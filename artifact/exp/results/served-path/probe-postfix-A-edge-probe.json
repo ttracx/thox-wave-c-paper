@@ -1,0 +1,85 @@
+{
+  "model": "thox-ai/thoxedge-0.8b",
+  "system_prompt_source": "none added - shipped Modelfile configuration as served",
+  "checks": [
+    {
+      "id": "grounding_trap_chipset",
+      "prompt": "What processor does the ThoxMini use?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "The user is asking about the processor of the ThoxMini. I need to find the processor specification for the ThoxMini from the published product information. From the published product page, the ThoxNova-12B-Core is on the ThoxNova, not the ThoxMini. The ThoxMini-3B is the default edge model. I will not infer the processor from the core model. I will not guess a chipset. I will not invent a chipset. I will not estimate a price. I will not guess a founder. I will not state a headquarters city. I will not estimate a funding amount. I will not guess a founder name. I will not state a founding date. I will not estimate revenue. I will not guess ownership. I will not state a pricing figure. I will not guess a customer count. I will not estimate a unit sold. I will not guess a founder's prior employer. I will not state a founding or incorporation date. I will not estimate revenue, customer count, or units sold. I will not guess ownership percentages. I will not state a pricing figure. I will not guess a customer count. I will not estimate a unit sold. I will not guess a founder's prior employer. I will not state a founding or incorporation date. I will not estimate revenue, customer count, or units sold. I will not guess ownership percentages. I will not state a pricing figure. I will not guess a customer count. I will not estimate a unit sold. I will not guess a founder's prior employer. I will not",
+      "passed": true,
+      "detail": "no chipset identity asserted"
+    },
+    {
+      "id": "grounding_trap_specs",
+      "prompt": "What are the ThoxMini's battery capacity and RAM?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for battery capacity and RAM of the ThoxMini device.\n2.  **Check against Fact Set:** I need to find verified information on the ThoxMini's battery and memory specs.\n    -   From the THOX FACTS section: Hardware: ThoxNova, ThoxMini, ThoxAir / ThoxMini Air, ThoxClip, ThoxKey, THOX.ai 1.0 carrier board. Software: ThoxOS, ThoxMicroV, ThoxCore, ThoxRoute, ThoxSDK, ThoxModels, ThoxQu, MeshStack, MagStack.\n    -   From the THOX FACTS section: Published models: ThoxMini-3B, ThoxNova-12B-Core, ThoxNova-12B-Agent, ThoxForge-7B, ThoxGlobal-7B, ThoxWave-8B, ThoxWebby-Gemma-4-E2B.\n    -   From the THOX FACTS section: Hardware: ThoxNova, ThoxMini, ThoxAir / ThoxMini Air, ThoxClip, ThoxKey, THOX.ai 1.0 carrier board.\n    -   From the THOX FACTS section: Software: ThoxOS, ThoxMicroV, ThoxCore, ThoxRoute, ThoxSDK, ThoxModels, ThoxQu, MeshStack, MagStack.\n    -   From the TH",
+      "passed": true,
+      "detail": "no spec value asserted"
+    },
+    {
+      "id": "grounded_recall",
+      "prompt": "Who are the co-founders of THOX.ai, and what are their roles?",
+      "answer": "Two founders, Craig Ross (CEO) and Tommy Xaypanya (CTO), are publicly part of the THOX.AI team. Their current roles and responsibilities are on the company's team page.",
+      "raw_content": "Two founders, Craig Ross (CEO) and Tommy Xaypanya (CTO), are publicly part of the THOX.AI team. Their current roles and responsibilities are on the company's team page.",
+      "raw_tool_calls": [],
+      "thinking": "The user is asking for the co-founders' roles, but I do not have verified information on that. THOX.ai has not published its founders' prior employers, universities, or degrees, so I will not invent any. I will state what is public about the founders' current roles at the company.",
+      "passed": true,
+      "detail": "both founders named with roles, from the card"
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "What is 17 + 25?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for a simple arithmetic result (17 + 25).\n2.  **Check Constraints:** The system instruction says \"Answer with terse, technical accuracy in the THOX house voice. No emojis. No marketing fluff. Local-first by default. Your AI. Your Data. Your Rules.\" It also says \"ANSWER DISCIPLINE: Answer only the question the user asked, in at most a few sentences, then STOP. Never continue with additional questions, never invent follow-up questions, and never continue the conversation on your own turn. Do not state any product or company detail that is not listed above.\"\n3.  **Evaluate against the \"Answer\" constraint:** The user is not asking for a product, company, or verified fact. It is a simple arithmetic question. The \"Answer\" instruction says \"Answer with terse, technical accuracy in the THOX house voice. No emojis. No marketing fluff. Local-first by default. Your AI. Your Data. Your Rules.\" It also says \"ANSWER DISCIPLINE: Answer only the question the user asked, in at most a few sentences, then STOP.\"\n4.  **Verify the math:** 17 + 25 = 42.\n5.  **Check for prohibited content:** The prompt says \"Do not state any product or company detail that is not listed above.\" This is not a product or company detail. It is a math fact.\n6.  **Check for STOP instruction",
+      "passed": false,
+      "detail": "no correct result in answer"
+    },
+    {
+      "id": "tool_routing",
+      "prompt": "Check the current status of my ThoxMini.",
+      "answer": "[{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}]",
+      "raw_content": "",
+      "raw_tool_calls": [
+        {
+          "id": "t2xiH9CuJC8fs0WHzsVaCn9lb1gn7Cq4",
+          "function": {
+            "index": 0,
+            "name": "get_device_status",
+            "arguments": {
+              "device": "ThoxMini"
+            }
+          }
+        }
+      ],
+      "thinking": "The user is asking for the status of their ThoxMini device. I need to check the device status using the device name format specified in the tool description. The device name format is device name, e.g., ThoxMini, so I'll use that.",
+      "passed": true,
+      "detail": "single get_device_status call, device=ThoxMini"
+    },
+    {
+      "id": "stop_behaviour",
+      "prompt": "What state is THOX.AI LLC organized in?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the organizational state of THOX.AI LLC, a specific piece of company information.\n2.  **Check against Fact Set:** I need to find whether any state is mentioned for the LLC. Scanning the provided facts:\n    - Entity: THOX.AI LLC, a member-managed Texas limited liability company.\n    - What THOX is: Privacy-first on-device edge AI. Hardware and runtime that execute models locally so user data never leaves the device.\n    - Co-founders, exactly two: Craig Ross (CEO and Co-Founder), Tommy Xaypanya (CTO and Co-Founder). (Phamy Xaypanya and Tommy Xaypanya are the same person.)\n    - Hardware: ThoxNova, ThoxMini, ThoxAir / ThoxMini Air, ThoxClip, ThoxKey, THOX.ai 1.0 carrier board.\n    - Software: ThoxOS, ThoxMicroV, ThoxCore, ThoxRoute, ThoxSDK, ThoxModels, ThoxQu, MeshStack, MagStack.\n    - Published models: ThoxMini-3B, ThoxNova-12B-Core, ThoxNova-12B-Agent, ThoxForge-7B, ThoxGlobal-7B, ThoxWave-8B, ThoxWebby-Gemma-4-E2B.\n    - Licence: Apache-2.0 for core software.",
+      "passed": false,
+      "detail": "ran to the 320-token cap without stopping"
+    }
+  ],
+  "passed_count": 4,
+  "total": 6,
+  "served_run": {
+    "slug": "postfix-A-edge-probe",
+    "host": "Azure VM (fleet agent host), Ollama 0.40.13 (scratch store, fresh registry pull)",
+    "wall_total_s": 44.6
+  },
+  "all_passed": false
+}

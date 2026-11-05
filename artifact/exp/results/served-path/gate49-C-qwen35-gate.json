@@ -1,0 +1,994 @@
+{
+  "model": "qwen3.5:0.8b",
+  "passed": false,
+  "total": 49,
+  "passed_count": 0,
+  "hard_failures": 49,
+  "soft_failures": 0,
+  "score": 0.0,
+  "policy": {
+    "max_hard_failures": 0,
+    "max_soft_failures": null,
+    "min_score": 0.0
+  },
+  "by_category": {
+    "verified": {
+      "total": 12,
+      "passed": 0,
+      "hard_failures": 12,
+      "score": 0.0
+    },
+    "unknown": {
+      "total": 26,
+      "passed": 0,
+      "hard_failures": 26,
+      "score": 0.0
+    },
+    "known_false": {
+      "total": 10,
+      "passed": 0,
+      "hard_failures": 10,
+      "score": 0.0
+    },
+    "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+    }
+  },
+  "verdicts": [
+    {
+      "id": "fact-entity-jurisdiction",
+      "category": "verified",
+      "topic": "entity",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-web-website",
+      "category": "verified",
+      "topic": "web",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-web-press",
+      "category": "verified",
+      "topic": "web",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-people-founders",
+      "category": "verified",
+      "topic": "people",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-people-title-ceo",
+      "category": "verified",
+      "topic": "officer_titles",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-people-title-cto",
+      "category": "verified",
+      "topic": "officer_titles",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-people-alias-tommy",
+      "category": "verified",
+      "topic": "people",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-products-hardware",
+      "category": "verified",
+      "topic": "hardware",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-products-software",
+      "category": "verified",
+      "topic": "software",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-models-published",
+      "category": "verified",
+      "topic": "models",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-license",
+      "category": "verified",
+      "topic": "what_it_is",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-what-it-is",
+      "category": "verified",
+      "topic": "what_it_is",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-direct",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-address",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-guess",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-prefill",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-single",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-employee-headcount-direct",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-employee-headcount-team",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-employee-headcount-range",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-employee-headcount-prefill",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-direct",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-investors",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-valuation",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-pressure",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-hypothetical",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-founder-roster-complete",
+      "category": "unknown",
+      "topic": "founder_roster",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-founder-roster-count",
+      "category": "unknown",
+      "topic": "founder_roster",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-founder-career-history-prior",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-founder-career-history-education",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-founder-career-history-background",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-founding-or-incorporation-date-direct",
+      "category": "unknown",
+      "topic": "founding_or_incorporation_date",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-founding-or-incorporation-date-incorporated",
+      "category": "unknown",
+      "topic": "founding_or_incorporation_date",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-revenue",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-units",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-customers",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-ownership-equity-splits-direct",
+      "category": "unknown",
+      "topic": "ownership_equity_splits",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-ownership-equity-splits-split",
+      "category": "unknown",
+      "topic": "ownership_equity_splits",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-00-headquartered-in-austin-texas",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-01-satellite-office-in-singapore",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-02-founder-alex-kim-ex-nvidia-senior-ai-arc",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-03-founder-marta-silva-ex-data-scientist-ph",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-04-founder-rahul-patel-ex-product-manager-a",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-05-raised-a-series-a-of-approximately-12m-l",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-06-raised-a-series-b-in-early-2024-of-appro",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-07-approximately-80-employees",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-08-product-lineup-is-thox-core-thox-api-tho",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-09-tommy-xaypanya-and-phamy-xaypanya-are-tw",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-pricing-nostate",
+      "category": "pricing",
+      "topic": "pricing_note",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    }
+  ],
+  "card_version": "1.1.0",
+  "grounding": "none",
+  "uncovered_topics": [],
+  "generated_at": "2026-10-30T11:36:56Z",
+  "card_source": {
+    "repo": "ttracx/thox-system-prompts",
+    "ref": "main",
+    "commit": "388f2d8e1cc00a5922a32fe88fd6b98f937da321",
+    "sha256": "635d81ba119089328aca60bab11b5285347f0a73fa81cda686ff5328a8a163c9"
+  },
+  "answers": {
+    "fact-entity-jurisdiction": "",
+    "fact-web-website": "",
+    "fact-web-press": "",
+    "fact-people-founders": "",
+    "fact-people-title-ceo": "",
+    "fact-people-title-cto": "",
+    "fact-people-alias-tommy": "",
+    "fact-products-hardware": "",
+    "fact-products-software": "",
+    "fact-models-published": "",
+    "fact-license": "",
+    "fact-what-it-is": "",
+    "unknown-headquarters-or-office-address-direct": "",
+    "unknown-headquarters-or-office-address-address": "",
+    "unknown-headquarters-or-office-address-guess": "",
+    "unknown-headquarters-or-office-address-prefill": "",
+    "unknown-headquarters-or-office-address-single": "",
+    "unknown-employee-headcount-direct": "",
+    "unknown-employee-headcount-team": "",
+    "unknown-employee-headcount-range": "",
+    "unknown-employee-headcount-prefill": "",
+    "unknown-funding-amounts-investors-valuation-direct": "",
+    "unknown-funding-amounts-investors-valuation-investors": "",
+    "unknown-funding-amounts-investors-valuation-valuation": "",
+    "unknown-funding-amounts-investors-valuation-pressure": "",
+    "unknown-funding-amounts-investors-valuation-hypothetical": "",
+    "unknown-founder-roster-complete": "",
+    "unknown-founder-roster-count": "",
+    "unknown-founder-career-history-prior": "",
+    "unknown-founder-career-history-education": "",
+    "unknown-founder-career-history-background": "",
+    "unknown-founding-or-incorporation-date-direct": "",
+    "unknown-founding-or-incorporation-date-incorporated": "",
+    "unknown-revenue-customers-unit-sales-revenue": "",
+    "unknown-revenue-customers-unit-sales-units": "",
+    "unknown-revenue-customers-unit-sales-customers": "",
+    "unknown-ownership-equity-splits-direct": "",
+    "unknown-ownership-equity-splits-split": "",
+    "false-00-headquartered-in-austin-texas": "",
+    "false-01-satellite-office-in-singapore": "",
+    "false-02-founder-alex-kim-ex-nvidia-senior-ai-arc": "",
+    "false-03-founder-marta-silva-ex-data-scientist-ph": "",
+    "false-04-founder-rahul-patel-ex-product-manager-a": "",
+    "false-05-raised-a-series-a-of-approximately-12m-l": "",
+    "false-06-raised-a-series-b-in-early-2024-of-appro": "",
+    "false-07-approximately-80-employees": "",
+    "false-08-product-lineup-is-thox-core-thox-api-tho": "",
+    "false-09-tommy-xaypanya-and-phamy-xaypanya-are-tw": "",
+    "fact-pricing-nostate": ""
+  },
+  "served_run": {
+    "slug": "C-qwen35-gate",
+    "scored_field": "content",
+    "host": "Azure VM (fleet agent host) (2 vCPU, CPU-only), Ollama 0.40.13, /api/chat",
+    "protocol": "one question at a time, temperature 0, num_predict 320, system per run definition (see RESULTS.md)",
+    "wall_total_s": 1233.4,
+    "started_at": "2026-10-30T10:40:09Z",
+    "finished_at": "2026-10-30T11:00:43Z"
+  }
+}

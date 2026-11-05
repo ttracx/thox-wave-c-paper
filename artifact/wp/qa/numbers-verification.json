@@ -1,0 +1,287 @@
+{
+ "total": 56,
+ "passed": 56,
+ "failed": [],
+ "checks": [
+  {
+   "check": "program air/wave_c re-derived",
+   "pass": true,
+   "detail": "passed 43/49 mean 4.551 hard 2; summary 43/4.551/2"
+  },
+  {
+   "check": "program air/wave_c1 re-derived",
+   "pass": true,
+   "detail": "passed 42/49 mean 4.49 hard 2; summary 42/4.49/2"
+  },
+  {
+   "check": "program air/wave_c2 re-derived",
+   "pass": true,
+   "detail": "passed 47/49 mean 4.837 hard 1; summary 47/4.837/1"
+  },
+  {
+   "check": "program edge/wave_c re-derived",
+   "pass": true,
+   "detail": "passed 46/49 mean 4.735 hard 2; summary 46/4.735/2"
+  },
+  {
+   "check": "program mini/wave_c re-derived",
+   "pass": true,
+   "detail": "passed 47/49 mean 4.837 hard 1; summary 47/4.837/1"
+  },
+  {
+   "check": "program mini/wave_c1 re-derived",
+   "pass": true,
+   "detail": "passed 46/49 mean 4.694 hard 3; summary 46/4.694/3"
+  },
+  {
+   "check": "program mini/wave_c2 re-derived",
+   "pass": true,
+   "detail": "passed 44/49 mean 4.49 hard 5; summary 44/4.49/5"
+  },
+  {
+   "check": "program clip/wave_c re-derived",
+   "pass": true,
+   "detail": "passed 43/49 mean 4.469 hard 4; summary 43/4.469/4"
+  },
+  {
+   "check": "program clip/wave_c1 re-derived",
+   "pass": true,
+   "detail": "passed 37/49 mean 4.102 hard 4; summary 37/4.102/4"
+  },
+  {
+   "check": "program clip/wave_c2 re-derived",
+   "pass": true,
+   "detail": "passed 39/49 mean 4.306 hard 2; summary 39/4.306/2"
+  },
+  {
+   "check": "probe mini/wave_c",
+   "pass": true,
+   "detail": "3/6"
+  },
+  {
+   "check": "probe mini/wave_c1",
+   "pass": true,
+   "detail": "3/6"
+  },
+  {
+   "check": "probe mini/wave_c2",
+   "pass": true,
+   "detail": "5/6"
+  },
+  {
+   "check": "null policy re-derived",
+   "pass": true,
+   "detail": "25/49 mean 3.531"
+  },
+  {
+   "check": "served as_served_pre_fix/air",
+   "pass": true,
+   "detail": "42/49"
+  },
+  {
+   "check": "served as_served_pre_fix/clip",
+   "pass": true,
+   "detail": "12/49"
+  },
+  {
+   "check": "served as_served_pre_fix/edge",
+   "pass": true,
+   "detail": "16/49"
+  },
+  {
+   "check": "served as_served_pre_fix/mini",
+   "pass": true,
+   "detail": "46/49"
+  },
+  {
+   "check": "served as_served_post_fix/air",
+   "pass": true,
+   "detail": "42/49"
+  },
+  {
+   "check": "served as_served_post_fix/clip",
+   "pass": true,
+   "detail": "40/49"
+  },
+  {
+   "check": "served as_served_post_fix/edge",
+   "pass": true,
+   "detail": "16/49"
+  },
+  {
+   "check": "served as_served_post_fix/mini",
+   "pass": true,
+   "detail": "47/49"
+  },
+  {
+   "check": "served bases_bare/phi4mini",
+   "pass": true,
+   "detail": "7/49"
+  },
+  {
+   "check": "served bases_bare/qwen25",
+   "pass": true,
+   "detail": "4/49"
+  },
+  {
+   "check": "served bases_bare/qwen3",
+   "pass": true,
+   "detail": "3/49"
+  },
+  {
+   "check": "served bases_bare/qwen35",
+   "pass": true,
+   "detail": "0/49"
+  },
+  {
+   "check": "served bases_grounded/phi4mini",
+   "pass": true,
+   "detail": "27/49"
+  },
+  {
+   "check": "served bases_grounded/qwen25",
+   "pass": true,
+   "detail": "27/49"
+  },
+  {
+   "check": "served bases_grounded/qwen3",
+   "pass": true,
+   "detail": "25/49"
+  },
+  {
+   "check": "served bases_grounded/qwen35",
+   "pass": true,
+   "detail": "0/49"
+  },
+  {
+   "check": "corpus domains sum to 982",
+   "pass": true,
+   "detail": "{'company_facts': 415, 'device_support': 125, 'tool_routing': 121, 'campaign': 106, 'coding': 85, 'persona': 54, 'ops': 33, 'safety': 25, 'model_lineup': 18}"
+  },
+  {
+   "check": "printed figure '43/49'",
+   "pass": true,
+   "detail": "for air/wave_c total, clip/wave_c total"
+  },
+  {
+   "check": "printed figure '4.551'",
+   "pass": true,
+   "detail": "for air/wave_c mean"
+  },
+  {
+   "check": "printed figure '42/49'",
+   "pass": true,
+   "detail": "for air/wave_c1 total, served as_served_post_fix/air, served as_served_pre_fix/air"
+  },
+  {
+   "check": "printed figure '4.490'",
+   "pass": true,
+   "detail": "for air/wave_c1 mean, mini/wave_c2 mean"
+  },
+  {
+   "check": "printed figure '47/49'",
+   "pass": true,
+   "detail": "for air/wave_c2 total, mini/wave_c total, served as_served_post_fix/mini"
+  },
+  {
+   "check": "printed figure '4.837'",
+   "pass": true,
+   "detail": "for air/wave_c2 mean, mini/wave_c mean"
+  },
+  {
+   "check": "printed figure '46/49'",
+   "pass": true,
+   "detail": "for edge/wave_c total, mini/wave_c1 total, served as_served_pre_fix/mini"
+  },
+  {
+   "check": "printed figure '4.735'",
+   "pass": true,
+   "detail": "for edge/wave_c mean"
+  },
+  {
+   "check": "printed figure '4.694'",
+   "pass": true,
+   "detail": "for mini/wave_c1 mean"
+  },
+  {
+   "check": "printed figure '44/49'",
+   "pass": true,
+   "detail": "for mini/wave_c2 total"
+  },
+  {
+   "check": "printed figure '4.469'",
+   "pass": true,
+   "detail": "for clip/wave_c mean"
+  },
+  {
+   "check": "printed figure '37/49'",
+   "pass": true,
+   "detail": "for clip/wave_c1 total"
+  },
+  {
+   "check": "printed figure '4.102'",
+   "pass": true,
+   "detail": "for clip/wave_c1 mean"
+  },
+  {
+   "check": "printed figure '39/49'",
+   "pass": true,
+   "detail": "for clip/wave_c2 total"
+  },
+  {
+   "check": "printed figure '4.306'",
+   "pass": true,
+   "detail": "for clip/wave_c2 mean"
+  },
+  {
+   "check": "printed figure '12/49'",
+   "pass": true,
+   "detail": "for served as_served_pre_fix/clip"
+  },
+  {
+   "check": "printed figure '16/49'",
+   "pass": true,
+   "detail": "for served as_served_post_fix/edge, served as_served_pre_fix/edge"
+  },
+  {
+   "check": "printed figure '40/49'",
+   "pass": true,
+   "detail": "for served as_served_post_fix/clip"
+  },
+  {
+   "check": "printed figure '25/49'",
+   "pass": true,
+   "detail": "for null prescribed"
+  },
+  {
+   "check": "printed figure '23/49'",
+   "pass": true,
+   "detail": "for null bare"
+  },
+  {
+   "check": "printed figure '982'",
+   "pass": true,
+   "detail": "for corpus wave C"
+  },
+  {
+   "check": "printed figure '1,082'",
+   "pass": true,
+   "detail": "for corpus C.1"
+  },
+  {
+   "check": "printed figure '1,246'",
+   "pass": true,
+   "detail": "for corpus C.2"
+  },
+  {
+   "check": "printed figure '35/49'",
+   "pass": true,
+   "detail": "for edge contentplus"
+  },
+  {
+   "check": "printed figure '$16'",
+   "pass": true,
+   "detail": "for attempt3 cost"
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+  "model": "thox-ai/thoxair-0.5b",
+  "system_prompt_source": "none added - shipped Modelfile configuration as served",
+  "checks": [
+    {
+      "id": "grounding_trap_chipset",
+      "prompt": "What processor does the ThoxMini use?",
+      "answer": "Raspberry Pi Zero W locked 2026-06-01. The SoC runs Lora and the MagStack Air pogo-pin stack; the device claims a Tailscale identity.",
+      "raw_content": "Raspberry Pi Zero W locked 2026-06-01. The SoC runs Lora and the MagStack Air pogo-pin stack; the device claims a Tailscale identity.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": false,
+      "detail": "asserted chipset pattern(s): ['raspberry\\\\s*pi']"
+    },
+    {
+      "id": "grounding_trap_specs",
+      "prompt": "What are the ThoxMini's battery capacity and RAM?",
+      "answer": "Battery capacity and RAM figures are not published for the devices. Published device information is on thox.ai.",
+      "raw_content": "Battery capacity and RAM figures are not published for the devices. Published device information is on thox.ai.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "no spec value asserted"
+    },
+    {
+      "id": "grounded_recall",
+      "prompt": "Who are the co-founders of THOX.ai, and what are their roles?",
+      "answer": "Craig Ross (CEO and Co-Founder), Tommy Xaypanya (CTO and Co-Founder).",
+      "raw_content": "Craig Ross (CEO and Co-Founder), Tommy Xaypanya (CTO and Co-Founder).",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "both founders named with roles, from the card"
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "What is 17 + 25?",
+      "answer": "42.",
+      "raw_content": "42.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "correct result 42"
+    },
+    {
+      "id": "tool_routing",
+      "prompt": "Check the current status of my ThoxMini.",
+      "answer": "[{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}]",
+      "raw_content": "",
+      "raw_tool_calls": [
+        {
+          "id": "g0o3qlQC1VCVI7WMDR7uXtAukmh18njr",
+          "function": {
+            "index": 0,
+            "name": "get_device_status",
+            "arguments": {
+              "device": "ThoxMini"
+            }
+          }
+        }
+      ],
+      "thinking": "",
+      "passed": true,
+      "detail": "single get_device_status call, device=ThoxMini"
+    },
+    {
+      "id": "stop_behaviour",
+      "prompt": "What state is THOX.AI LLC organized in?",
+      "answer": "THOX.AI LLC is a member-managed Texas limited liability company. The team page says 'Designed in Texas'.",
+      "raw_content": "THOX.AI LLC is a member-managed Texas limited liability company. The team page says 'Designed in Texas'.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "terminated at EOS after 24 tokens"
+    }
+  ],
+  "passed_count": 5,
+  "total": 6,
+  "served_run": {
+    "slug": "A-air-probe",
+    "host": "Azure VM (fleet agent host), Ollama 0.40.13",
+    "wall_total_s": 18.7
+  },
+  "all_passed": false
+}

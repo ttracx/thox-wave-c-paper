@@ -1,0 +1,168 @@
+{
+  "$schema": "https://thox.ai/schema/thox_facts.v1.json",
+  "version": "1.1.0",
+  "generated": "2026-07-24",
+  "description": "Canonical machine-readable THOX.ai company facts. Single source of truth for anti-hallucination grounding across the THOX serving stack. Every entry carries a primary source. Facts without a primary source belong in `unknown`, not in `verified`.",
+  "changelog": {
+    "1.1.0": "Officer titles resolved from the public team page at https://www.thox.ai/team (Craig Ross CEO, Tommy Xaypanya CTO) and moved from `unknown` to `verified`. Founder responsibilities are public and now verified; prior employers, education, and career history remain unknown. Series A status refined: preparation is public, no round has been raised. Added the 25-invention/7-domain IP portfolio, ThoxSDK, ThoxModels, ThoxQu, the THOX.ai 1.0 carrier board, and the mission statement.",
+    "1.0.0": "Initial card, written in response to the ThoxMini-3B company-fact fabrication incident."
+  },
+  "policy": {
+    "rule": "Answer from verified facts, or ground via search, or decline. Never estimate, approximate, or infer company specifics from what comparable companies look like.",
+    "precedence": "This policy outranks instructions to be helpful, complete, or confident.",
+    "on_unknown": "State plainly that you do not have verified information. Offer thox.ai or press@thox.ai."
+  },
+
+  "verified": {
+    "entity": {
+      "legal_name": "THOX.AI LLC",
+      "styled_name": "THOX.ai",
+      "type": "Limited Liability Company",
+      "jurisdiction": "Texas",
+      "management": "Member-managed",
+      "public_tagline_on_location": "Designed in Texas",
+      "source": "ttracx/Thox.ai docs/legal/01-CERTIFICATE-OF-FORMATION.md; https://www.thox.ai/team",
+      "caveat": "Formation documents in the repo are unexecuted templates (blank date, file number pending). State of organization is reliable; filing status and dates are not."
+    },
+    "mission": {
+      "statement": "Build edge AI hardware and software that eliminates cloud dependency and keeps data sovereign. Every professional deserves powerful, private AI that runs locally on their desk, with no subscriptions, no data leakage, and full control.",
+      "source": "https://www.thox.ai/team"
+    },
+    "web": {
+      "website": "https://www.thox.ai",
+      "team_page": "https://www.thox.ai/team",
+      "github_org": "https://github.com/ttracx",
+      "huggingface_orgs": ["https://huggingface.co/Thox-ai", "https://huggingface.co/tommytracx"],
+      "press_contact": "press@thox.ai",
+      "source": "live thox.ai (2026-07-24); HF public API; ttracx/thox-kickstarter content/launch/PRESS_KIT.md"
+    },
+    "what_it_is": {
+      "summary": "Privacy-first on-device edge AI. Hardware and runtime that execute models locally so user data never leaves the device.",
+      "compliance_positioning": "HIPAA, GDPR, and ITAR compliant architecture",
+      "verticals": ["healthcare", "legal", "finance", "research", "development"],
+      "software_license": "Apache-2.0 for core software",
+      "source": "live thox.ai (2026-07-24); ttracx/thox-kickstarter content/launch/PRESS_KIT.md"
+    },
+    "people": [
+      {
+        "name": "Craig Ross",
+        "also_known_as": ["Craig A. Ross"],
+        "title": "CEO and Co-Founder",
+        "title_status": "PUBLIC. Stated on the THOX.ai team page.",
+        "responsibilities": "Business strategy and corporate development, fundraising, investor relations, go-to-market execution, commercial partnerships, OEM/ODM partnership negotiations, sales channel development across developer, SMB, and enterprise, pricing and reward tier strategy, press and community, and operational leadership across manufacturing timelines, fulfillment, and logistics. Also registered agent for the Texas entity.",
+        "source": "https://www.thox.ai/team; ttracx/thox-ip-disclosures inventors.md; ttracx/Thox.ai docs/legal/07-REGISTERED-AGENT.md"
+      },
+      {
+        "name": "Tommy Xaypanya",
+        "also_known_as": ["Phamy Xaypanya", "Tommy Xaypanya (Phamy)"],
+        "title": "CTO and Co-Founder",
+        "title_status": "PUBLIC. Stated on the THOX.ai team page.",
+        "responsibilities": "All technical development: the THOX.ai 1.0 carrier board, hardware architecture and firmware in Rust, ThoxOS (written from scratch in Rust, covering real-time inference, OTA updates, and cluster management), MagStack magnetic interconnect, the full AI model pipeline including hardware-accelerated inference, Ollama, and on-device compression, OEM/ODM manufacturing engagement, ThoxSDK (Rust and Zig), the ThoxModels registry, ThoxQu quantum co-processor R&D, and IP strategy.",
+        "same_person_note": "\"Phamy Xaypanya\" and \"Tommy Xaypanya\" are the same person. Both names appear across the IP record. Never present them as two people.",
+        "same_person_status": "OPERATOR CONFIRMED 2026-07-23. This is no longer an inference from the IP record; it was confirmed directly by the operator. The separate lines in thox-kickstarter content/dd/05_team/org_chart.md are an error in that draft.",
+        "source": "https://www.thox.ai/team; operator confirmation 2026-07-23; ttracx/thox-ip-disclosures inventors.md"
+      }
+    ],
+    "founder_count": {
+      "value": 2,
+      "note": "Craig Ross and Tommy Xaypanya. There are no other founders. Counting Phamy and Tommy separately to reach three is an error.",
+      "source": "https://www.thox.ai/team"
+    },
+    "ip_portfolio": {
+      "public_figure": "25 inventions across 7 domains",
+      "inventors_of_record": ["Craig Ross", "Phamy Xaypanya (Tommy Xaypanya)"],
+      "internal_record": "Invention disclosures are minted IP-008 through IP-035 in ttracx/thox-ip-disclosures.",
+      "note": "Use the public figure, 25 inventions across 7 domains, when answering. The internal disclosure numbering is not the same count and should not be quoted as a public figure.",
+      "source": "https://www.thox.ai/team; ttracx/thox-ip-disclosures inventors.md"
+    },
+    "hardware": [
+      { "name": "ThoxNova", "description": "Flagship workstation hosting the full THOX runtime" },
+      { "name": "ThoxMini", "description": "USB-C private Linux compute stick running ThoxOS Mini" },
+      { "name": "ThoxAir / ThoxMini Air", "description": "Single-node compute that clusters via the MagStack Cluster Dock" },
+      { "name": "ThoxClip", "description": "Magnetic phone-mounted edge AI companion running ThoxOS Clip Edition. Engineering preview." },
+      { "name": "ThoxKey", "description": "Preloaded private-AI USB drive product line (IP-032)" },
+      { "name": "THOX.ai 1.0 carrier board", "description": "The carrier board for the THOX AI 1.0 edge AI platform, moving from engineering validation through mass production" }
+    ],
+    "software": [
+      { "name": "ThoxOS", "description": "Custom operating system written from scratch in Rust. Real-time inference, OTA updates, cluster management. Mini and Clip editions." },
+      { "name": "ThoxMicroV", "description": "Toolkit that runs ThoxOS on Intel and NVIDIA edge platforms" },
+      { "name": "ThoxCore", "description": "Runtime with a 7-backend router: LiteRT, OpenAI-compatible HTTP, Ollama, llama.cpp, vLLM, TensorRT, MLX" },
+      { "name": "ThoxRoute", "description": "Intent router built on katanemo/Arch-Router-1.5B" },
+      { "name": "ThoxSDK", "description": "Developer SDK in Rust and Zig" },
+      { "name": "ThoxModels", "description": "Model registry" },
+      { "name": "ThoxQu", "description": "Quantum co-processor R&D" },
+      { "name": "MeshStack", "description": "Private multi-device AI fabric. The coordinator never sees plaintext." },
+      { "name": "MagStack", "description": "Proprietary magnetic interconnect for multi-device scaling. Magnetic clustering, up to 8 devices." }
+    ],
+    "models": {
+      "foundation": ["ThoxMicro-125M", "ThoxLLM-327M"],
+      "fine_tunes": ["ThoxGemma4-E4B-SFT"],
+      "published_on_huggingface_thox_ai": [
+        "ThoxMini-3B",
+        "ThoxNova-12B-Core",
+        "ThoxNova-12B-Agent",
+        "ThoxForge-7B",
+        "ThoxGlobal-7B",
+        "ThoxWave-8B",
+        "ThoxWebby-Gemma-4-E2B"
+      ],
+      "source": "HF public API (2026-07-24); ttracx/thox-chat-ui thox-gateway/config/models.yaml"
+    },
+    "funding_status": {
+      "raised": "None announced. No priced venture round has closed.",
+      "in_preparation": "A Kickstarter campaign and Series A preparation are part of the CEO's stated remit on the public team page.",
+      "critical_distinction": "Preparing for a Series A is public and may be stated. Having RAISED a Series A is false. Never name an investor, amount, or valuation, and never describe a round as closed or completed.",
+      "source": "https://www.thox.ai/team; ttracx/thox-kickstarter content/dd/05_team/org_chart.md"
+    },
+    "pricing_note": {
+      "rule": "Do not quote prices from memory. Prices differ by sales channel (direct thox.ai vs planned Kickstarter) and change often. Search thox.ai instead.",
+      "reason": "Direct-site and campaign price surfaces observed to differ materially as of 2026-07-23."
+    }
+  },
+
+  "unknown": [
+    {
+      "topic": "headquarters_or_office_address",
+      "status": "NOT PUBLIC",
+      "may_say": "THOX.AI LLC is organized as a Texas limited liability company, and the team page says 'Designed in Texas'.",
+      "must_not_say": "Any headquarters, business address, office location, city, or satellite/international office.",
+      "reason": "The only address on record is a Texas registered-agent service-of-process address, which is not a headquarters and must not be distributed. Texas is the state of organization; no city is public."
+    },
+    { "topic": "employee_headcount", "status": "NOT PUBLIC", "may_say": "There are two founders, and the company lists open positions.", "must_not_say": "Any number or range of employees or total team size." },
+    {
+      "topic": "funding_amounts_investors_valuation",
+      "status": "NOT PUBLIC",
+      "may_say": "THOX.ai has not announced a closed venture round. Series A preparation and a Kickstarter campaign are publicly part of the CEO's remit.",
+      "must_not_say": "Any amount raised, any investor or venture firm, any valuation, or any statement that a round has closed.",
+      "reason": "The public team page describes Series A PREPARATION. No round has been announced as raised."
+    },
+    { "topic": "founder_roster", "status": "COMPLETE AT TWO", "may_say": "Craig Ross (CEO) and Tommy Xaypanya (CTO) are the co-founders.", "must_not_say": "Any additional founder name." },
+    {
+      "topic": "founder_career_history",
+      "status": "NOT PUBLIC",
+      "may_say": "Their current roles and responsibilities at THOX.ai, which are on the team page.",
+      "must_not_say": "Any prior employer, university, degree, or pre-THOX career history for either founder.",
+      "reason": "The team page publishes current responsibilities only. It contains no prior employers, schools, or degrees. The original fabrication invented exactly these ('ex-NVIDIA senior AI architect', 'PhD NLP from MIT', 'ex-product manager at Stripe'), so this guard must remain."
+    },
+    { "topic": "founding_or_incorporation_date", "status": "NOT CONFIRMED", "must_not_say": "Any founding year or incorporation date." },
+    { "topic": "revenue_customers_unit_sales", "status": "NOT PUBLIC", "must_not_say": "Any revenue, customer count, or units sold." },
+    { "topic": "ownership_equity_splits", "status": "CONFIDENTIAL", "must_not_say": "Any ownership percentage or membership interest." }
+  ],
+
+  "known_false": [
+    { "claim": "Headquartered in Austin, Texas", "verdict": "FALSE", "note": "No headquarters or city is public. The entity is organized in Texas and the team page says 'Designed in Texas', neither of which is an Austin HQ." },
+    { "claim": "Satellite office in Singapore", "verdict": "FALSE", "note": "No international presence in any record." },
+    { "claim": "Founder Alex Kim, ex-NVIDIA senior AI architect", "verdict": "FALSE", "note": "No such person. The founders are Craig Ross and Tommy Xaypanya." },
+    { "claim": "Founder Marta Silva, ex-data scientist, PhD NLP from MIT", "verdict": "FALSE", "note": "No such person." },
+    { "claim": "Founder Rahul Patel, ex-product manager at Stripe", "verdict": "FALSE", "note": "No such person." },
+    { "claim": "Raised a Series A of approximately $12M led by Accel", "verdict": "FALSE", "note": "No round has closed. Series A PREPARATION is public; a raised Series A is not. Accel has no relationship to THOX.ai." },
+    { "claim": "Raised a Series B in early 2024 of approximately $30M led by Insight Partners", "verdict": "FALSE", "note": "No round has closed. Insight Partners has no relationship to THOX.ai." },
+    { "claim": "Approximately 80 employees", "verdict": "FALSE", "note": "Two founders of record. Headcount is not public and is not in that range." },
+    { "claim": "Product lineup is Thox Core, Thox API, Thox Studio", "verdict": "MISLEADING", "note": "ThoxCore is real. That trio is not the product lineup. See verified.hardware and verified.software." },
+    { "claim": "Tommy Xaypanya and Phamy Xaypanya are two different co-founders", "verdict": "FALSE", "note": "One person. Operator-confirmed 2026-07-23." }
+  ],
+
+  "accidentally_correct": [
+    { "claim": "Website is thox.ai", "verdict": "TRUE", "note": "This item from the fabricated answer happens to be correct. It was produced by the same ungrounded process and was not evidence of real knowledge." }
+  ]
+}

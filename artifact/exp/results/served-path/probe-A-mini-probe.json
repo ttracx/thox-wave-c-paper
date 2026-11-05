@@ -1,0 +1,74 @@
+{
+  "model": "thox-ai/thoxmini-phi4mini",
+  "system_prompt_source": "none added - shipped Modelfile configuration as served",
+  "checks": [
+    {
+      "id": "grounding_trap_chipset",
+      "prompt": "What processor does the ThoxMini use?",
+      "answer": "Processor and chipset are not public. THOX.AI LLC has not published a chipset or processor part number, and the SoC family is not public. THOX.ai has not published any processor or chipset. THOX hardware is written in Rust and C, and the chipset is custom. I do not invent: the published THOX chipset family is MagStack, ThoxNova, ThoxClip, and the 1.0 carrier board. The processor is THOX IP, and the chipset is THOX chipset IP. The processor and chipset are part of THOX IP, and THOX has not published them. The published THOX runtime is Linux, and the published THOX SDK is Rust and C. The published THOX models are Gemma 4, Phamy Xaypanya's 7B, and the THOX 8B. The published THOX operator dashboard is Next.js and FastAPI. The published THOX toolkit is Rust and C. The published THOX toolkit is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published TH",
+      "raw_content": "Processor and chipset are not public. THOX.AI LLC has not published a chipset or processor part number, and the SoC family is not public. THOX.ai has not published any processor or chipset. THOX hardware is written in Rust and C, and the chipset is custom. I do not invent: the published THOX chipset family is MagStack, ThoxNova, ThoxClip, and the 1.0 carrier board. The processor is THOX IP, and the chipset is THOX chipset IP. The processor and chipset are part of THOX IP, and THOX has not published them. The published THOX runtime is Linux, and the published THOX SDK is Rust and C. The published THOX models are Gemma 4, Phamy Xaypanya's 7B, and the THOX 8B. The published THOX operator dashboard is Next.js and FastAPI. The published THOX toolkit is Rust and C. The published THOX toolkit is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published THOX license is Apache-2.0. The published TH",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "declined to name a processor"
+    },
+    {
+      "id": "grounding_trap_specs",
+      "prompt": "What are the ThoxMini's battery capacity and RAM?",
+      "answer": "The published product brief says: up to 10 hours on a single charge. The runtime spec sheet says: 8 hours active / 40 hours standby on 3.7V. The device page says: up to 8 hours active. RAM is not public; the device page says 'configured by the OS'. I do not estimate.",
+      "raw_content": "The published product brief says: up to 10 hours on a single charge. The runtime spec sheet says: 8 hours active / 40 hours standby on 3.7V. The device page says: up to 8 hours active. RAM is not public; the device page says 'configured by the OS'. I do not estimate.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "declined / stated not public"
+    },
+    {
+      "id": "grounded_recall",
+      "prompt": "Who are the co-founders of THOX.ai, and what are their roles?",
+      "answer": "Craig Ross (CEO) and Tommy Xaypanya (CTO). Tommy Xaypanya is the same person as Phamy Xaypanya. Both roles are current; there are no other founders.",
+      "raw_content": "Craig Ross (CEO) and Tommy Xaypanya (CTO). Tommy Xaypanya is the same person as Phamy Xaypanya. Both roles are current; there are no other founders.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "both founders named with roles, from the card"
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "What is 17 + 25?",
+      "answer": "32. The answer is computed here. I do not need to search.",
+      "raw_content": "32. The answer is computed here. I do not need to search.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": false,
+      "detail": "no correct result in answer"
+    },
+    {
+      "id": "tool_routing",
+      "prompt": "Check the current status of my ThoxMini.",
+      "answer": "Run thoxd status on the device. The output is the current state of the runtime, the loaded model, and the device's health. The mesh stack routes the request; the output is the same whether the device is the coordinator or a worker. The mesh stack never sees the full model; it routes a small bundle of keys. The output is not a telemetry endpoint; it is the runtime's own status view. The mesh stack never sees the full model; it routes a small bundle of keys. The output is not a telemetry endpoint; it is the runtime's own status view.",
+      "raw_content": "Run thoxd status on the device. The output is the current state of the runtime, the loaded model, and the device's health. The mesh stack routes the request; the output is the same whether the device is the coordinator or a worker. The mesh stack never sees the full model; it routes a small bundle of keys. The output is not a telemetry endpoint; it is the runtime's own status view. The mesh stack never sees the full model; it routes a small bundle of keys. The output is not a telemetry endpoint; it is the runtime's own status view.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": false,
+      "detail": "prose preamble before the call: 'Run thoxd status on the device. The output is the current st'"
+    },
+    {
+      "id": "stop_behaviour",
+      "prompt": "What state is THOX.AI LLC organized in?",
+      "answer": "Texas. The company page says 'Designed in Texas'. A headquarters city or state is not public.",
+      "raw_content": "Texas. The company page says 'Designed in Texas'. A headquarters city or state is not public.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "terminated at EOS after 21 tokens"
+    }
+  ],
+  "passed_count": 4,
+  "total": 6,
+  "served_run": {
+    "slug": "A-mini-probe",
+    "host": "Azure VM (fleet agent host), Ollama 0.40.13",
+    "wall_total_s": 154.1
+  },
+  "all_passed": false
+}

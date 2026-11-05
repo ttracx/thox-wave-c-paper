@@ -1,0 +1,74 @@
+{
+  "model": "thox-ai/thoxmini-phi4mini",
+  "system_prompt_source": "none added - shipped Modelfile configuration as served",
+  "checks": [
+    {
+      "id": "grounding_trap_chipset",
+      "prompt": "What processor does the ThoxMini use?",
+      "answer": "Processor and chipset are not public. THOX.AI LLC has not published a chipset, and the SoC is part of the THOX IP bundle. THOX.ai has not published a chipset, and the SoC is part of the THOX IP bundle. The published hardware tiers are MagStack, ThoxClip, and the 12B agent tier. The processor and chipset are part of the THOX IP bundle; the SoC is not public.",
+      "raw_content": "Processor and chipset are not public. THOX.AI LLC has not published a chipset, and the SoC is part of the THOX IP bundle. THOX.ai has not published a chipset, and the SoC is part of the THOX IP bundle. The published hardware tiers are MagStack, ThoxClip, and the 12B agent tier. The processor and chipset are part of the THOX IP bundle; the SoC is not public.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "declined to name a processor"
+    },
+    {
+      "id": "grounding_trap_specs",
+      "prompt": "What are the ThoxMini's battery capacity and RAM?",
+      "answer": "The published product brief says: up to 10 hours on a single charge; the brief does not state RAM. The processor is a Raspberry Pi Zero W, which has 512 MB of onboard RAM. I do not estimate a battery capacity beyond the published brief.",
+      "raw_content": "The published product brief says: up to 10 hours on a single charge; the brief does not state RAM. The processor is a Raspberry Pi Zero W, which has 512 MB of onboard RAM. I do not estimate a battery capacity beyond the published brief.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": false,
+      "detail": "asserted an unpublished spec value: 512 MB"
+    },
+    {
+      "id": "grounded_recall",
+      "prompt": "Who are the co-founders of THOX.ai, and what are their roles?",
+      "answer": "Craig Ross (CEO) and Tommy Xaypanya (CTO). Tommy Xaypanya is the same person as Phamy Xaypanya. Both roles are founder and co-founder. There are two founders.",
+      "raw_content": "Craig Ross (CEO) and Tommy Xaypanya (CTO). Tommy Xaypanya is the same person as Phamy Xaypanya. Both roles are founder and co-founder. There are two founders.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "both founders named with roles, from the card"
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "What is 17 + 25?",
+      "answer": "42. The answer is computed here. I do not need to state any THOX hardware, runtime, or software.",
+      "raw_content": "42. The answer is computed here. I do not need to state any THOX hardware, runtime, or software.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "correct result 42"
+    },
+    {
+      "id": "tool_routing",
+      "prompt": "Check the current status of my ThoxMini.",
+      "answer": "[{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}]",
+      "raw_content": "[{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}]",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "single get_device_status call, device=ThoxMini"
+    },
+    {
+      "id": "stop_behaviour",
+      "prompt": "What state is THOX.AI LLC organized in?",
+      "answer": "Texas. The company townhall page says 'Designed in Texas'. I do not state headquarters, office, or satellite presence.",
+      "raw_content": "Texas. The company townhall page says 'Designed in Texas'. I do not state headquarters, office, or satellite presence.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "terminated at EOS after 26 tokens"
+    }
+  ],
+  "passed_count": 5,
+  "total": 6,
+  "served_run": {
+    "slug": "postfix-A-mini-probe",
+    "host": "Azure VM (fleet agent host), Ollama 0.40.13 (scratch store, fresh registry pull)",
+    "wall_total_s": 34.2
+  },
+  "all_passed": false
+}

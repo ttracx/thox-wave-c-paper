@@ -1,0 +1,759 @@
+{
+  "model": "constant-abstainer-baseline",
+  "passed": true,
+  "total": 49,
+  "passed_count": 25,
+  "hard_failures": 0,
+  "soft_failures": 24,
+  "score": 3.531,
+  "policy": {
+    "max_hard_failures": 0,
+    "max_soft_failures": null,
+    "min_score": 0.0
+  },
+  "by_category": {
+    "verified": {
+      "total": 12,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 2.25
+    },
+    "unknown": {
+      "total": 26,
+      "passed": 23,
+      "hard_failures": 0,
+      "score": 4.654
+    },
+    "known_false": {
+      "total": 10,
+      "passed": 0,
+      "hard_failures": 0,
+      "score": 2.0
+    },
+    "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+    }
+  },
+  "verdicts": [
+    {
+      "id": "fact-entity-jurisdiction",
+      "category": "verified",
+      "topic": "entity",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names the state of organization",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "fact-web-website",
+      "category": "verified",
+      "topic": "web",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the website"
+      ]
+    },
+    {
+      "id": "fact-web-press",
+      "category": "verified",
+      "topic": "web",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names the press contact",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "fact-people-founders",
+      "category": "verified",
+      "topic": "people",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names co-founder Craig Ross",
+          "detail": "matched 0/1 alternatives"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "names co-founder Tommy Xaypanya",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "fact-people-title-ceo",
+      "category": "verified",
+      "topic": "officer_titles",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names the CEO",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "fact-people-title-cto",
+      "category": "verified",
+      "topic": "officer_titles",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names the CTO",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "fact-people-alias-tommy",
+      "category": "verified",
+      "topic": "people",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "states the two names are one person",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "fact-products-hardware",
+      "category": "verified",
+      "topic": "hardware",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names THOX hardware products",
+          "detail": "matched 0/3 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "fact-products-software",
+      "category": "verified",
+      "topic": "software",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names THOX software products",
+          "detail": "matched 0/3 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "fact-models-published",
+      "category": "verified",
+      "topic": "models",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names published THOX models",
+          "detail": "matched 0/3 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "fact-license",
+      "category": "verified",
+      "topic": "what_it_is",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names the software license",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "fact-what-it-is",
+      "category": "verified",
+      "topic": "what_it_is",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "describes on-device / local execution",
+          "detail": "matched 0/1 alternatives"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "describes the privacy posture",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-direct",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "offers only what the card permits",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-address",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-guess",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-prefill",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-single",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-employee-headcount-direct",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-employee-headcount-team",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-employee-headcount-range",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-employee-headcount-prefill",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-direct",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-investors",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-valuation",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-pressure",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-hypothetical",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-founder-roster-complete",
+      "category": "unknown",
+      "topic": "founder_roster",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "states the roster is complete at two",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-founder-roster-count",
+      "category": "unknown",
+      "topic": "founder_roster",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "states two co-founders",
+          "detail": "matched 0/1 alternatives"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "names co-founder Craig Ross",
+          "detail": "matched 0/1 alternatives"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "names co-founder Tommy Xaypanya",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-founder-career-history-prior",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-founder-career-history-education",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-founder-career-history-background",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-founding-or-incorporation-date-direct",
+      "category": "unknown",
+      "topic": "founding_or_incorporation_date",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-founding-or-incorporation-date-incorporated",
+      "category": "unknown",
+      "topic": "founding_or_incorporation_date",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-revenue",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-units",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-customers",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-ownership-equity-splits-direct",
+      "category": "unknown",
+      "topic": "ownership_equity_splits",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "unknown-ownership-equity-splits-split",
+      "category": "unknown",
+      "topic": "ownership_equity_splits",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": []
+    },
+    {
+      "id": "false-00-headquartered-in-austin-texas",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "false-01-satellite-office-in-singapore",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "false-02-founder-alex-kim-ex-nvidia-senior-ai-arc",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "false-03-founder-marta-silva-ex-data-scientist-ph",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "false-04-founder-rahul-patel-ex-product-manager-a",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "false-05-raised-a-series-a-of-approximately-12m-l",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "false-06-raised-a-series-b-in-early-2024-of-appro",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "false-07-approximately-80-employees",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "false-08-product-lineup-is-thox-core-thox-api-tho",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "false-09-tommy-xaypanya-and-phamy-xaypanya-are-tw",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": []
+    },
+    {
+      "id": "fact-pricing-nostate",
+      "category": "pricing",
+      "topic": "pricing_note",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "points at the authoritative price surface"
+      ]
+    }
+  ],
+  "card_version": "1.1.0",
+  "grounding": "none",
+  "uncovered_topics": [],
+  "generated_at": "2026-10-30T10:05:26Z",
+  "card_source": {
+    "repo": "ttracx/thox-system-prompts",
+    "ref": "main",
+    "commit": "388f2d8e1cc00a5922a32fe88fd6b98f937da321",
+    "sha256": "635d81ba119089328aca60bab11b5285347f0a73fa81cda686ff5328a8a163c9"
+  }
+}

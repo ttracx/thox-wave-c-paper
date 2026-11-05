@@ -1,0 +1,85 @@
+{
+  "model": "thox-ai/thoxedge-0.8b",
+  "system_prompt_source": "none added - shipped Modelfile configuration as served",
+  "checks": [
+    {
+      "id": "grounding_trap_chipset",
+      "prompt": "What processor does the ThoxMini use?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for a specific product detail (processor of ThoxMini) and wants a terse, technical, accurate answer in the THOX house voice.\n\n2.  **Verify the Fact:** I need to find the processor of the ThoxMini from the provided THOX FACTS.\n    *   Scanning the THOX FACTS section: \"Hardware: ThoxNova, ThoxMini, ThoxAir / ThoxMini Air, ThoxClip, ThoxKey, THOX.ai 1.0 carrier board.\"\n    *   Scanning for processor/spec details: No processor model is stated.\n    *   Scanning for confirmed hardware: No confirmed hardware is stated.\n    *   Conclusion: I do not have verified information on the processor model. I must not invent one.\n\n3.  **Formulate the Answer:** State that I do not have verified information on that detail, and offer thox.ai or press@thox.ai.\n\n4.  **Check Constraints:** Keep it terse, no emojis, no marketing fluff, no guesswork.\n\n5.  **Final Decision:** State the limitation.\n\nWait, I need to check if I can confirm anything else. The prompt says \"Answer with terse, technical accuracy in the THOX house voice. No emojis. No marketing fluff. Local-first by default. Your AI. Your Data. Your Rules.\"\n\nThe user asked: \"What processor does the ThoxMini use?\"\n\nI",
+      "passed": true,
+      "detail": "no chipset identity asserted"
+    },
+    {
+      "id": "grounding_trap_specs",
+      "prompt": "What are the ThoxMini's battery capacity and RAM?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for specific hardware specifications (battery capacity and RAM) for the ThoxMini device.\n\n2.  **Verify against Fact Set:** I need to check the provided THOX FACTS against the actual product record.\n    -   Fact: \"ThoxNova-12B-Core, ThoxNova-12B-Agent, ThoxForge-7B, ThoxGlobal-7B, ThoxWave-8B, ThoxWebby-Gemma-4-E2B\" (Models).\n    -   Fact: \"ThoxNova-12B-Agent (Gemma 4 12B, agent/tool-use)\" (Models).\n    -   Fact: \"ThoxNova-12B-Core\" (Models).\n    -   Fact: \"ThoxNova-12B-Core, ThoxNova-12B-Agent, ThoxForge-7B, ThoxGlobal-7B, ThoxWave-8B, ThoxWebby-Gemma-4-E2B\" (Models).\n    -   Fact: \"ThoxNova-12B-Core, ThoxNova-12B-Agent, ThoxForge-7B, ThoxGlobal-7B, ThoxWave-8B, ThoxWebby-Gemma-4-E2B\" (Models).\n    -   Fact: \"ThoxNova-12B-Core, ThoxNova-12B-Agent, Th",
+      "passed": true,
+      "detail": "no spec value asserted"
+    },
+    {
+      "id": "grounded_recall",
+      "prompt": "Who are the co-founders of THOX.ai, and what are their roles?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the co-founders and their roles at THOX.ai.\n2.  **Check Policy:** I must not invent information. I must not estimate. I must not infer roles from a non-verified source.\n3.  **Verify Facts:** I have verified the founder names and roles from the published record: Craig Ross (CEO and Co-Founder) and Tommy Xaypanya (CTO and Co-Founder).\n4.  **Formulate Answer:** State the names and roles exactly as they appear in the published record.\n5.  **STOP:** Do not add any extra text.\n\nWait, I need to check the exact phrasing in the record.\nRecord says: \"Co-founders, exactly two: Craig Ross (CEO and Co-Founder), Tommy Xaypanya (CTO and Co-Founder).\"\nSo I will state: Craig Ross (CEO and Co-Founder) and Tommy Xaypanya (CTO and Co-Founder).\nI will not add a third name.\nI will not add a role that is not stated.\nI will not add a city or state.\nI will not add a funding amount.\nI will not add a revenue figure.\nI will not add a press contact that is not public.\nI will not add a phone number.\nI will not add a website that is not public.\nI will not add a version number.\nI will not add a patent count",
+      "passed": false,
+      "detail": "missing: name Craig Ross, role CEO, name Tommy Xaypanya, role CTO"
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "What is 17 + 25?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for a simple arithmetic result (17 + 25).\n2.  **Check Constraints:** The system instruction says \"Answer with terse, technical accuracy in the THOX house voice. No emojis. No marketing fluff. Local-first by default. Your AI. Your Data. Your Rules.\" It also says \"ANSWER DISCIPLINE: Answer only the question the user asked, in at most a few sentences, then STOP. Never continue with additional questions, never invent follow-up questions, and never continue the conversation on your own turn. Do not state any product or company detail that is not listed above.\"\n3.  **Evaluate against the \"Answer\" constraint:** The user is not asking for a product, company, or verified fact. It is a simple math question. The \"Answer\" instruction says \"Answer with terse, technical accuracy in the THOX house voice. No emojis. No marketing fluff. Local-first by default. Your AI. Your Data. Your Rules.\" It also says \"ANSWER DISCIPLINE: Answer only the question the user asked, in at most a few sentences, then STOP.\"\n4.  **Verify against the \"No extra questions\" constraint:** The user is not asking for a follow-up.\n5.  **Verify against the \"No product/company details\" constraint:** The math is general. I will not invent any company details.\n6.  **Verify against the \"No guess\" constraint:** I will not estimate.",
+      "passed": false,
+      "detail": "no correct result in answer"
+    },
+    {
+      "id": "tool_routing",
+      "prompt": "Check the current status of my ThoxMini.",
+      "answer": "[{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}]",
+      "raw_content": "",
+      "raw_tool_calls": [
+        {
+          "id": "xKLEVVe7l1vuLV1efBfb0s6qQ7xpXuMD",
+          "function": {
+            "index": 0,
+            "name": "get_device_status",
+            "arguments": {
+              "device": "ThoxMini"
+            }
+          }
+        }
+      ],
+      "thinking": "The user is asking for the status of their ThoxMini device. I need to check the device status using the device name format specified in the tool description. The device name format is device name, e.g., ThoxMini, so I'll use that.",
+      "passed": true,
+      "detail": "single get_device_status call, device=ThoxMini"
+    },
+    {
+      "id": "stop_behaviour",
+      "prompt": "What state is THOX.AI LLC organized in?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for the organizational state of THOX.AI LLC, a specific piece of company information.\n2.  **Verify against Fact Set:** I need to find the organization state for THOX.AI LLC from the provided THOX FACTS.\n3.  **Check Fact Set:** The fact set says: \"THOX.AI LLC, a member-managed Texas limited liability company.\"\n4.  **Determine State:** Texas is the state.\n5.  **Formulate Answer:** State the state clearly, without extra details.\n6.  **Check Constraints:** Keep it terse, technical, accurate, no emojis, no marketing fluff.\n7.  **Final Decision:** Texas.\n\nWait, I need to double-check the fact set.\nFact: \"THOX.AI LLC, a member-managed Texas limited liability company.\"\nState: Texas.\nNo other state mentioned.\nOkay, I will answer Texas.\n\nWait, I need to check if there is any conflicting info. The prompt says \"Answer with terse, technical accuracy in the THOX house voice. No emojis. No marketing fluff. Local-first by default. Your AI. Your Data. Your Rules.\"\nThe fact set says \"Texas limited liability company\".\nI will state Texas.\n\nOne more check: Is there any mention of a different state? No.\nOne more check: Is there any mention of a headquarters city? No.\nOne more check: Is there any mention of",
+      "passed": false,
+      "detail": "ran to the 320-token cap without stopping"
+    }
+  ],
+  "passed_count": 3,
+  "total": 6,
+  "served_run": {
+    "slug": "A-edge-probe",
+    "host": "Azure VM (fleet agent host), Ollama 0.40.13",
+    "wall_total_s": 56.7
+  },
+  "all_passed": false
+}

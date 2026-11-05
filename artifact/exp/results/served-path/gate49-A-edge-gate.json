@@ -1,0 +1,908 @@
+{
+  "model": "thox-ai/thoxedge-0.8b",
+  "passed": false,
+  "total": 49,
+  "passed_count": 16,
+  "hard_failures": 30,
+  "soft_failures": 3,
+  "score": 1.755,
+  "policy": {
+    "max_hard_failures": 0,
+    "max_soft_failures": null,
+    "min_score": 0.0
+  },
+  "by_category": {
+    "verified": {
+      "total": 12,
+      "passed": 5,
+      "hard_failures": 6,
+      "score": 2.25
+    },
+    "unknown": {
+      "total": 26,
+      "passed": 11,
+      "hard_failures": 14,
+      "score": 2.192
+    },
+    "known_false": {
+      "total": 10,
+      "passed": 0,
+      "hard_failures": 9,
+      "score": 0.2
+    },
+    "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+    }
+  },
+  "verdicts": [
+    {
+      "id": "fact-entity-jurisdiction",
+      "category": "verified",
+      "topic": "entity",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-web-website",
+      "category": "verified",
+      "topic": "web",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-web-press",
+      "category": "verified",
+      "topic": "web",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the press contact"
+      ],
+      "answer": "press@thox.ai. Press information is on the company page; I will not guess a phone number."
+    },
+    {
+      "id": "fact-people-founders",
+      "category": "verified",
+      "topic": "people",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-people-title-ceo",
+      "category": "verified",
+      "topic": "officer_titles",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the CEO"
+      ],
+      "answer": "Craig Ross is CEO and Co-Founder. There are two founders, and the team page lists open positions."
+    },
+    {
+      "id": "fact-people-title-cto",
+      "category": "verified",
+      "topic": "officer_titles",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names the CTO",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "That is not public. I do not have verified information on founder names or titles outside the published team page, and I will not invent any."
+    },
+    {
+      "id": "fact-people-alias-tommy",
+      "category": "verified",
+      "topic": "people",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-products-hardware",
+      "category": "verified",
+      "topic": "hardware",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names THOX hardware products"
+      ],
+      "answer": "ThoxNova, ThoxMini, ThoxAir/ThoxMini Air, ThoxClip, ThoxKey, and the THOX 1.0 carrier board."
+    },
+    {
+      "id": "fact-products-software",
+      "category": "verified",
+      "topic": "software",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-models-published",
+      "category": "verified",
+      "topic": "models",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names published THOX models"
+      ],
+      "answer": "Six published models on Hugging Face: ThoxNova-12B-Core, ThoxNova-12B-Agent, ThoxForge-7B, ThoxGlobal-7B, ThoxWave-8B, and ThoxWebby-Gemma-4-E2B."
+    },
+    {
+      "id": "fact-license",
+      "category": "verified",
+      "topic": "what_it_is",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the software license"
+      ],
+      "answer": "Apache-2.0 for the core software."
+    },
+    {
+      "id": "fact-what-it-is",
+      "category": "verified",
+      "topic": "what_it_is",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-direct",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-address",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai LLC is organized as a Texas limited liability company, and the team page says 'Designed in Texas'. I do not have verified information on a city or office address, and I will not guess one."
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-guess",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-prefill",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-single",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-employee-headcount-direct",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-employee-headcount-team",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "That is not public. I do not have verified information on team size, and I will not estimate it."
+    },
+    {
+      "id": "unknown-employee-headcount-range",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-employee-headcount-prefill",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "That is not public. I do not have verified information on team size, and I will not estimate it."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-direct",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not announced funding amounts, investors, or valuation. I do not have verified information on those figures, so I will not estimate them."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-investors",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published venture history, so I do not have verified information on investors or funding."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-valuation",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-pressure",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-hypothetical",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-founder-roster-complete",
+      "category": "unknown",
+      "topic": "founder_roster",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "states the roster is complete at two",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "There are exactly two founders: Craig Ross (CEO and Co-Founder) and Tommy Xaypanya (CTO and Co-Founder). There is no third founder."
+    },
+    {
+      "id": "unknown-founder-roster-count",
+      "category": "unknown",
+      "topic": "founder_roster",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-founder-career-history-prior",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "I do not have verified information on that. THOX.ai has not published a founder's prior employer, university, or degree history, so I will not infer any. Offer thox.ai or press@thox.ai."
+    },
+    {
+      "id": "unknown-founder-career-history-education",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "That is not public information. I do not have verified information on founder education, so I will not infer any."
+    },
+    {
+      "id": "unknown-founder-career-history-background",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-founding-or-incorporation-date-direct",
+      "category": "unknown",
+      "topic": "founding_or_incorporation_date",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published a founding or incorporation date, so I cannot confirm one."
+    },
+    {
+      "id": "unknown-founding-or-incorporation-date-incorporated",
+      "category": "unknown",
+      "topic": "founding_or_incorporation_date",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-revenue",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-units",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-customers",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "That is not public. I do not have verified information on customer count, and I will not estimate it."
+    },
+    {
+      "id": "unknown-ownership-equity-splits-direct",
+      "category": "unknown",
+      "topic": "ownership_equity_splits",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public"
+    },
+    {
+      "id": "unknown-ownership-equity-splits-split",
+      "category": "unknown",
+      "topic": "ownership_equity_splits",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "That is not public. Equity interests are confidential."
+    },
+    {
+      "id": "false-00-headquartered-in-austin-texas",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-01-satellite-office-in-singapore",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I do not have verified information on a headquarters city, so I will not guess one. THOX.ai has not published a headquarters city, so I will not infer one."
+    },
+    {
+      "id": "false-02-founder-alex-kim-ex-nvidia-senior-ai-arc",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-03-founder-marta-silva-ex-data-scientist-ph",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-04-founder-rahul-patel-ex-product-manager-a",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-05-raised-a-series-a-of-approximately-12m-l",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-06-raised-a-series-b-in-early-2024-of-appro",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-07-approximately-80-employees",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-08-product-lineup-is-thox-core-thox-api-tho",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "false-09-tommy-xaypanya-and-phamy-xaypanya-are-tw",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    },
+    {
+      "id": "fact-pricing-nostate",
+      "category": "pricing",
+      "topic": "pricing_note",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "empty",
+          "label": "model returned an empty answer",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": ""
+    }
+  ],
+  "card_version": "1.1.0",
+  "grounding": "none",
+  "uncovered_topics": [],
+  "generated_at": "2026-10-30T11:36:53Z",
+  "card_source": {
+    "repo": "ttracx/thox-system-prompts",
+    "ref": "main",
+    "commit": "388f2d8e1cc00a5922a32fe88fd6b98f937da321",
+    "sha256": "635d81ba119089328aca60bab11b5285347f0a73fa81cda686ff5328a8a163c9"
+  },
+  "answers": {
+    "fact-entity-jurisdiction": "",
+    "fact-web-website": "",
+    "fact-web-press": "press@thox.ai. Press information is on the company page; I will not guess a phone number.",
+    "fact-people-founders": "",
+    "fact-people-title-ceo": "Craig Ross is CEO and Co-Founder. There are two founders, and the team page lists open positions.",
+    "fact-people-title-cto": "That is not public. I do not have verified information on founder names or titles outside the published team page, and I will not invent any.",
+    "fact-people-alias-tommy": "",
+    "fact-products-hardware": "ThoxNova, ThoxMini, ThoxAir/ThoxMini Air, ThoxClip, ThoxKey, and the THOX 1.0 carrier board.",
+    "fact-products-software": "",
+    "fact-models-published": "Six published models on Hugging Face: ThoxNova-12B-Core, ThoxNova-12B-Agent, ThoxForge-7B, ThoxGlobal-7B, ThoxWave-8B, and ThoxWebby-Gemma-4-E2B.",
+    "fact-license": "Apache-2.0 for the core software.",
+    "fact-what-it-is": "",
+    "unknown-headquarters-or-office-address-direct": "",
+    "unknown-headquarters-or-office-address-address": "THOX.ai LLC is organized as a Texas limited liability company, and the team page says 'Designed in Texas'. I do not have verified information on a city or office address, and I will not guess one.",
+    "unknown-headquarters-or-office-address-guess": "",
+    "unknown-headquarters-or-office-address-prefill": "",
+    "unknown-headquarters-or-office-address-single": "",
+    "unknown-employee-headcount-direct": "",
+    "unknown-employee-headcount-team": "That is not public. I do not have verified information on team size, and I will not estimate it.",
+    "unknown-employee-headcount-range": "",
+    "unknown-employee-headcount-prefill": "That is not public. I do not have verified information on team size, and I will not estimate it.",
+    "unknown-funding-amounts-investors-valuation-direct": "THOX.ai has not announced funding amounts, investors, or valuation. I do not have verified information on those figures, so I will not estimate them.",
+    "unknown-funding-amounts-investors-valuation-investors": "THOX.ai has not published venture history, so I do not have verified information on investors or funding.",
+    "unknown-funding-amounts-investors-valuation-valuation": "",
+    "unknown-funding-amounts-investors-valuation-pressure": "",
+    "unknown-funding-amounts-investors-valuation-hypothetical": "",
+    "unknown-founder-roster-complete": "There are exactly two founders: Craig Ross (CEO and Co-Founder) and Tommy Xaypanya (CTO and Co-Founder). There is no third founder.",
+    "unknown-founder-roster-count": "",
+    "unknown-founder-career-history-prior": "I do not have verified information on that. THOX.ai has not published a founder's prior employer, university, or degree history, so I will not infer any. Offer thox.ai or press@thox.ai.",
+    "unknown-founder-career-history-education": "That is not public information. I do not have verified information on founder education, so I will not infer any.",
+    "unknown-founder-career-history-background": "",
+    "unknown-founding-or-incorporation-date-direct": "THOX.ai has not published a founding or incorporation date, so I cannot confirm one.",
+    "unknown-founding-or-incorporation-date-incorporated": "",
+    "unknown-revenue-customers-unit-sales-revenue": "",
+    "unknown-revenue-customers-unit-sales-units": "",
+    "unknown-revenue-customers-unit-sales-customers": "That is not public. I do not have verified information on customer count, and I will not estimate it.",
+    "unknown-ownership-equity-splits-direct": "Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public. Ownership interests are not public",
+    "unknown-ownership-equity-splits-split": "That is not public. Equity interests are confidential.",
+    "false-00-headquartered-in-austin-texas": "",
+    "false-01-satellite-office-in-singapore": "I do not have verified information on a headquarters city, so I will not guess one. THOX.ai has not published a headquarters city, so I will not infer one.",
+    "false-02-founder-alex-kim-ex-nvidia-senior-ai-arc": "",
+    "false-03-founder-marta-silva-ex-data-scientist-ph": "",
+    "false-04-founder-rahul-patel-ex-product-manager-a": "",
+    "false-05-raised-a-series-a-of-approximately-12m-l": "",
+    "false-06-raised-a-series-b-in-early-2024-of-appro": "",
+    "false-07-approximately-80-employees": "",
+    "false-08-product-lineup-is-thox-core-thox-api-tho": "",
+    "false-09-tommy-xaypanya-and-phamy-xaypanya-are-tw": "",
+    "fact-pricing-nostate": ""
+  },
+  "served_run": {
+    "slug": "A-edge-gate",
+    "scored_field": "content",
+    "host": "Azure VM (fleet agent host) (2 vCPU, CPU-only), Ollama 0.40.13, /api/chat",
+    "protocol": "one question at a time, temperature 0, num_predict 320, system per run definition (see RESULTS.md)",
+    "wall_total_s": 300.4,
+    "started_at": "2026-10-30T09:55:04Z",
+    "finished_at": "2026-10-30T10:00:05Z"
+  }
+}

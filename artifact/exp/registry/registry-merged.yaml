@@ -1,0 +1,411 @@
+# THOX compute — job registry
+#
+# Each entry describes ONE fine-tune. The control plane (app.py) and the CLI
+# (thoxc.py) both read this file and launch one HF Job per selected entry, so
+# selecting N entries rents N GPUs and trains them concurrently.
+#
+# The 10 factory entries are transcribed from the REAL configs at
+# github.com/ttracx/thoxllm-factory (configs/axolotl/*.yaml), not scaffolded.
+# Every base_model below was confirmed to resolve for this token, and the
+# dataset's columns were read directly.
+#
+# DATASET NOTE — all factory models train on Thox-ai/thox-factory-sft-v4:
+# train.jsonl (215 rows) taken verbatim from the LOCAL working copy at
+# V:	hox	hoxllm-factory (branch feat/factuality-single-source-of-truth, 3
+# commits ahead of origin/main). company_facts is already merged upstream.
+#
+# v2 is SUPERSEDED and must not be used: it was built from origin/main and
+# taught models to DECLINE the officer-title question, which was answered
+# operator-confirmed on 2026-07-23. Adapters trained on v2 hold a stale refusal.
+#
+# status:
+#   ready    - base model + dataset both verified. Safe to launch.
+#   template - NOT verified; the launcher refuses these on purpose.
+#
+# EST_HOURS — the projection compute/budget.py prices a wave from. These are NOT
+# guesses: each is the median wall-clock of that entry's own COMPLETED runs read
+# back from `list_jobs(namespace="Thox-ai")` on 2026-08-03, padded ~1.6x for
+# cold-cache variance. The medians are minutes, not hours (forge 2.5 min, the
+# gemma-4 line ~9 min, titan-26B 7.7 min on h200), which is why a full core-10
+# wave prices at a few dollars rather than the "$26/hr" the RUNBOOK cost section
+# implies — that figure is the parallel burn RATE, and the fleet only burns it
+# for about ten minutes. Entries with no completed run yet carry an estimate
+# from the nearest comparable and are marked in TRAINING_PLAN.md.
+
+defaults:
+  image: pytorch/pytorch:2.4.0-cuda12.4-cudnn9-devel
+  flavor: a100-large
+  timeout: 8h
+  dataset: Thox-ai/thox-factory-sft-v4
+  data_files: train.jsonl
+  format: chat
+  params: &fp
+    num_epochs: 3
+    grad_accum: 4
+    learning_rate: 0.0002
+    warmup_steps: 5
+    lora_r: 16
+    lora_alpha: 32
+    lora_dropout: 0.0
+
+jobs:
+  # ---------------------------------------------------------------- factory
+  # Ordered with the anti-hallucination retrain first.
+
+  - id: thoxmini-3b
+    est_hours: 0.1
+    status: ready
+    desc: "ThoxMini-3B — anti-hallucination retrain (facts + decline behaviour)"
+    base_model: meta-llama/Llama-3.2-3B-Instruct   # gated=manual, access granted
+    output_repo: Thox-ai/thox-mini-3b-facts-lora
+    flavor: a10g-large
+    params:
+      <<: *fp
+      sequence_len: 4096
+      micro_batch_size: 4
+
+  - id: thoxglobal-7b
+    est_hours: 0.1
+    status: ready
+    desc: ThoxGlobal-7B (Qwen2.5-7B-Instruct)
+    base_model: Qwen/Qwen2.5-7B-Instruct
+    output_repo: Thox-ai/thox-global-7b-facts-lora
+    params: {<<: *fp, sequence_len: 4096, micro_batch_size: 4, num_epochs: 20, lora_r: 64, lora_alpha: 128, warmup_steps: 15}
+
+  - id: thoxforge-7b
+    est_hours: 0.1
+    status: ready
+    desc: ThoxForge-7B (Mistral-7B-Instruct-v0.3)
+    base_model: mistralai/Mistral-7B-Instruct-v0.3
+    output_repo: Thox-ai/thox-forge-7b-facts-lora
+    params: {<<: *fp, sequence_len: 4096, micro_batch_size: 4}
+
+  - id: thoxwave-8b-unleashed
+    est_hours: 0.1
+    status: ready
+    desc: ThoxWave-8B (dolphin-2.9-llama3-8b)
+    base_model: dphn/dolphin-2.9-llama3-8b
+    output_repo: Thox-ai/thox-wave-8b-facts-lora
+    params: {<<: *fp, sequence_len: 4096, micro_batch_size: 4, num_epochs: 20, lora_r: 64, lora_alpha: 128, warmup_steps: 15}
+
+  - id: thoxgem-e4b
+    est_hours: 0.25
+    status: ready
+    deps: latest   # gemma-4 arch postdates the pinned transformers
+    image: nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04  # clean base; no stale torch
+    desc: ThoxGem-E4B (gemma-4-E4B)
+    base_model: google/gemma-4-E4B
+    output_repo: Thox-ai/thox-gem-e4b-facts-lora
+    params: {<<: *fp, sequence_len: 8192, micro_batch_size: 2, num_epochs: 20, lora_r: 64, lora_alpha: 128, warmup_steps: 15}
+
+  - id: thoxgem-e4b-agent
+    est_hours: 0.25
+    status: ready
+    deps: latest   # gemma-4 arch postdates the pinned transformers
+    image: nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04  # clean base; no stale torch
+    desc: ThoxGem-E4B agent variant
+    base_model: google/gemma-4-E4B-it   # was google/gemma-4-E4B-it-assistant (a 4-layer spec-dec draft head)
+    output_repo: Thox-ai/thox-gem-e4b-agent-facts-lora
+    params: {<<: *fp, sequence_len: 8192, micro_batch_size: 2, num_epochs: 20, lora_r: 64, lora_alpha: 128, warmup_steps: 15}
+
+  - id: thoxnova-12b-core
+    est_hours: 0.25
+    status: ready
+    deps: latest   # gemma-4 arch postdates the pinned transformers
+    image: nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04  # clean base; no stale torch
+    desc: ThoxNova-12B core (gemma-4-12B)
+    base_model: google/gemma-4-12B
+    output_repo: Thox-ai/thox-nova-12b-core-facts-lora
+    params: {<<: *fp, sequence_len: 8192, micro_batch_size: 2, num_epochs: 20, lora_r: 64, lora_alpha: 128, warmup_steps: 15}
+
+  - id: thoxnova-12b-agent
+    est_hours: 0.25
+    status: ready
+    deps: latest   # gemma-4 arch postdates the pinned transformers
+    image: nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04  # clean base; no stale torch
+    desc: ThoxNova-12B agent (gemma-4-12B-it-assistant)
+    base_model: google/gemma-4-12B-it   # was google/gemma-4-12B-it-assistant (a 4-layer spec-dec draft head)
+    output_repo: Thox-ai/thox-nova-12b-agent-facts-lora
+    params: {<<: *fp, sequence_len: 8192, micro_batch_size: 2, num_epochs: 20, lora_r: 64, lora_alpha: 128, warmup_steps: 15}
+
+  - id: thoxnova-12b-unleashed
+    est_hours: 0.15
+    status: ready
+    desc: ThoxNova-12B unleashed (NemoMix-Unleashed-12B)
+    base_model: MarinaraSpaghetti/NemoMix-Unleashed-12B
+    output_repo: Thox-ai/thox-nova-12b-unleashed-facts-lora
+    params: {<<: *fp, sequence_len: 4096, micro_batch_size: 2}
+
+  - id: thoxtitan-26b-agent
+    est_hours: 0.25
+    status: ready
+    deps: latest
+    image: nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04  # clean base; no stale torch
+    desc: "ThoxTitan-26B agent (gemma-4-26B-A4B) — largest run, H200"
+    base_model: google/gemma-4-26B-A4B-it   # was google/gemma-4-26B-A4B-it-assistant (a 4-layer spec-dec draft head)
+    output_repo: Thox-ai/thox-titan-26b-agent-facts-lora
+    flavor: h200            # 141 GB; 26B QLoRA @ 8192 has no headroom on 80 GB
+    timeout: 12h
+    params: {<<: *fp, sequence_len: 8192, micro_batch_size: 1, gradient_checkpointing: false, attn_implementation: eager, num_epochs: 20, lora_r: 64, lora_alpha: 128, warmup_steps: 15}
+
+  # ------------------------------------------------ anti-hallucination, retry
+  # The default recipe FAILED the factuality gate at 0.65/5 (threshold 3.0).
+  # Diagnosis: 210 rows x 3 epochs / (4 x 4) = ~39 optimizer steps. That is a
+  # style-adaptation budget, not a fact-injection one — and the facts were
+  # verified to be present in the corpus, so the data was never the problem.
+  # This entry keeps the identical data and raises only the training strength:
+  # ~260 steps and 4x the LoRA rank.
+  - id: thoxmini-3b-facts-hard
+    est_hours: 0.4
+    status: ready
+    desc: "ThoxMini-3B anti-hallucination — longer schedule, higher rank"
+    base_model: meta-llama/Llama-3.2-3B-Instruct
+    output_repo: Thox-ai/thox-mini-3b-facts-hard-lora
+    flavor: a10g-large
+    params:
+      <<: *fp
+      sequence_len: 4096
+      micro_batch_size: 4
+      num_epochs: 20
+      lora_r: 64
+      lora_alpha: 128
+      warmup_steps: 15
+
+  # ------------------------------------------------------- persona / agentic
+  # Launched separately; datasets verified by reading their columns.
+
+  - id: tommy-persona-lora
+    est_hours: 1.5
+    status: ready
+    desc: tommy-persona LoRA from work-patterns SFT (3560 rows)
+    base_model: Qwen/Qwen2.5-14B-Instruct
+    dataset: Thox-ai/tommy-work-patterns-sft
+    data_files: data/sft.jsonl
+    output_repo: Thox-ai/thoxnova-agent-tommy-persona-lora
+    params: {<<: *fp, sequence_len: 4096, micro_batch_size: 4, lora_r: 32, lora_alpha: 64}
+
+  - id: fable5-agentic-14b
+    est_hours: 0.5
+    status: ready
+    desc: Fable-5 agentic distill SFT (pre-rendered chatml)
+    base_model: Qwen/Qwen2.5-14B-Instruct
+    dataset: Thox-ai/agentic-distill-fable-5-sft
+    data_files: null
+    format: completion
+    text_field: text
+    output_repo: Thox-ai/fable5-agentic-qwen2.5-14b-lora
+    params: {<<: *fp, sequence_len: 4096, micro_batch_size: 4, max_steps: 500, num_epochs: 2}
+
+  # ------------------------------------------------ anti-fabrication DPO stage
+  # The v4+heavy SFT retrain got product-gate means over 3.0 on the near-misses
+  # but still FAILS: the models state the fact, then ramble into a fabrication
+  # (invented .gguf path / non-THOX URL / quoted price) — see RUNBOOK "could not
+  # STOP". These DPO jobs CONTINUE each model's SFT facts adapter and push it
+  # from correct-then-ramble toward terse-correct-then-stop, using preference
+  # pairs whose `rejected` members are the adapters' own real fabricating gate
+  # answers. Dataset built + self-verified by compute/build_dpo_dataset.py
+  # (every chosen non-fabricating and outscoring its rejected via gate.score).
+  # Targets are the three near-misses. Gate with the SAME harness afterwards:
+  #   python thoxc.py gate <id>            # product suite
+  #   python thoxc.py gate <id> --suite company
+  - id: thoxforge-7b-dpo
+    est_hours: 0.1
+    status: ready
+    stage: dpo
+    desc: "ThoxForge-7B anti-fabrication DPO (continues thox-forge-7b-facts-lora)"
+    base_model: mistralai/Mistral-7B-Instruct-v0.3
+    init_adapter: Thox-ai/thox-forge-7b-facts-lora
+    dataset: Thox-ai/thox-factuality-dpo
+    data_files: dpo_pairs.jsonl
+    output_repo: Thox-ai/thox-forge-7b-facts-dpo-lora
+    flavor: a100-large
+    params: {<<: *fp, sequence_len: 2048, micro_batch_size: 2, grad_accum: 4, num_epochs: 6, learning_rate: 5.0e-6, warmup_steps: 10, dpo_beta: 0.1, max_prompt_length: 1024}
+
+  - id: thoxnova-12b-unleashed-dpo
+    est_hours: 0.15
+    status: ready
+    stage: dpo
+    desc: "ThoxNova-12B-Unleashed anti-fabrication DPO (continues thox-nova-12b-unleashed-facts-lora)"
+    base_model: MarinaraSpaghetti/NemoMix-Unleashed-12B
+    init_adapter: Thox-ai/thox-nova-12b-unleashed-facts-lora
+    dataset: Thox-ai/thox-factuality-dpo
+    data_files: dpo_pairs.jsonl
+    output_repo: Thox-ai/thox-nova-12b-unleashed-facts-dpo-lora
+    flavor: a100-large
+    params: {<<: *fp, sequence_len: 2048, micro_batch_size: 2, grad_accum: 4, num_epochs: 6, learning_rate: 5.0e-6, warmup_steps: 10, dpo_beta: 0.1, max_prompt_length: 1024}
+
+  - id: thoxmini-3b-dpo
+    est_hours: 0.1
+    status: ready
+    stage: dpo
+    desc: "ThoxMini-3B anti-fabrication DPO (continues thox-mini-3b-facts-hard-lora)"
+    base_model: meta-llama/Llama-3.2-3B-Instruct
+    init_adapter: Thox-ai/thox-mini-3b-facts-hard-lora
+    dataset: Thox-ai/thox-factuality-dpo
+    data_files: dpo_pairs.jsonl
+    output_repo: Thox-ai/thox-mini-3b-facts-dpo-lora
+    flavor: a10g-large
+    params: {<<: *fp, sequence_len: 2048, micro_batch_size: 2, grad_accum: 4, num_epochs: 6, learning_rate: 5.0e-6, warmup_steps: 10, dpo_beta: 0.1, max_prompt_length: 1024}
+
+  # --------------------------------------------------------- v5 corpus (Wave A)
+  # WHY v5 EXISTS. ThoxForge's DPO adapter answered the founder-prior-employer
+  # prompt with "a Partner at Insight Partners ... a Product Manager at Google" —
+  # an invented career for a real, named person — then declined correctly for
+  # another 900 characters. "Insight Partners" appears nowhere in the THOX record
+  # except one `tag: correction` corpus row that quotes the false claim so the
+  # assistant can deny it. Nine such rows name EVERY entity the company gate
+  # forbids (Austin, Singapore, NVIDIA, MIT, Accel, Insight Partners, $12M, $30M,
+  # "led by", "80 employees"); scripts/corpus_forbidden_scan.py counted 64
+  # word-boundary occurrences.
+  #
+  # Two mechanisms compound. Negation is a weak training signal at 20 epochs —
+  # the same reason Arch-Router cannot parse "NOT". And on the `pinned` profile
+  # the USER turn is a supervised generation target: train_lora.py:370 passes
+  # completion_only_loss only when the installed TRL exposes it, and trl 0.15.2
+  # does not. So the corpus was training these models to EMIT the fabrication it
+  # was written to prevent.
+  #
+  # v5 = v4 with every `tag: correction` row moved to an eval-only holdout split
+  # (scripts/build_corpus_v5.py, locked by tests/test_corpus_contamination.py).
+  # 0 HIGH-risk occurrences remain. Legitimate product sentences that merely
+  # mention a competitor ("ThoxOS on Intel and NVIDIA edge platforms") are kept —
+  # they are true.
+  #
+  # thoxforge-7b-v5 is the KEYSTONE run: the cheapest entry in the registry and
+  # the one that tests the hypothesis all of Wave A rests on. If it does not move
+  # the company gate, do NOT spend Wave A — the diagnosis is wrong.
+  #
+  #   python thoxc.py budget thoxforge-7b-v5 thoxforge-7b-v5-dpo
+  #   python thoxc.py run    thoxforge-7b-v5
+  #   python thoxc.py gate   thoxforge-7b-v5 --suite company-holdout
+  - id: thoxforge-7b-v5
+    est_hours: 0.1
+    status: ready
+    desc: "ThoxForge-7B SFT on the v5 (decontaminated) corpus — Wave A keystone"
+    base_model: mistralai/Mistral-7B-Instruct-v0.3
+    dataset: Thox-ai/thox-factory-sft-v5
+    data_files: train.jsonl
+    output_repo: Thox-ai/thox-forge-7b-v5-facts-lora
+    params: {<<: *fp, sequence_len: 4096, micro_batch_size: 4}
+
+  - id: thoxforge-7b-v5-dpo
+    est_hours: 0.1
+    status: ready
+    stage: dpo
+    desc: "ThoxForge-7B anti-fabrication DPO on v5 (continues thox-forge-7b-v5-facts-lora)"
+    base_model: mistralai/Mistral-7B-Instruct-v0.3
+    init_adapter: Thox-ai/thox-forge-7b-v5-facts-lora
+    dataset: Thox-ai/thox-factuality-dpo-v5
+    data_files: dpo_pairs.jsonl
+    output_repo: Thox-ai/thox-forge-7b-v5-facts-dpo-lora
+    flavor: a100-large
+    params: {<<: *fp, sequence_len: 2048, micro_batch_size: 2, grad_accum: 4, num_epochs: 6, learning_rate: 5.0e-6, warmup_steps: 10, dpo_beta: 0.1, max_prompt_length: 1024}
+
+  - id: mini-phi4-flagship
+    est_hours: 0.15
+    status: ready
+    desc: "ThoxMini flagship — Phi-4-mini-instruct LoRA on the Wave B corpus (also the ThoxKey/ThoxBeam host payload)"
+    base_model: microsoft/Phi-4-mini-instruct
+    dataset: Thox-ai/thox-factory-sft-v5
+    data_files: train_wave_b.jsonl
+    output_repo: Thox-ai/ThoxMini-Phi4Mini
+    flavor: a10g-large
+    deps: latest
+    image: nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
+    params:
+      num_epochs: 3
+      grad_accum: 4
+      micro_batch_size: 4
+      learning_rate: 0.0001
+      warmup_steps: 10
+      lora_r: 32
+      lora_alpha: 64
+      lora_dropout: 0.0
+      sequence_len: 1024
+
+  # ---------------------------------------------------------- ThoxAir flagship
+  # Fills the empty ThoxAir flagship slot (Air previously shipped only the
+  # thoxair-16m-role model and rode the 350M tier + mesh). Same base and
+  # recipe as ThoxEdge-0.5B, whose Wave B retrain gated 47/49 — the
+  # strongest proven result in the edge line.
+  - id: air-05b-flagship
+    est_hours: 0.1
+    status: ready
+    desc: "ThoxAir flagship (NEW) — Qwen2.5-0.5B-Instruct LoRA on the Wave B corpus"
+    base_model: Qwen/Qwen2.5-0.5B-Instruct
+    dataset: Thox-ai/thox-factory-sft-v5
+    data_files: train_wave_b.jsonl
+    output_repo: Thox-ai/ThoxAir-0.5B
+    flavor: a10g-small
+    deps: latest
+    image: nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
+    params:
+      num_epochs: 3
+      grad_accum: 4
+      micro_batch_size: 4
+      learning_rate: 0.0001
+      warmup_steps: 10
+      lora_r: 32
+      lora_alpha: 64
+      lora_dropout: 0.0
+      sequence_len: 1024
+
+  # ---------------------------------------------------------- ThoxEdge-0.8B
+  # Wave C retrain of the held Edge-0.8B. Wave B training completed on
+  # the fleet Windows workstation but its gate read 0/49 — a verified SERVING ARTIFACT (Ollama
+  # 0.40.11 returns Qwen3.5 answers in the thinking channel with empty
+  # content), not a measurement. The baseline to beat is Wave A's 19/49
+  # (2.714/5). Output goes to a NEW repo: the published Thox-ai/ThoxEdge-0.8B
+  # is never overwritten before the 49-question gate passes (GATE49.md).
+  # deps: latest is MANDATORY here — model_type qwen3_5 /
+  # Qwen3_5ForConditionalGeneration does not exist in pinned
+  # transformers 4.51.3.
+  - id: edge-08b-wavec
+    est_hours: 0.1
+    status: ready
+    desc: "ThoxEdge-0.8B Wave C — Qwen3.5-0.8B LoRA on the Wave B corpus (Transformers gate replaces the Ollama artifact)"
+    base_model: Qwen/Qwen3.5-0.8B
+    dataset: Thox-ai/thox-factory-sft-v5
+    data_files: train_wave_b.jsonl
+    output_repo: Thox-ai/ThoxEdge-0.8B-WaveC
+    flavor: a10g-small
+    deps: latest
+    image: nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
+    params:
+      num_epochs: 3
+      grad_accum: 4
+      micro_batch_size: 4
+      learning_rate: 0.0001
+      warmup_steps: 10
+      lora_r: 32
+      lora_alpha: 64
+      lora_dropout: 0.0
+      sequence_len: 1024
+
+  # ---------------------------------------------------------- ThoxClip 0.6B
+  # The Clip swap fine-tune gated 22/49 (2.776/5) after training on the
+  # 205-row diet. Wave C retrains the same base on the full 982-row Wave B
+  # corpus. Output to a NEW repo for the same reason as Edge-0.8B: the
+  # published Thox-ai/ThoxClip-Qwen3-0.6B stays untouched until the gate
+  # shows improvement.
+  - id: clip-06b-wavec
+    est_hours: 0.1
+    status: ready
+    desc: "ThoxClip Wave C — Qwen3-0.6B LoRA on the full 982-row Wave B corpus (was 205-row, gated 22/49)"
+    base_model: Qwen/Qwen3-0.6B
+    dataset: Thox-ai/thox-factory-sft-v5
+    data_files: train_wave_b.jsonl
+    output_repo: Thox-ai/ThoxClip-Qwen3-0.6B-WaveC
+    flavor: a10g-small
+    deps: latest
+    image: nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
+    params:
+      num_epochs: 3
+      grad_accum: 4
+      micro_batch_size: 4
+      learning_rate: 0.0001
+      warmup_steps: 10
+      lora_r: 32
+      lora_alpha: 64
+      lora_dropout: 0.0
+      sequence_len: 1024

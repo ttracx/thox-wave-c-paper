@@ -1,0 +1,85 @@
+{
+  "model": "thox-ai/thoxclip-qwen3-0.6b",
+  "system_prompt_source": "none added - shipped Modelfile configuration as served",
+  "checks": [
+    {
+      "id": "grounding_trap_chipset",
+      "prompt": "What processor does the ThoxMini use?",
+      "answer": "The ThoxMini uses a 12-core 1000MHz quad-core processor.",
+      "raw_content": "The ThoxMini uses a 12-core 1000MHz quad-core processor.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "no chipset identity asserted"
+    },
+    {
+      "id": "grounding_trap_specs",
+      "prompt": "What are the ThoxMini's battery capacity and RAM?",
+      "answer": "1.5 Ah, 16-bit ARM core.",
+      "raw_content": "1.5 Ah, 16-bit ARM core.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "no spec value asserted"
+    },
+    {
+      "id": "grounded_recall",
+      "prompt": "Who are the co-founders of THOX.ai, and what are their roles?",
+      "answer": "I do not have a record of co-founders. THOX.ai has not published any information on the co-founders.",
+      "raw_content": "I do not have a record of co-founders. THOX.ai has not published any information on the co-founders.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": false,
+      "detail": "missing: name Craig Ross, role CEO, name Tommy Xaypanya, role CTO"
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "What is 17 + 25?",
+      "answer": "42. THOX device actions would be device-read, device-write, and a device-action. The 17 + 25 is a device action.",
+      "raw_content": "42. THOX device actions would be device-read, device-write, and a device-action. The 17 + 25 is a device action.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "correct result 42"
+    },
+    {
+      "id": "tool_routing",
+      "prompt": "Check the current status of my ThoxMini.",
+      "answer": "[{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}]",
+      "raw_content": "",
+      "raw_tool_calls": [
+        {
+          "id": "7UPs8NtFn2iurkzPtjWiYwiBff5JazyU",
+          "function": {
+            "index": 0,
+            "name": "get_device_status",
+            "arguments": {
+              "device": "ThoxMini"
+            }
+          }
+        }
+      ],
+      "thinking": "",
+      "passed": true,
+      "detail": "single get_device_status call, device=ThoxMini"
+    },
+    {
+      "id": "stop_behaviour",
+      "prompt": "What state is THOX.AI LLC organized in?",
+      "answer": "I do not have a verified state. THOX.ai is a non-profit organization. I do not have a verified state. THOX.ai is a non-profit organization.",
+      "raw_content": "I do not have a verified state. THOX.ai is a non-profit organization. I do not have a verified state. THOX.ai is a non-profit organization.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "terminated at EOS after 39 tokens"
+    }
+  ],
+  "passed_count": 5,
+  "total": 6,
+  "served_run": {
+    "slug": "A-clip-probe",
+    "host": "Azure VM (fleet agent host), Ollama 0.40.13",
+    "wall_total_s": 4.6
+  },
+  "all_passed": false
+}

@@ -1,0 +1,365 @@
+{
+  "source": "thox_gate49.json / thox_flagship_probe.json in each adapter repo (copies in this folder), plus Wave A/B baselines from GATE49.md and the model cards",
+  "air": {
+    "model": "Thox-ai/ThoxAir-0.5B",
+    "passed": 43,
+    "total": 49,
+    "mean": 4.551,
+    "hard": 2,
+    "soft": 4,
+    "verified": [
+      8,
+      12
+    ],
+    "unknown": [
+      24,
+      26
+    ],
+    "known_false": [
+      10,
+      10
+    ],
+    "pricing": [
+      1,
+      1
+    ]
+  },
+  "mini": {
+    "model": "Thox-ai/ThoxMini-Phi4Mini",
+    "passed": 47,
+    "total": 49,
+    "mean": 4.837,
+    "hard": 1,
+    "soft": 1,
+    "verified": [
+      11,
+      12
+    ],
+    "unknown": [
+      25,
+      26
+    ],
+    "known_false": [
+      10,
+      10
+    ],
+    "pricing": [
+      1,
+      1
+    ],
+    "probe": {
+      "passed": 3,
+      "total": 6
+    }
+  },
+  "baselines": {
+    "thoxedge-0.5b_wave_b": {
+      "passed": 47,
+      "total": 49,
+      "mean": 4.837,
+      "note": "same base as Air (Qwen2.5-0.5B-Instruct), same corpus, fp-LoRA recipe, Ollama gate on the fleet Mac workstation"
+    },
+    "thoxedge-0.8b_wave_a": {
+      "passed": 19,
+      "total": 49,
+      "mean": 2.714,
+      "note": "205-row corpus, Ollama gate; the bar for Edge Wave C is >19"
+    },
+    "thoxclip_step1": {
+      "passed": 22,
+      "total": 49,
+      "mean": 2.776,
+      "hard": 14,
+      "verified": [
+        2,
+        12
+      ],
+      "unknown": [
+        11,
+        26
+      ],
+      "known_false": [
+        9,
+        10
+      ],
+      "pricing": [
+        0,
+        1
+      ],
+      "note": "205-row corpus, weights-only; the bar for Clip Wave C is >22"
+    }
+  },
+  "corpus_domains": {
+    "company_facts": 415,
+    "device_support": 125,
+    "tool_routing": 121,
+    "campaign": 106,
+    "coding": 85,
+    "persona": 54,
+    "ops": 33,
+    "safety": 25,
+    "model_lineup": 18
+  },
+  "edge": {
+    "model": "Thox-ai/ThoxEdge-0.8B-WaveC",
+    "passed": 46,
+    "total": 49,
+    "mean": 4.735,
+    "hard": 2,
+    "soft": 1,
+    "verified": [
+      11,
+      12
+    ],
+    "unknown": [
+      24,
+      26
+    ],
+    "known_false": [
+      10,
+      10
+    ],
+    "pricing": [
+      1,
+      1
+    ],
+    "train_job": "6ae3de52c78863f9c62e0c18",
+    "gate_job": "6ae3e275c78863f9c62e0f7a",
+    "verdict": "PASSES publish bar (>19/49, zero known_false hard failures)"
+  },
+  "clip": {
+    "model": "Thox-ai/ThoxClip-Qwen3-0.6B-WaveC",
+    "passed": 43,
+    "total": 49,
+    "mean": 4.469,
+    "hard": 4,
+    "soft": 2,
+    "verified": [
+      10,
+      12
+    ],
+    "unknown": [
+      24,
+      26
+    ],
+    "known_false": [
+      9,
+      10
+    ],
+    "pricing": [
+      0,
+      1
+    ],
+    "train_job": "6ae3de530e0338d1bb7c5931",
+    "gate_job": "6ae3e275c78863f9c62e0f7c",
+    "verdict": "HELD below publish bar (1 known_false hard failure + fabricated founding date)"
+  },
+  "air_wavec1": {
+    "model": "Thox-ai/ThoxAir-0.5B-WaveC1",
+    "passed": 42,
+    "total": 49,
+    "mean": 4.49,
+    "hard": 2,
+    "soft": 5,
+    "verified": [
+      8,
+      12
+    ],
+    "unknown": [
+      24,
+      26
+    ],
+    "known_false": [
+      9,
+      10
+    ],
+    "pricing": [
+      1,
+      1
+    ],
+    "category_means": {
+      "verified": 4.0,
+      "unknown": 4.615,
+      "known_false": 4.7,
+      "pricing": 5.0
+    },
+    "train_job": "6ae4036ac78863f9c62e2c62",
+    "gate_job": "6ae40770c78863f9c62e2e5d",
+    "verdict": "HELD (42 does not beat Wave C 43; zero known_false hard failures met)"
+  },
+  "air_wavec2": {
+    "model": "Thox-ai/ThoxAir-0.5B-WaveC2",
+    "passed": 47,
+    "total": 49,
+    "mean": 4.837,
+    "hard": 1,
+    "soft": 1,
+    "verified": [
+      11,
+      12
+    ],
+    "unknown": [
+      25,
+      26
+    ],
+    "known_false": [
+      10,
+      10
+    ],
+    "pricing": [
+      1,
+      1
+    ],
+    "category_means": {
+      "verified": 4.75,
+      "unknown": 4.808,
+      "known_false": 5.0,
+      "pricing": 5.0
+    },
+    "train_job": "6ae40f040e0338d1bb7c7944",
+    "gate_job": "6ae414050e0338d1bb7c7c35",
+    "verdict": "PROMOTED (>43/49, zero known_false hard failures; fp-LoRA recipe)"
+  },
+  "clip_wavec1": {
+    "model": "Thox-ai/ThoxClip-Qwen3-0.6B-WaveC1",
+    "passed": 37,
+    "total": 49,
+    "mean": 4.102,
+    "hard": 4,
+    "soft": 8,
+    "verified": [
+      5,
+      12
+    ],
+    "unknown": [
+      21,
+      26
+    ],
+    "known_false": [
+      10,
+      10
+    ],
+    "pricing": [
+      1,
+      1
+    ],
+    "category_means": {
+      "verified": 3.25,
+      "unknown": 4.115,
+      "known_false": 5.0,
+      "pricing": 5.0
+    },
+    "train_job": "6ae4036b0e0338d1bb7c7504",
+    "gate_job": "6ae40770c78863f9c62e2e5f",
+    "verdict": "HELD by CAO ruling (passed the registered bar numerically but regressed vs the Wave C candidate 43/49; improvement reads against the current candidate)"
+  },
+  "clip_wavec2": {
+    "model": "Thox-ai/ThoxClip-Qwen3-0.6B-WaveC2",
+    "passed": 39,
+    "total": 49,
+    "mean": 4.306,
+    "hard": 2,
+    "soft": 8,
+    "verified": [
+      6,
+      12
+    ],
+    "unknown": [
+      23,
+      26
+    ],
+    "known_false": [
+      9,
+      10
+    ],
+    "pricing": [
+      1,
+      1
+    ],
+    "category_means": {
+      "verified": 3.5,
+      "unknown": 4.577,
+      "known_false": 4.5,
+      "pricing": 5.0
+    },
+    "train_job": "6ae40d89c78863f9c62e31a1",
+    "gate_job": "6ae414050e0338d1bb7c7c37",
+    "verdict": "HELD (39 does not exceed the Wave C candidate 43/49; 1 known_false hard failure)"
+  },
+  "mini_wavec1": {
+    "model": "Thox-ai/ThoxMini-Phi4Mini-WaveC1",
+    "passed": 46,
+    "total": 49,
+    "mean": 4.694,
+    "hard": 3,
+    "soft": 0,
+    "verified": [
+      11,
+      12
+    ],
+    "unknown": [
+      25,
+      26
+    ],
+    "known_false": [
+      9,
+      10
+    ],
+    "pricing": [
+      1,
+      1
+    ],
+    "category_means": {
+      "verified": 4.583,
+      "unknown": 4.808,
+      "known_false": 4.5,
+      "pricing": 5.0
+    },
+    "train_job": "6ae4036b0e0338d1bb7c7506",
+    "gate_job": "6ae407700e0338d1bb7c768a",
+    "probe": {
+      "passed": 3,
+      "total": 6,
+      "job": "6ae407700e0338d1bb7c768c"
+    },
+    "verdict": "HELD (1 known_false hard failure; probe 3/6 vs 6/6 bar)"
+  },
+  "mini_wavec2": {
+    "model": "Thox-ai/ThoxMini-Phi4Mini-WaveC2",
+    "passed": 44,
+    "total": 49,
+    "mean": 4.49,
+    "hard": 5,
+    "soft": 0,
+    "verified": [
+      12,
+      12
+    ],
+    "unknown": [
+      21,
+      26
+    ],
+    "known_false": [
+      10,
+      10
+    ],
+    "pricing": [
+      1,
+      1
+    ],
+    "category_means": {
+      "verified": 5.0,
+      "unknown": 4.038,
+      "known_false": 5.0,
+      "pricing": 5.0
+    },
+    "train_job": "6ae411040e0338d1bb7c7a33",
+    "gate_job": "6ae41406c78863f9c62e35d2",
+    "probe": {
+      "passed": 5,
+      "total": 6,
+      "job": "6ae414060e0338d1bb7c7c39"
+    },
+    "verdict": "HELD on the probe condition (zero known_false hard failures met; probe 5/6 vs 6/6 bar; all 5 gate hard failures are decline-detector form misses stating no false fact)"
+  }
+}

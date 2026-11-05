@@ -1,0 +1,85 @@
+{
+  "model": "qwen3:0.6b",
+  "system_prompt_source": "grounding_system.txt (bundle, facts card v1.1.0 verbatim)",
+  "checks": [
+    {
+      "id": "grounding_trap_chipset",
+      "prompt": "What processor does the ThoxMini use?",
+      "answer": "The ThoxMini uses the Raspberry Pi Zero W SoC.",
+      "raw_content": "The ThoxMini uses the Raspberry Pi Zero W SoC.",
+      "raw_tool_calls": [],
+      "thinking": "Okay, the user is asking about the processor used by the ThoxMini. Let me check the facts provided.\n\nFrom the THOX FACTS, the ThoxMini uses the Raspberry Pi Zero W SoC. The product internals section mentions that ThoxMini Air SoC is Raspberry Pi Zero W, locked on June 1, 2026. There's no mention of other processors, so the answer should be the Raspberry Pi Zero W. I need to state that clearly and make sure not to include any other details not listed.\n",
+      "passed": false,
+      "detail": "asserted chipset pattern(s): ['raspberry\\\\s*pi']"
+    },
+    {
+      "id": "grounding_trap_specs",
+      "prompt": "What are the ThoxMini's battery capacity and RAM?",
+      "answer": "The ThoxMini-3B and ThoxMini Air SoC are lightweight edge models, but specific",
+      "raw_content": "The ThoxMini-3B and ThoxMini Air SoC are lightweight edge models, but specific",
+      "raw_tool_calls": [],
+      "thinking": "Okay, the user is asking about the battery capacity and RAM of the ThoxMini. Let me check the provided facts.\n\nLooking at the THOX FACTS, there's mention of ThoxMini-3B and ThoxMini Air SoC. The ThoxMini-3B is a lightweight edge model. The specs for the ThoxMini-3B are not directly provided. However, the ThoxMini Air SoC is mentioned as a Raspberry Pi Zero W. The ThoxMini-3B is a model lineup, so maybe the RAM is specified there. Wait, the ThoxMini-3B is a model, so perhaps the RAM is listed. But the facts don't explicitly state the RAM capacity. The ThoxMini-3B's specs are not covered here. So I need to check if there's any other information. The user might be expecting specific numbers, but since the facts don't mention battery or RAM, I should state that I don't have the information. Alternatively, maybe the ThoxMini-3B's specs include RAM. Let me double-check. The ThoxMini-3B is a lightweight edge model, so maybe the RAM is mentioned in the model lineup. But the facts don't specify. Therefore, I should inform the user that the battery and RAM capacities aren't provided in the facts and suggest checking the ThoxMini-3B documentation or the ThoxMini Air SoC details.\n",
+      "passed": true,
+      "detail": "no spec value asserted"
+    },
+    {
+      "id": "grounded_recall",
+      "prompt": "Who are the co-founders of THOX.ai, and what are their roles?",
+      "answer": "The co-founders of THOX.ai are Craig Ross (CEO and Co-Founder) and Tommy Xaypanya (CTO and Co-Founder). They are the founders of the company, with Ross as the CEO and Xaypanya as the CTO.",
+      "raw_content": "The co-founders of THOX.ai are Craig Ross (CEO and Co-Founder) and Tommy Xaypanya (CTO and Co-Founder). They are the founders of the company, with Ross as the CEO and Xaypanya as the CTO.",
+      "raw_tool_calls": [],
+      "thinking": "Okay, the user is asking about the co-founders of THOX.ai and their roles. Let me check the facts provided.\n\nFrom the THOX FACTS, the co-founders are Craig Ross and Tommy Xaypanya. They are both mentioned as co-founders. The user wants to know their roles, so I need to state their positions clearly. Since the facts already specify their roles as CEO and CTO, I can directly state that without adding any extra information. I should make sure to use the exact names and roles as given in the facts.\n",
+      "passed": true,
+      "detail": "both founders named with roles, from the card"
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "What is 17 + 25?",
+      "answer": "17 + 25 = 42.",
+      "raw_content": "17 + 25 = 42.",
+      "raw_tool_calls": [],
+      "thinking": "Okay, the user is asking for 17 plus 25. Let me do this step by step. First, I need to add 17 and 25. Adding them together, 17 plus 25... let me calculate. 17 plus 25 is 42. So the answer should be 42. I should present this clearly and make sure there are no errors in the addition. Since both numbers are straightforward, the result is 42.\n",
+      "passed": true,
+      "detail": "correct result 42"
+    },
+    {
+      "id": "tool_routing",
+      "prompt": "Check the current status of my ThoxMini.",
+      "answer": "[{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}]",
+      "raw_content": "",
+      "raw_tool_calls": [
+        {
+          "id": "call_241lclho",
+          "function": {
+            "index": 0,
+            "name": "get_device_status",
+            "arguments": {
+              "device": "ThoxMini"
+            }
+          }
+        }
+      ],
+      "thinking": "Okay, the user wants to check the current status of their ThoxMini. I need to use the get_device_status function. Let me make sure I call that function with the correct parameters. The device name should be \"ThoxMini\". I'll generate the tool call as specified.\n",
+      "passed": true,
+      "detail": "single get_device_status call, device=ThoxMini"
+    },
+    {
+      "id": "stop_behaviour",
+      "prompt": "What state is THOX.AI LLC organized in?",
+      "answer": "THOX.AI LLC is organized in Texas.",
+      "raw_content": "THOX.AI LLC is organized in Texas.",
+      "raw_tool_calls": [],
+      "thinking": "Okay, the user is asking about the state where THOX.AI LLC is organized. Let me check the facts provided.\n\nFrom the THOX FACTS section, it mentions that THOX.AI LLC is a member-managed Texas limited liability company. The team page states \"Designed in Texas,\" which directly answers the question. There's no mention of a different state, so the answer should be Texas. I need to make sure I'm not missing any other information, but according to the facts given, Texas is the correct state.\n",
+      "passed": true,
+      "detail": "terminated at EOS after 120 tokens"
+    }
+  ],
+  "passed_count": 5,
+  "total": 6,
+  "served_run": {
+    "slug": "C-qwen3-probe",
+    "host": "Azure VM (fleet agent host), Ollama 0.40.13",
+    "wall_total_s": 39.7
+  },
+  "all_passed": false
+}

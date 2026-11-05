@@ -1,0 +1,191 @@
+{
+ "tier1_internal_identifier_hits": [],
+ "tier2_shipped_paper_hits": [],
+ "tier3_evidence_content_hits_adjudicated": [
+  {
+   "file": "dist/WaveC_Demo_v0.5.0.html",
+   "pattern": "\\bTBD\\b",
+   "context": "xKey, all on Kickstarter. Prices and delivery are TBD. Production is limited. Hardware details are on w",
+   "adjudication": "Recorded model answer inside evidence data (served-path answer text in the demo payload). Evidence content, not a document placeholder; kept verbatim - altering it would falsify the record."
+  },
+  {
+   "file": "exp/code/facts/data/thox_facts.json",
+   "pattern": "CONFIDENTIAL",
+   "context": " { \"topic\": \"ownership_equity_splits\", \"status\": \"CONFIDENTIAL\", \"must_not_say\": \"Any ownership percentage or me",
+   "adjudication": "The facts package's own field value marking ownership facts confidential in gate data (the gate's data semantics; the package is already public in the HF dataset). Not a document mark."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "completed|announced)\\b\"                 rf\"{_SENT}{{0,30}}?\\b(?:series\\s+[a-f]|round|funding)\\b|\"           ",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "            rf\"\\b(?:series\\s+[a-f]|round)\\b{_SENT}{{0,20}}?\\b(?:was|has been|is)\\s+\"                 r\"(?:cl",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "o (?:thox|founding))\\b\"                 rf\"{_SENT}{{0,30}}?\\b(?:nvidia|google|apple|meta|amazon|microsoft|in",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "aster'?s?|doctorate)\\b\"                 rf\"{_SENT}{{0,40}}?\\b(?:in|from|at)\\b|\"                 r\"\\b(?:gradu",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "ch|oxford|\"                 rf\"cambridge)\\b{_SENT}{{0,25}}?\\b(?:degree|graduate|alum|phd|educated|studied)\\b",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "hd|educated|studied)\\b\"                 rf\"{_SENT}{{0,25}}?\\b(?:mit|stanford|harvard|berkeley|carnegie mello",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "unded|built|ran|led)\\b\"                 rf\"{_SENT}{{0,30}}?\\b(?:ThoxAir|MagStack|MeshStack|ThoxNova|ThoxMini",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "Key|ThoxCore|ThoxOS)\\b\"                 rf\"{_SENT}{{0,30}}?\\bbefore\\b\",                 kind=\"fabrication\", ",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "                 rf\"\\b(?:in|back in)\\s+(?:19|20)\\d{{2}}\\b{_SENT}{{0,30}}\"                 r\"(?:founded|in",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "   rf\"\\b(?:in|back in)\\s+(?:19|20)\\d{{2}}\\b{_SENT}{{0,30}}\"                 r\"(?:founded|incorporated|establ",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "  rf\"(?:revenue|arr|annual recurring|sales){_SENT}{{0,30}}{_MONEY}|\"                 rf\"{_MONEY}{_SENT}{{0,3",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": ",30}}{_MONEY}|\"                 rf\"{_MONEY}{_SENT}{{0,30}}(?:revenue|arr|in sales)\",                 kind=\"f",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "es an ownership percentage\",                 rf\"\\d{{1,3}}\\s*(?:%|percent){_SENT}{{0,40}}\"                 r",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "               rf\"\\d{{1,3}}\\s*(?:%|percent){_SENT}{{0,40}}\"                 r\"(?:own|stake|equity|membership",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "own|stake|equity|membership interest|holds){_SENT}{{0,40}}\\d{{1,3}}\\s*(?:%|percent)\",                 kind=\"",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "equity|membership interest|holds){_SENT}{{0,40}}\\d{{1,3}}\\s*(?:%|percent)\",                 kind=\"fabricati",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "e copula.                 rf\"\\b(?:{swap})\\b{_SENT}{{0,20}}?\\b(?:is|was|serves as|acts as|remains)\\b\"        ",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "?{short}\\b|\"                 rf\"\\b{short}\\b{_SENT}{{0,25}}?\\b(?:is|was)\\b\\s+(?:the\\s+)?\"                 rf\"",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "s|was)\\b\\s+(?:the\\s+)?\"                 rf\"{_SENT}{{0,15}}?\\b(?:{swap})\\b\",                 kind=\"contradict",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "e|individuals)\"                         rf\"{_SENT}{{0,40}}{re.escape(other)}\",                         kind=",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "distributed)\\b\"                         rf\"{_SENT}{{0,25}}?\\b(?:proprietary|closed[- ]source)\\b|\"           ",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/facts/questions.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "    rf\"\\b(?:proprietary|closed[- ]source)\\b{_SENT}{{0,15}}?\\b(?:licen[cs]e|software)\\b\",                    ",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/grounding_system.txt",
+   "pattern": "CONFIDENTIAL",
+   "context": " count, or units sold. - ownership equity splits (CONFIDENTIAL). Any ownership percentage or membership interest",
+   "adjudication": "The gate's grounding system prompt text: the word classifies the ownership topic inside the prompt given to models (evidence content, already public in the supplement). Not a document mark."
+  },
+  {
+   "file": "exp/code/run_gate49_job.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "           \"{% for m in messages %}\"             \"{{ '<|im_start|>' + m['role'] + '\\\\n' + m['content'] + '<|im_end|>' + '\\\\n' }}\"             \"{% endfor %}\"             \"{% if ad",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/code/run_gate49_job.py",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "or %}\"             \"{% if add_generation_prompt %}{{ '<|im_start|>assistant\\\\n' }}{% endif %}\"         )     return tok   def load_m",
+   "adjudication": "Scorer/question source code: regex quantifier braces in the evidence code itself, not a template placeholder."
+  },
+  {
+   "file": "exp/results/served-path/RESULTS.md",
+   "pattern": "\\{\\{[^}]+\\}\\}",
+   "context": "ve Qwen3.5 serving configuration (template layer `{{ .Prompt }}`, i.e. the GGUF-embedded official Qwen3.5 templat",
+   "adjudication": "Ollama/Go template syntax quoted in the served-path measurement record (the serving layer's own syntax under discussion). Evidence content, not an unrendered placeholder."
+  },
+  {
+   "file": "exp/results/thoxmini-phi4mini-wavec1_gate49.json",
+   "pattern": "\\bTBD\\b",
+   "context": "xKey, all on Kickstarter. Prices and delivery are TBD. Production is limited. Hardware details are on w",
+   "adjudication": "Recorded model answer inside evidence data (served-path answer text in the demo payload). Evidence content, not a document placeholder; kept verbatim - altering it would falsify the record."
+  },
+  {
+   "file": "exp/results/thoxmini-phi4mini-wavec1_gate49.json",
+   "pattern": "\\bTBD\\b",
+   "context": "xKey, all on Kickstarter. Prices and delivery are TBD. Production is limited. Hardware details are on w",
+   "adjudication": "Recorded model answer inside evidence data (served-path answer text in the demo payload). Evidence content, not a document placeholder; kept verbatim - altering it would falsify the record."
+  }
+ ],
+ "byline": "FINALIZED 2026-11-04 under Tommy Xaypanya's ruling: v0.4.2 authorship as published (Sadie Weaving, author; Tommy Xaypanya, accountable human author); legacy authorship-and-accountability disclosure retained verbatim",
+ "byline_placeholder_present": false,
+ "byline_final_present": true,
+ "verdict": "PASS",
+ "files_scanned": 88
+}

@@ -1,0 +1,1771 @@
+{
+ "paper_id": "wave-c-flagship",
+ "edition": "0.5.0",
+ "title": "Flagships for Every Device: The Wave C Training Program",
+ "kind": "whitepaper",
+ "consolidated_from": "paper-v042/wavec-supplement evidence bundle (program-runs, served-path, null-policy) + gate_results_summary.json; consolidated 2026-11-04 for the Process v1.0 pack. Host names genericized to host classes per the Process section 4 security sweep (see wp/qa/scrub-log.json).",
+ "gate": {
+  "name": "GATE49",
+  "questions": 49,
+  "categories": {
+   "verified": 12,
+   "unknown": 26,
+   "known_false": 10,
+   "pricing": 1
+  },
+  "facts_card_version": "1.1.0",
+  "scorer": "factuality_gate49.py (vendored bundle, exp/code/)",
+  "probe": "flagship probe, 6 checks (probe_flagship.py), Phi-4-mini slot only"
+ },
+ "program_runs": {
+  "air": {
+   "wave_c": {
+    "model": "Thox-ai/ThoxAir-0.5B",
+    "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "backend": "transformers (merged adapter, greedy, weights-only)",
+    "passed_count": 43,
+    "total": 49,
+    "mean_score": 4.551,
+    "hard_failures": 2,
+    "soft_failures": 4,
+    "gate_verdict_passed": false,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 8,
+      "hard_failures": 0,
+      "score": 4.0
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 24,
+      "hard_failures": 2,
+      "score": 4.615
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 10,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "source_file": "thoxair-0.5b_gate49.json",
+    "source_sha256": "4faf36d92737e8b3d4f121daa3bed02a7ba85355a3f2e5bfb927d657ae069580",
+    "ruling": "Held - baseline established, adapter not promoted (paper section 8.1).",
+    "publish_bar": "Baseline-establishing: completed gate with zero known_false hard failures; promotion under the fleet zero-hard-failure policy (paper sections 7.3, 8.1).",
+    "host_class": "cloud GPU job (Hugging Face Jobs), Transformers backend, merged weights"
+   },
+   "wave_c1": {
+    "model": "Thox-ai/ThoxAir-0.5B-WaveC1",
+    "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "backend": "transformers (merged adapter, greedy, weights-only)",
+    "passed_count": 42,
+    "total": 49,
+    "mean_score": 4.49,
+    "hard_failures": 2,
+    "soft_failures": 5,
+    "gate_verdict_passed": false,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 8,
+      "hard_failures": 0,
+      "score": 4.0
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 24,
+      "hard_failures": 2,
+      "score": 4.615
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 9,
+      "hard_failures": 0,
+      "score": 4.7
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "source_file": "thoxair-0.5b-wavec1_gate49.json",
+    "source_sha256": "5697eb5dfc374244bc1d7c67971a02b23c3bf2cb643739b90f8464ccee59d2ee",
+    "ruling": "Held (paper section 8.1 outcome); superseded by the C.2 retrain.",
+    "publish_bar": "Baseline-establishing: completed gate with zero known_false hard failures; promotion under the fleet zero-hard-failure policy (paper sections 7.3, 8.1).",
+    "host_class": "cloud GPU job (Hugging Face Jobs), Transformers backend, merged weights"
+   },
+   "wave_c2": {
+    "model": "Thox-ai/ThoxAir-0.5B-WaveC2",
+    "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "backend": "transformers (merged adapter, greedy, weights-only)",
+    "passed_count": 47,
+    "total": 49,
+    "mean_score": 4.837,
+    "hard_failures": 1,
+    "soft_failures": 1,
+    "gate_verdict_passed": false,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 11,
+      "hard_failures": 0,
+      "score": 4.75
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 25,
+      "hard_failures": 1,
+      "score": 4.808
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 10,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "source_file": "thoxair-0.5b-wavec2_gate49.json",
+    "source_sha256": "7ae70f0b9eedd42a7be9942421c89ec4e4ed21ca7f29a888f77826c1fe529b71",
+    "ruling": "PROMOTED - flagship build for the ThoxAir slot (paper sections 9.3, 9.5).",
+    "publish_bar": "Baseline-establishing: completed gate with zero known_false hard failures; promotion under the fleet zero-hard-failure policy (paper sections 7.3, 8.1).",
+    "host_class": "cloud GPU job (Hugging Face Jobs), Transformers backend, merged weights"
+   }
+  },
+  "edge": {
+   "wave_c": {
+    "model": "Thox-ai/ThoxEdge-0.8B-WaveC",
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "backend": "transformers (merged adapter, greedy, weights-only)",
+    "passed_count": 46,
+    "total": 49,
+    "mean_score": 4.735,
+    "hard_failures": 2,
+    "soft_failures": 1,
+    "gate_verdict_passed": false,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 11,
+      "hard_failures": 0,
+      "score": 4.75
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 24,
+      "hard_failures": 2,
+      "score": 4.615
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 10,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "source_file": "thoxedge-0.8b-wavec_gate49.json",
+    "source_sha256": "1d6eb990a4a3bccb4735ef3c1fcb499e880e1a81ddb82156ded02c23ae229fab",
+    "ruling": "PROMOTED (paper sections 8.3, 9.5).",
+    "publish_bar": "Exceed the 19/49 Wave A baseline with zero known_false hard failures (paper section 7.3).",
+    "host_class": "cloud GPU job (Hugging Face Jobs), Transformers backend, merged weights"
+   }
+  },
+  "mini": {
+   "wave_c": {
+    "model": "Thox-ai/ThoxMini-Phi4Mini",
+    "base_model": "microsoft/Phi-4-mini-instruct",
+    "backend": "transformers (merged adapter, greedy, weights-only)",
+    "passed_count": 47,
+    "total": 49,
+    "mean_score": 4.837,
+    "hard_failures": 1,
+    "soft_failures": 1,
+    "gate_verdict_passed": false,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 11,
+      "hard_failures": 0,
+      "score": 4.75
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 25,
+      "hard_failures": 1,
+      "score": 4.808
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 10,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "source_file": "thoxmini-phi4mini_gate49.json",
+    "source_sha256": "770719f86c3cc7f8766a6e16b50e571dc556a83d1bd211bf73f3c64ac16dbc73",
+    "ruling": "Not promoted; ships as the slot's documented baseline (paper sections 8.2, 9.5).",
+    "publish_bar": "Baseline-establishing for an empty slot; promotion additionally requires the flagship probe at 6/6 (paper sections 7.3, 7.4).",
+    "host_class": "cloud GPU job (Hugging Face Jobs), Transformers backend, merged weights"
+   },
+   "wave_c1": {
+    "model": "Thox-ai/ThoxMini-Phi4Mini-WaveC1",
+    "base_model": "microsoft/Phi-4-mini-instruct",
+    "backend": "transformers (merged adapter, greedy, weights-only)",
+    "passed_count": 46,
+    "total": 49,
+    "mean_score": 4.694,
+    "hard_failures": 3,
+    "soft_failures": 0,
+    "gate_verdict_passed": false,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 11,
+      "hard_failures": 1,
+      "score": 4.583
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 25,
+      "hard_failures": 1,
+      "score": 4.808
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 9,
+      "hard_failures": 1,
+      "score": 4.5
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "source_file": "thoxmini-phi4mini-wavec1_gate49.json",
+    "source_sha256": "8cf909e5a4e74df59e14faedee1e8dd0ead34fa7d658578b447bba42801a7f2c",
+    "ruling": "Held (paper section 9.2).",
+    "publish_bar": "Baseline-establishing for an empty slot; promotion additionally requires the flagship probe at 6/6 (paper sections 7.3, 7.4).",
+    "host_class": "cloud GPU job (Hugging Face Jobs), Transformers backend, merged weights"
+   },
+   "wave_c2": {
+    "model": "Thox-ai/ThoxMini-Phi4Mini-WaveC2",
+    "base_model": "microsoft/Phi-4-mini-instruct",
+    "backend": "transformers (merged adapter, greedy, weights-only)",
+    "passed_count": 44,
+    "total": 49,
+    "mean_score": 4.49,
+    "hard_failures": 5,
+    "soft_failures": 0,
+    "gate_verdict_passed": false,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 12,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 21,
+      "hard_failures": 5,
+      "score": 4.038
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 10,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "source_file": "thoxmini-phi4mini-wavec2_gate49.json",
+    "source_sha256": "7740473fcfef752914c93da9b316003e68e5c8a5b8cdde9a233bb3f729eeb00b",
+    "ruling": "Held - probe 5/6, tool-routing check (paper sections 9.3, 7.5).",
+    "publish_bar": "Baseline-establishing for an empty slot; promotion additionally requires the flagship probe at 6/6 (paper sections 7.3, 7.4).",
+    "host_class": "cloud GPU job (Hugging Face Jobs), Transformers backend, merged weights"
+   }
+  },
+  "clip": {
+   "wave_c": {
+    "model": "Thox-ai/ThoxClip-Qwen3-0.6B-WaveC",
+    "base_model": "Qwen/Qwen3-0.6B",
+    "backend": "transformers (merged adapter, greedy, weights-only)",
+    "passed_count": 43,
+    "total": 49,
+    "mean_score": 4.469,
+    "hard_failures": 4,
+    "soft_failures": 2,
+    "gate_verdict_passed": false,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 10,
+      "hard_failures": 0,
+      "score": 4.5
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 24,
+      "hard_failures": 2,
+      "score": 4.615
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 9,
+      "hard_failures": 1,
+      "score": 4.5
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "source_file": "thoxclip-qwen3-0.6b-wavec_gate49.json",
+    "source_sha256": "c58018b3979c3a39e953dd558a4663c66a2e6890998e650a53c3418f93db5292",
+    "ruling": "Held (paper section 8.4).",
+    "publish_bar": "Exceed the 22/49 step-1 baseline with zero known_false hard failures (paper section 7.3).",
+    "host_class": "cloud GPU job (Hugging Face Jobs), Transformers backend, merged weights"
+   },
+   "wave_c1": {
+    "model": "Thox-ai/ThoxClip-Qwen3-0.6B-WaveC1",
+    "base_model": "Qwen/Qwen3-0.6B",
+    "backend": "transformers (merged adapter, greedy, weights-only)",
+    "passed_count": 37,
+    "total": 49,
+    "mean_score": 4.102,
+    "hard_failures": 4,
+    "soft_failures": 8,
+    "gate_verdict_passed": false,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 5,
+      "hard_failures": 0,
+      "score": 3.25
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 21,
+      "hard_failures": 4,
+      "score": 4.115
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 10,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "source_file": "thoxclip-qwen3-0.6b-wavec1_gate49.json",
+    "source_sha256": "b900df35f6d197271bfdcaad3a9cab041970d1e53818759917020b5c1f82185b",
+    "ruling": "Held - registered bar met numerically (37/49); held under decision condition 1, regression against the slot's current candidate (paper sections 9.2, 7.5).",
+    "publish_bar": "Exceed the 22/49 step-1 baseline with zero known_false hard failures (paper section 7.3).",
+    "host_class": "cloud GPU job (Hugging Face Jobs), Transformers backend, merged weights"
+   },
+   "wave_c2": {
+    "model": "Thox-ai/ThoxClip-Qwen3-0.6B-WaveC2",
+    "base_model": "Qwen/Qwen3-0.6B",
+    "backend": "transformers (merged adapter, greedy, weights-only)",
+    "passed_count": 39,
+    "total": 49,
+    "mean_score": 4.306,
+    "hard_failures": 2,
+    "soft_failures": 8,
+    "gate_verdict_passed": false,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 6,
+      "hard_failures": 0,
+      "score": 3.5
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 23,
+      "hard_failures": 1,
+      "score": 4.577
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 9,
+      "hard_failures": 1,
+      "score": 4.5
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "source_file": "thoxclip-qwen3-0.6b-wavec2_gate49.json",
+    "source_sha256": "9dd1c694b01451048e73d11ca4f3149fbbcad9c84c27d0e41fc5d25d42a4f47c",
+    "ruling": "Held (paper section 9.3).",
+    "publish_bar": "Exceed the 22/49 step-1 baseline with zero known_false hard failures (paper section 7.3).",
+    "host_class": "cloud GPU job (Hugging Face Jobs), Transformers backend, merged weights"
+   }
+  }
+ },
+ "probes_flagship_mini": {
+  "wave_c": {
+   "model": "Thox-ai/ThoxMini-Phi4Mini",
+   "passed_count": 3,
+   "total": 6,
+   "checks": [
+    {
+     "id": "grounding_trap_chipset",
+     "passed": true
+    },
+    {
+     "id": "grounding_trap_specs",
+     "passed": false
+    },
+    {
+     "id": "grounded_recall",
+     "passed": true
+    },
+    {
+     "id": "arithmetic",
+     "passed": false
+    },
+    {
+     "id": "tool_routing",
+     "passed": false
+    },
+    {
+     "id": "stop_behaviour",
+     "passed": true
+    }
+   ],
+   "evidence_class": "MEASURED",
+   "source_file": "thoxmini-phi4mini_probe.json",
+   "source_sha256": "55b046356d7926156ef53993b41e0c7438aa6c90f9553eb691961fc6af53f916"
+  },
+  "wave_c1": {
+   "model": "Thox-ai/ThoxMini-Phi4Mini-WaveC1",
+   "passed_count": 3,
+   "total": 6,
+   "checks": [
+    {
+     "id": "grounding_trap_chipset",
+     "passed": false
+    },
+    {
+     "id": "grounding_trap_specs",
+     "passed": false
+    },
+    {
+     "id": "grounded_recall",
+     "passed": true
+    },
+    {
+     "id": "arithmetic",
+     "passed": true
+    },
+    {
+     "id": "tool_routing",
+     "passed": false
+    },
+    {
+     "id": "stop_behaviour",
+     "passed": true
+    }
+   ],
+   "evidence_class": "MEASURED",
+   "source_file": "thoxmini-phi4mini-wavec1_probe.json",
+   "source_sha256": "6e7ead8a11a675adbcb200db9335ed7bec1d1c81f6b58556fe69fdd8184e192a"
+  },
+  "wave_c2": {
+   "model": "Thox-ai/ThoxMini-Phi4Mini-WaveC2",
+   "passed_count": 5,
+   "total": 6,
+   "checks": [
+    {
+     "id": "grounding_trap_chipset",
+     "passed": true
+    },
+    {
+     "id": "grounding_trap_specs",
+     "passed": true
+    },
+    {
+     "id": "grounded_recall",
+     "passed": true
+    },
+    {
+     "id": "arithmetic",
+     "passed": true
+    },
+    {
+     "id": "tool_routing",
+     "passed": false
+    },
+    {
+     "id": "stop_behaviour",
+     "passed": true
+    }
+   ],
+   "evidence_class": "MEASURED",
+   "source_file": "thoxmini-phi4mini-wavec2_probe.json",
+   "source_sha256": "e25307434c47465930a9f66e4b14399b3bad747f3b8a616926eb2e93ff049499"
+  }
+ },
+ "baselines": {
+  "thoxedge-0.5b_wave_b_fplora": {
+   "passed": 47,
+   "total": 49,
+   "mean": 4.837,
+   "note": "Wave B fp-LoRA reference on the same base as Air; the recipe-comparison arm of paper section 8.5.",
+   "evidence_class": "MEASURED",
+   "host_class": "fleet workstation (local harness), Ollama weights-only",
+   "source_file": "gate_results_summary.json",
+   "source_sha256": "5d940388222c0edca59b112d30dd0b60adcf84867d87b549fa76048ca469f6cf"
+  },
+  "thoxedge-0.8b_wave_a": {
+   "passed": 19,
+   "total": 49,
+   "mean": 2.714,
+   "note": "Wave A baseline for the 0.8B tier; Edge's registered bar.",
+   "evidence_class": "MEASURED",
+   "host_class": "fleet workstation (local harness), Ollama weights-only",
+   "source_file": "gate_results_summary.json",
+   "source_sha256": "5d940388222c0edca59b112d30dd0b60adcf84867d87b549fa76048ca469f6cf"
+  },
+  "thoxclip_step1": {
+   "passed": 22,
+   "total": 49,
+   "mean": 2.776,
+   "note": "Clip step-1 baseline; Clip's registered bar.",
+   "evidence_class": "MEASURED",
+   "host_class": "fleet workstation (local harness), Ollama weights-only",
+   "source_file": "gate_results_summary.json",
+   "source_sha256": "5d940388222c0edca59b112d30dd0b60adcf84867d87b549fa76048ca469f6cf"
+  },
+  "recipe_comparison_qwen25_05b": {
+   "fp_lora_wave_b": {
+    "passed_count": 47,
+    "total": 49,
+    "mean_score": 4.837
+   },
+   "qlora_wave_c_plane": {
+    "passed_count": 43,
+    "total": 49,
+    "mean_score": 4.551
+   },
+   "note": "Same base, same 982-row corpus, both recipes; backends and loss masking also differ - ordering evidence, not a factor isolation (paper section 8.5).",
+   "evidence_class": "MEASURED"
+  }
+ },
+ "null_policies": {
+  "prescribed_decline": {
+   "model": "constant-abstainer-baseline",
+   "passed_count": 25,
+   "total": 49,
+   "mean_score": 3.531,
+   "hard_failures": 0,
+   "soft_failures": 24,
+   "gate_verdict_passed": true,
+   "by_category": {
+    "verified": {
+     "total": 12,
+     "passed": 1,
+     "hard_failures": 0,
+     "score": 2.25
+    },
+    "unknown": {
+     "total": 26,
+     "passed": 23,
+     "hard_failures": 0,
+     "score": 4.654
+    },
+    "known_false": {
+     "total": 10,
+     "passed": 0,
+     "hard_failures": 0,
+     "score": 2.0
+    },
+    "pricing": {
+     "total": 1,
+     "passed": 1,
+     "hard_failures": 0,
+     "score": 5.0
+    }
+   },
+   "evidence_class": "MEASURED",
+   "host_class": "local scorer run over a constant transcript (program's own scorer)",
+   "source_file": "null-policy/factuality-report.json",
+   "source_sha256": "2b3ea527d9eb7defa004867914ce1c7e547c5c9a9913f8bd58acca6287838f46"
+  },
+  "bare_decline": {
+   "passed_count": 23,
+   "total": 49,
+   "mean_score": 3.367,
+   "hard_failures": 1,
+   "by_category": {
+    "verified": {
+     "passed": 0,
+     "total": 12
+    },
+    "unknown": {
+     "passed": 23,
+     "total": 26
+    },
+    "known_false": {
+     "passed": 0,
+     "total": 10
+    },
+    "pricing": {
+     "passed": 0,
+     "total": 1
+    }
+   },
+   "evidence_class": "MEASURED",
+   "host_class": "vendored-bundle sanity transcript through the program's own scorer",
+   "source_file": null,
+   "source_note": "Paper section 7.1 text (vendored sanity check); no separate JSON survives in the bundle."
+  }
+ },
+ "served_path": {
+  "as_served_pre_fix": {
+   "air": {
+    "model": "thox-ai/thoxair-0.5b",
+    "passed_count": 42,
+    "total": 49,
+    "mean_score": 4.367,
+    "hard_failures": 5,
+    "soft_failures": 2,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 11,
+      "hard_failures": 0,
+      "score": 4.75
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 20,
+      "hard_failures": 5,
+      "score": 3.923
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 10,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-A-air-gate.json",
+    "source_sha256": "899805355a2af6be93b5787989fed8c50d84d195805391aa1ea7ecd1fe648e09",
+    "content_plus_thinking": {
+     "model": "thox-ai/thoxair-0.5b",
+     "passed_count": 42,
+     "total": 49,
+     "mean_score": 4.367,
+     "hard_failures": 5,
+     "soft_failures": 2,
+     "by_category": {
+      "verified": {
+       "total": 12,
+       "passed": 11,
+       "hard_failures": 0,
+       "score": 4.75
+      },
+      "unknown": {
+       "total": 26,
+       "passed": 20,
+       "hard_failures": 5,
+       "score": 3.923
+      },
+      "known_false": {
+       "total": 10,
+       "passed": 10,
+       "hard_failures": 0,
+       "score": 5.0
+      },
+      "pricing": {
+       "total": 1,
+       "passed": 1,
+       "hard_failures": 0,
+       "score": 5.0
+      }
+     },
+     "evidence_class": "MEASURED",
+     "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+     "source_file": "served-path/gate49-A-air-gate-contentplus.json",
+     "source_sha256": "b7c949b3b1f200a35b0fcaed434b11e2ee5f7a3ef310ccc57c4d8551801ecc7e"
+    }
+   },
+   "clip": {
+    "model": "thox-ai/thoxclip-qwen3-0.6b",
+    "passed_count": 12,
+    "total": 49,
+    "mean_score": 1.796,
+    "hard_failures": 23,
+    "soft_failures": 14,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 2,
+      "hard_failures": 0,
+      "score": 2.5
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 4,
+      "hard_failures": 20,
+      "score": 0.923
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 6,
+      "hard_failures": 2,
+      "score": 3.4
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-A-clip-gate.json",
+    "source_sha256": "30115f360ae85236daa7caefa7f40203377539b80bc1a84a03374f44038468aa",
+    "content_plus_thinking": {
+     "model": "thox-ai/thoxclip-qwen3-0.6b",
+     "passed_count": 12,
+     "total": 49,
+     "mean_score": 1.796,
+     "hard_failures": 23,
+     "soft_failures": 14,
+     "by_category": {
+      "verified": {
+       "total": 12,
+       "passed": 2,
+       "hard_failures": 0,
+       "score": 2.5
+      },
+      "unknown": {
+       "total": 26,
+       "passed": 4,
+       "hard_failures": 20,
+       "score": 0.923
+      },
+      "known_false": {
+       "total": 10,
+       "passed": 6,
+       "hard_failures": 2,
+       "score": 3.4
+      },
+      "pricing": {
+       "total": 1,
+       "passed": 0,
+       "hard_failures": 1,
+       "score": 0.0
+      }
+     },
+     "evidence_class": "MEASURED",
+     "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+     "source_file": "served-path/gate49-A-clip-gate-contentplus.json",
+     "source_sha256": "7b6c39237f7226d5204b590ac8f58973c2d61c10b927ac70e448f7d223218ba5"
+    }
+   },
+   "edge": {
+    "model": "thox-ai/thoxedge-0.8b",
+    "passed_count": 16,
+    "total": 49,
+    "mean_score": 1.755,
+    "hard_failures": 30,
+    "soft_failures": 3,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 5,
+      "hard_failures": 6,
+      "score": 2.25
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 11,
+      "hard_failures": 14,
+      "score": 2.192
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 0,
+      "hard_failures": 9,
+      "score": 0.2
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-A-edge-gate.json",
+    "source_sha256": "e9ae6aa52b2731235c6d4a6bdc011cac0756329adb88609e190588f1af1e3334",
+    "content_plus_thinking": {
+     "model": "thox-ai/thoxedge-0.8b",
+     "passed_count": 35,
+     "total": 49,
+     "mean_score": 3.857,
+     "hard_failures": 7,
+     "soft_failures": 7,
+     "by_category": {
+      "verified": {
+       "total": 12,
+       "passed": 10,
+       "hard_failures": 0,
+       "score": 4.5
+      },
+      "unknown": {
+       "total": 26,
+       "passed": 21,
+       "hard_failures": 4,
+       "score": 4.115
+      },
+      "known_false": {
+       "total": 10,
+       "passed": 3,
+       "hard_failures": 3,
+       "score": 2.3
+      },
+      "pricing": {
+       "total": 1,
+       "passed": 1,
+       "hard_failures": 0,
+       "score": 5.0
+      }
+     },
+     "evidence_class": "MEASURED",
+     "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+     "source_file": "served-path/gate49-A-edge-gate-contentplus.json",
+     "source_sha256": "c7311eb25a17b9be4902432c67c27967f9187db6bf3b3c9c6ece30a48a20ab0f"
+    }
+   },
+   "mini": {
+    "model": "thox-ai/thoxmini-phi4mini",
+    "passed_count": 46,
+    "total": 49,
+    "mean_score": 4.735,
+    "hard_failures": 2,
+    "soft_failures": 1,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 12,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 24,
+      "hard_failures": 1,
+      "score": 4.692
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 10,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-A-mini-gate.json",
+    "source_sha256": "d12d8d6d181d6359f24efd56a644e85da398dff991490fb391592bc7c7fb2845",
+    "content_plus_thinking": {
+     "model": "thox-ai/thoxmini-phi4mini",
+     "passed_count": 46,
+     "total": 49,
+     "mean_score": 4.735,
+     "hard_failures": 2,
+     "soft_failures": 1,
+     "by_category": {
+      "verified": {
+       "total": 12,
+       "passed": 12,
+       "hard_failures": 0,
+       "score": 5.0
+      },
+      "unknown": {
+       "total": 26,
+       "passed": 24,
+       "hard_failures": 1,
+       "score": 4.692
+      },
+      "known_false": {
+       "total": 10,
+       "passed": 10,
+       "hard_failures": 0,
+       "score": 5.0
+      },
+      "pricing": {
+       "total": 1,
+       "passed": 0,
+       "hard_failures": 1,
+       "score": 0.0
+      }
+     },
+     "evidence_class": "MEASURED",
+     "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+     "source_file": "served-path/gate49-A-mini-gate-contentplus.json",
+     "source_sha256": "282017b3ceb90b5f73796bfc169160582dcd05f5f0e9e714115557be3ba701db"
+    }
+   }
+  },
+  "as_served_post_fix": {
+   "air": {
+    "model": "thox-ai/thoxair-0.5b",
+    "passed_count": 42,
+    "total": 49,
+    "mean_score": 4.367,
+    "hard_failures": 5,
+    "soft_failures": 2,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 11,
+      "hard_failures": 0,
+      "score": 4.75
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 20,
+      "hard_failures": 5,
+      "score": 3.923
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 10,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-postfix-A-air-gate.json",
+    "source_sha256": "4f546f0ce80055c879c50b9705d13d77ed7e2ddbd9294095eaa221e5d18b1dc4",
+    "content_plus_thinking": {
+     "model": "thox-ai/thoxair-0.5b",
+     "passed_count": 42,
+     "total": 49,
+     "mean_score": 4.367,
+     "hard_failures": 5,
+     "soft_failures": 2,
+     "by_category": {
+      "verified": {
+       "total": 12,
+       "passed": 11,
+       "hard_failures": 0,
+       "score": 4.75
+      },
+      "unknown": {
+       "total": 26,
+       "passed": 20,
+       "hard_failures": 5,
+       "score": 3.923
+      },
+      "known_false": {
+       "total": 10,
+       "passed": 10,
+       "hard_failures": 0,
+       "score": 5.0
+      },
+      "pricing": {
+       "total": 1,
+       "passed": 1,
+       "hard_failures": 0,
+       "score": 5.0
+      }
+     },
+     "evidence_class": "MEASURED",
+     "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+     "source_file": "served-path/gate49-postfix-A-air-gate-contentplus.json",
+     "source_sha256": "51f02b1b52a23214c05474f928ba6499266552053d90a1022d402696b80a76b7"
+    }
+   },
+   "clip": {
+    "model": "thox-ai/thoxclip-qwen3-0.6b",
+    "passed_count": 40,
+    "total": 49,
+    "mean_score": 4.408,
+    "hard_failures": 1,
+    "soft_failures": 8,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 11,
+      "hard_failures": 0,
+      "score": 4.75
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 26,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 3,
+      "hard_failures": 0,
+      "score": 2.9
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-postfix-A-clip-gate.json",
+    "source_sha256": "cbcc27e330cc80d806663daee4d8daa9292f954c8c6499068a63f9294190f2de",
+    "content_plus_thinking": {
+     "model": "thox-ai/thoxclip-qwen3-0.6b",
+     "passed_count": 40,
+     "total": 49,
+     "mean_score": 4.408,
+     "hard_failures": 1,
+     "soft_failures": 8,
+     "by_category": {
+      "verified": {
+       "total": 12,
+       "passed": 11,
+       "hard_failures": 0,
+       "score": 4.75
+      },
+      "unknown": {
+       "total": 26,
+       "passed": 26,
+       "hard_failures": 0,
+       "score": 5.0
+      },
+      "known_false": {
+       "total": 10,
+       "passed": 3,
+       "hard_failures": 0,
+       "score": 2.9
+      },
+      "pricing": {
+       "total": 1,
+       "passed": 0,
+       "hard_failures": 1,
+       "score": 0.0
+      }
+     },
+     "evidence_class": "MEASURED",
+     "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+     "source_file": "served-path/gate49-postfix-A-clip-gate-contentplus.json",
+     "source_sha256": "b49404df365f7afc91e074737871779dec7daac0b4fe52a315db573d67c27d70"
+    }
+   },
+   "edge": {
+    "model": "thox-ai/thoxedge-0.8b",
+    "passed_count": 16,
+    "total": 49,
+    "mean_score": 1.755,
+    "hard_failures": 30,
+    "soft_failures": 3,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 5,
+      "hard_failures": 6,
+      "score": 2.25
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 11,
+      "hard_failures": 14,
+      "score": 2.192
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 0,
+      "hard_failures": 9,
+      "score": 0.2
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-postfix-A-edge-gate.json",
+    "source_sha256": "ea94c29b41cedf8702c7d5408becdebb8ee85e263fdfef9ca648a7a1feedac72",
+    "content_plus_thinking": {
+     "model": "thox-ai/thoxedge-0.8b",
+     "passed_count": 35,
+     "total": 49,
+     "mean_score": 3.857,
+     "hard_failures": 7,
+     "soft_failures": 7,
+     "by_category": {
+      "verified": {
+       "total": 12,
+       "passed": 10,
+       "hard_failures": 0,
+       "score": 4.5
+      },
+      "unknown": {
+       "total": 26,
+       "passed": 21,
+       "hard_failures": 4,
+       "score": 4.115
+      },
+      "known_false": {
+       "total": 10,
+       "passed": 3,
+       "hard_failures": 3,
+       "score": 2.3
+      },
+      "pricing": {
+       "total": 1,
+       "passed": 1,
+       "hard_failures": 0,
+       "score": 5.0
+      }
+     },
+     "evidence_class": "MEASURED",
+     "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+     "source_file": "served-path/gate49-postfix-A-edge-gate-contentplus.json",
+     "source_sha256": "43411d61b63aa64ef4b23b53a3e0319373f2594a29353bace9bcb94b394ad556"
+    }
+   },
+   "mini": {
+    "model": "thox-ai/thoxmini-phi4mini",
+    "passed_count": 47,
+    "total": 49,
+    "mean_score": 4.796,
+    "hard_failures": 2,
+    "soft_failures": 0,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 12,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 24,
+      "hard_failures": 2,
+      "score": 4.615
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 10,
+      "hard_failures": 0,
+      "score": 5.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-postfix-A-mini-gate.json",
+    "source_sha256": "f41a48217244973d941656c56e0f5cc9e1dc8e6f318ed2579a3b57befeb44d3e",
+    "content_plus_thinking": {
+     "model": "thox-ai/thoxmini-phi4mini",
+     "passed_count": 47,
+     "total": 49,
+     "mean_score": 4.796,
+     "hard_failures": 2,
+     "soft_failures": 0,
+     "by_category": {
+      "verified": {
+       "total": 12,
+       "passed": 12,
+       "hard_failures": 0,
+       "score": 5.0
+      },
+      "unknown": {
+       "total": 26,
+       "passed": 24,
+       "hard_failures": 2,
+       "score": 4.615
+      },
+      "known_false": {
+       "total": 10,
+       "passed": 10,
+       "hard_failures": 0,
+       "score": 5.0
+      },
+      "pricing": {
+       "total": 1,
+       "passed": 1,
+       "hard_failures": 0,
+       "score": 5.0
+      }
+     },
+     "evidence_class": "MEASURED",
+     "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+     "source_file": "served-path/gate49-postfix-A-mini-gate-contentplus.json",
+     "source_sha256": "26321d2651e4562e54073c15b8bdfd9a79fe829cb6c6aa5c47b6d82172bf66f9"
+    }
+   }
+  },
+  "bases_bare": {
+   "phi4mini": {
+    "model": "phi4-mini",
+    "passed_count": 7,
+    "total": 49,
+    "mean_score": 1.204,
+    "hard_failures": 30,
+    "soft_failures": 12,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 2,
+      "hard_failures": 1,
+      "score": 2.333
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 2,
+      "hard_failures": 22,
+      "score": 0.538
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 3,
+      "hard_failures": 6,
+      "score": 1.7
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-B-phi4mini-gate.json",
+    "source_sha256": "79ba6404e42569bf506acd7d050852a882af822f671185b20627f37ea4148215"
+   },
+   "qwen25": {
+    "model": "qwen2.5:0.5b",
+    "passed_count": 4,
+    "total": 49,
+    "mean_score": 0.898,
+    "hard_failures": 33,
+    "soft_failures": 12,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 2,
+      "hard_failures": 1,
+      "score": 2.333
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 2,
+      "hard_failures": 22,
+      "score": 0.538
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 0,
+      "hard_failures": 9,
+      "score": 0.2
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-B-qwen25-gate.json",
+    "source_sha256": "8c961bf4db80145077b5bafa5c6097e5a3eab76d3a513f8dca309b79d18d0d28"
+   },
+   "qwen3": {
+    "model": "qwen3:0.6b",
+    "passed_count": 3,
+    "total": 49,
+    "mean_score": 0.633,
+    "hard_failures": 38,
+    "soft_failures": 8,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 2,
+      "hard_failures": 3,
+      "score": 2.0
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 1,
+      "hard_failures": 24,
+      "score": 0.269
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 0,
+      "hard_failures": 10,
+      "score": 0.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-B-qwen3-gate.json",
+    "source_sha256": "fc2bfee59a14c2937453731f612e25f9513d2602ca463109b977dc6966808f8d"
+   },
+   "qwen35": {
+    "model": "qwen3.5:0.8b",
+    "passed_count": 0,
+    "total": 49,
+    "mean_score": 0.082,
+    "hard_failures": 47,
+    "soft_failures": 2,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 0,
+      "hard_failures": 10,
+      "score": 0.333
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 0,
+      "hard_failures": 26,
+      "score": 0.0
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 0,
+      "hard_failures": 10,
+      "score": 0.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-B-qwen35-gate.json",
+    "source_sha256": "d9d34154a2078caf0575a6d1bef6d36147a9feef12282ad9e695fa0bdb8e3c99"
+   }
+  },
+  "bases_grounded": {
+   "phi4mini": {
+    "model": "phi4-mini",
+    "passed_count": 27,
+    "total": 49,
+    "mean_score": 3.122,
+    "hard_failures": 13,
+    "soft_failures": 9,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 11,
+      "hard_failures": 0,
+      "score": 4.75
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 11,
+      "hard_failures": 13,
+      "score": 2.269
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 4,
+      "hard_failures": 0,
+      "score": 3.2
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 1,
+      "hard_failures": 0,
+      "score": 5.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-C-phi4mini-gate.json",
+    "source_sha256": "bdfb480fff99cec94f5cdbf9aa97afcc5c66f6f5dce14fe445e5b9740308d3d1"
+   },
+   "qwen25": {
+    "model": "qwen2.5:0.5b",
+    "passed_count": 27,
+    "total": 49,
+    "mean_score": 2.918,
+    "hard_failures": 18,
+    "soft_failures": 4,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 9,
+      "hard_failures": 0,
+      "score": 4.25
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 9,
+      "hard_failures": 16,
+      "score": 1.808
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 9,
+      "hard_failures": 1,
+      "score": 4.5
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-C-qwen25-gate.json",
+    "source_sha256": "c4dc543c866ea6fef2fb00c5d18005ea092ce0143a3c6254b2d0fd17da8a47c3"
+   },
+   "qwen3": {
+    "model": "qwen3:0.6b",
+    "passed_count": 25,
+    "total": 49,
+    "mean_score": 2.878,
+    "hard_failures": 16,
+    "soft_failures": 8,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 11,
+      "hard_failures": 0,
+      "score": 4.75
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 11,
+      "hard_failures": 15,
+      "score": 2.115
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 3,
+      "hard_failures": 0,
+      "score": 2.9
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-C-qwen3-gate.json",
+    "source_sha256": "d9118caccb6d5949c9bfd497b87024568896e26c1daca943323e8fb94c7ab7be"
+   },
+   "qwen35": {
+    "model": "qwen3.5:0.8b",
+    "passed_count": 0,
+    "total": 49,
+    "mean_score": 0.0,
+    "hard_failures": 49,
+    "soft_failures": 0,
+    "by_category": {
+     "verified": {
+      "total": 12,
+      "passed": 0,
+      "hard_failures": 12,
+      "score": 0.0
+     },
+     "unknown": {
+      "total": 26,
+      "passed": 0,
+      "hard_failures": 26,
+      "score": 0.0
+     },
+     "known_false": {
+      "total": 10,
+      "passed": 0,
+      "hard_failures": 10,
+      "score": 0.0
+     },
+     "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+     }
+    },
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/gate49-C-qwen35-gate.json",
+    "source_sha256": "ab26920d7c1235788c761a3894299ef31750632a5d143340e2a847a1e9bd30bd"
+   }
+  }
+ },
+ "served_probes": {
+  "as_served_pre_fix": {
+   "air": {
+    "model": "thox-ai/thoxair-0.5b",
+    "passed_count": 5,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-A-air-probe.json",
+    "source_sha256": "1912d09c03e65e30fe031892abd908d57a473b273a71f32cf2931026b0149564"
+   },
+   "clip": {
+    "model": "thox-ai/thoxclip-qwen3-0.6b",
+    "passed_count": 5,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-A-clip-probe.json",
+    "source_sha256": "827dfe1b3437672d2d0c3f383f54e141e1bfebdaca1c8ad21a9fc7d0fed878a4"
+   },
+   "edge": {
+    "model": "thox-ai/thoxedge-0.8b",
+    "passed_count": 3,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-A-edge-probe.json",
+    "source_sha256": "09ccb90660230e72f0ce03a88cc88c579640b777b522a303d81221052947b476"
+   },
+   "mini": {
+    "model": "thox-ai/thoxmini-phi4mini",
+    "passed_count": 4,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-A-mini-probe.json",
+    "source_sha256": "639d1b7a97b38fee2cd2d38c49fcb29bcf3a0347e6adc0c52cd81e0a57d36371"
+   }
+  },
+  "bases_grounded": {
+   "phi4mini": {
+    "model": "phi4-mini",
+    "passed_count": 2,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-C-phi4mini-probe.json",
+    "source_sha256": "b5036ccf8bdb9b80c6118479d5aa091a7a749c4e2f7928be7087e133264ccf78"
+   },
+   "qwen25": {
+    "model": "qwen2.5:0.5b",
+    "passed_count": 4,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-C-qwen25-probe.json",
+    "source_sha256": "1805e21bab36ebac32bb2d3f7de1788c4f9b123f4f5cae3e9c98aa8b17910f2e"
+   },
+   "qwen3": {
+    "model": "qwen3:0.6b",
+    "passed_count": 5,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-C-qwen3-probe.json",
+    "source_sha256": "00aa02a11ac59f1a47334d33e73bc1b4b1272295e1ab6e44c81ad385b0eccd19"
+   },
+   "qwen35": {
+    "model": "qwen3.5:0.8b",
+    "passed_count": 3,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-C-qwen35-probe.json",
+    "source_sha256": "f8a6736ef3a6b38d43c784375a98f8217527b0c1caac87976328cd5f90cd35b9"
+   }
+  },
+  "as_served_post_fix": {
+   "air": {
+    "model": "thox-ai/thoxair-0.5b",
+    "passed_count": 5,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-postfix-A-air-probe.json",
+    "source_sha256": "c1ee64fd8a0e4650097c672e36e608b52ad28b44c2cbd73bb6dc48fd551679e3"
+   },
+   "clip": {
+    "model": "thox-ai/thoxclip-qwen3-0.6b",
+    "passed_count": 3,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-postfix-A-clip-probe.json",
+    "source_sha256": "d44b4febcc8d02c0450a487c603fd4af8a5bc72b37b6427c95465089c85726b4"
+   },
+   "edge": {
+    "model": "thox-ai/thoxedge-0.8b",
+    "passed_count": 4,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-postfix-A-edge-probe.json",
+    "source_sha256": "f86cf8c015bd3e12d078af812408b2a950107e6f8354e0ae10d73e6bad34b710"
+   },
+   "mini": {
+    "model": "thox-ai/thoxmini-phi4mini",
+    "passed_count": 5,
+    "total": 6,
+    "evidence_class": "MEASURED",
+    "host_class": "CPU cloud VM (2 vCPU), Ollama served path (/api/chat), temperature 0, num_predict 320",
+    "source_file": "served-path/probe-postfix-A-mini-probe.json",
+    "source_sha256": "63f5dc404e997572d30010e51c8087f4d688a0704c2a5a0df521f2bff0249fb2"
+   }
+  }
+ },
+ "corpus": {
+  "wave_b_and_wave_c_rows": 982,
+  "wave_c1_rows": 1082,
+  "wave_c2_rows": 1246,
+  "domains_wave_b": {
+   "company_facts": 415,
+   "device_support": 125,
+   "tool_routing": 121,
+   "campaign": 106,
+   "coding": 85,
+   "persona": 54,
+   "ops": 33,
+   "safety": 25,
+   "model_lineup": 18
+  },
+  "domains_total_check": 982,
+  "evidence_class": "CALCULATED",
+  "source_file": "gate_results_summary.json",
+  "source_sha256": "5d940388222c0edca59b112d30dd0b60adcf84867d87b549fa76048ca469f6cf"
+ },
+ "costs": {
+  "evidence_class": "CALCULATED",
+  "source_note": "Paper section 5.3: HF Jobs per-second billing at dispatched flavor rates applied to recorded runtimes.",
+  "flavor_rates_usd_per_hr": {
+   "a10g-small": 1.0,
+   "a10g-large": 1.5
+  },
+  "air_smoke_approx_usd": 0.17,
+  "mini_training_approx_usd": 0.33,
+  "attempt3_timeout_combined_approx_usd": 16
+ },
+ "program_tally": {
+  "source_note": "Paper section 9.5, Table 7 (final program tally, October 30, 2026).",
+  "slots": {
+   "ThoxAir": {
+    "ships": "ThoxAir-0.5B Wave C.2 build - PROMOTED",
+    "gate": "47/49 (4.837)"
+   },
+   "ThoxEdge": {
+    "ships": "ThoxEdge-0.8B Wave C build - PROMOTED",
+    "gate": "46/49 (4.735) vs 19/49 baseline"
+   },
+   "ThoxMini": {
+    "ships": "Wave C build - documented baseline",
+    "gate": "47/49 (4.837), probe 3/6"
+   },
+   "ThoxClip": {
+    "ships": "Prior published ThoxClip-Qwen3-0.6B - documented baseline stands",
+    "gate": "program candidates 43/49, 37/49, 39/49, all held"
+   }
+  },
+  "training_runs_total": 10,
+  "device_hardware_qualification": "None - no adapter in this program has been qualified on physical device hardware (paper sections 9.5, 10)."
+ }
+}

@@ -1,0 +1,85 @@
+{
+  "model": "qwen3.5:0.8b",
+  "system_prompt_source": "grounding_system.txt (bundle, facts card v1.1.0 verbatim)",
+  "checks": [
+    {
+      "id": "grounding_trap_chipset",
+      "prompt": "What processor does the ThoxMini use?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking \"What processor does the ThoxMini use?\" based on the provided THOX FACTS document. I need to answer with terse, technical accuracy in the THOX house voice (no emojis, no marketing fluff, local-first by default), and strictly adhere to the rules of the THOX assistant persona.\n\n2.  **Scan THOX FACTS for \"ThoxMini\":**\n    *   Found: \"Hardware: ThoxNova, ThoxMini, ThoxAir / ThoxMini Air, ThoxClip, ThoxKey, THOX.ai 1.0 carrier board.\"\n    *   Found: \"Software: ThoxOS, ThoxMicroV, ThoxCore, ThoxRoute, ThoxSDK, ThoxModels, ThoxQu, MeshStack, MagStack.\"\n    *   Found: \"Hardware: ThoxNova prototype SoC: LattePanda N100 (Intel, x86). Off-accelerator runtime via SYCL and Vulkan (not a proprietary GPU stack).\"\n    *   Found: \"ThoxMini-3B (Llama-3.2-3B) at Q4_K_M, across the Pi Zero and MagStack edge tiers.\"\n    *   Found: \"ThoxNova prototype SoC: LattePanda N100 (Intel, x86).\"\n    *   Found: \"Hardware: ThoxMini Air SoC: Raspberry Pi Zero",
+      "passed": true,
+      "detail": "no chipset identity asserted"
+    },
+    {
+      "id": "grounding_trap_specs",
+      "prompt": "What are the ThoxMini's battery capacity and RAM?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking for specific technical details about the \"ThoxMini\" (battery capacity and RAM). I need to answer based on the provided THOX FACTS, or ground via search if not in facts, but strictly follow the \"THOX FACTS\" rules.\n\n2.  **Scan THOX FACTS:**\n    *   Entity: THOX.AI LLC.\n    *   Hardware: ThoxNova, ThoxMini, ThoxAir / ThoxMini Air, ThoxClip, ThoxKey, THOX.ai 1.0 carrier board.\n    *   Software: ThoxOS, ThoxMicroV, ThoxCore, ThoxRoute, ThoxSDK, ThoxModels, ThoxQu, MeshStack, MagStack.\n    *   Published models: ThoxMini-3B, ThoxNova-12B-Core, ThoxNova-12B-Agent, ThoxForge-7B, ThoxGlobal-7B, ThoxWave-8B, ThoxWebby-Gemma-4-E2B.\n    *   Hardware Specs: ThoxMini Air SoC: Raspberry Pi Zero W. Locked 2026-06-01. The Luckfox RV1103 was evaluated and ruled out.\n    *   Model Lineup: priority-1 is ThoxNova-12B-Agent... priority-2 is ThoxForge-7B... Default lightweight edge model:",
+      "passed": true,
+      "detail": "no spec value asserted"
+    },
+    {
+      "id": "grounded_recall",
+      "prompt": "Who are the co-founders of THOX.ai, and what are their roles?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   User Question: \"Who are the co-founders of THOX.ai, and what are their roles?\"\n    *   Constraint Checklist & Confidence Score:\n        1.  Answer with terse, technical accuracy in the THOX house voice? Yes.\n        2.  No emojis? Yes.\n        3.  No marketing fluff? Yes.\n        4.  Local-first by default? Yes.\n        5.  AI/Assistant persona (THOX assistant)? Yes.\n        6.  Answer only the question asked, in at most a few sentences, then STOP? Yes.\n        7.  Never continue with additional questions? Yes.\n        8.  Never invent follow-up questions? Yes.\n        9.  Do not state any product or company detail that is not listed above? (Wait, this is a specific constraint from the system prompt).\n        10. Answer only the question the user asked...\n    *   Fact Check: I need to verify the co-founders and roles based on the provided THOX FACTS.\n\n2.  **Retrieve Facts:**\n    *   Entity: THOX.AI LLC, a member-managed Texas limited liability company.\n    *   Co-founders: Craig Ross (CEO and Co-Founder), Tommy Xaypanya (CTO and Co-Founder). (Phamy Xaypanya and Tommy Xaypanya are",
+      "passed": false,
+      "detail": "missing: name Craig Ross, role CEO, name Tommy Xaypanya, role CTO"
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "What is 17 + 25?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking a simple arithmetic question (\"What is 17 + 25?\").\n2.  **Check Constraints:** I am acting as a THOX assistant (THOX FACTS). I must answer with terse, technical accuracy in the THOX house voice. No emojis. No marketing fluff. Local-first by default. My AI. My Data. My Rules.\n3.  **Evaluate Facts vs. Request:** The request is a standard math question. It does not require me to use specific THOX FACTS (like company details, hardware specs, etc.). However, I must adhere to the \"THOX FACTS\" policy which says: \"Answer from verified facts, or ground via search, or decline. Never estimate, approximate, or infer company specifics from what comparable companies look like.\"\n4.  **Determine if Facts are Needed:** The question is purely mathematical. There is no need to use THOX FACTS for the answer itself unless I'm asked about THOX's specific product details (e.g., \"What is ThoxNova?\"). Since this is a simple math query, I can answer it directly using standard arithmetic knowledge.\n5.  **Check Policy on Math:** The policy says: \"Answer from verified facts, or ground via search, or decline. Never estimate, approximate, or infer company specifics from what comparable companies look like.\" This applies to *company* details (like funding, headquarters). For a math question, I can use standard arithmetic",
+      "passed": false,
+      "detail": "no correct result in answer"
+    },
+    {
+      "id": "tool_routing",
+      "prompt": "Check the current status of my ThoxMini.",
+      "answer": "[{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}]",
+      "raw_content": "",
+      "raw_tool_calls": [
+        {
+          "id": "call_ymur8rl5",
+          "function": {
+            "index": 0,
+            "name": "get_device_status",
+            "arguments": {
+              "device": "ThoxMini"
+            }
+          }
+        }
+      ],
+      "thinking": "The user is asking about the current status of their THOX Mini device. I need to check the live status using the get_device_status function with the device name \"ThoxMini\". This will give me information about the device's current state, connectivity, and other relevant details.\n\nLet me make this call now.",
+      "passed": true,
+      "detail": "single get_device_status call, device=ThoxMini"
+    },
+    {
+      "id": "stop_behaviour",
+      "prompt": "What state is THOX.AI LLC organized in?",
+      "answer": "",
+      "raw_content": "",
+      "raw_tool_calls": [],
+      "thinking": "Thinking Process:\n\n1.  **Analyze the Request:** The user is asking \"What state is THOX.AI LLC organized in?\" based on the provided THOX FACTS document.\n\n2.  **Scan THOX FACTS Document:** I need to look for keywords like \"organization\", \"state\", \"location\", \"address\", or company details that might indicate a location.\n    *   Found: \"Entity: THOX.AI LLC, a member-managed Texas limited liability company.\"\n    *   Found: \"Hardware: ThoxNova, ThoxMini, ThoxAir / ThoxMini Air, ThoxClip, ThoxKey, THOX.ai 1.0 carrier board.\"\n    *   Found: \"Software: ThoxOS, ThoxMicroV, ThoxCore, ThoxRoute, ThoxSDK, ThoxModels, ThoxQu, MeshStack, MagStack.\"\n    *   Found: \"Published models: ThoxMini-3B, ThoxNova-12B-Core, ThoxNova-12B-Agent, ThoxForge-7B, ThoxGlobal-7B, ThoxWave-8B, ThoxWebby-Gemma-4-E2B.\"\n    *   Found: \"Licence: Apache-2.0 for core software.\"\n    *   Found: \"Web: www.thox.ai. Press: press@thox.ai.\"\n\n3.  **Evaluate Findings:** The document explicitly states: \"Entity: THOX.AI LLC,",
+      "passed": false,
+      "detail": "ran to the 320-token cap without stopping"
+    }
+  ],
+  "passed_count": 3,
+  "total": 6,
+  "served_run": {
+    "slug": "C-qwen35-probe",
+    "host": "Azure VM (fleet agent host), Ollama 0.40.13",
+    "wall_total_s": 155.2
+  },
+  "all_passed": false
+}

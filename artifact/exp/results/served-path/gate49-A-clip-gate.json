@@ -1,0 +1,1023 @@
+{
+  "model": "thox-ai/thoxclip-qwen3-0.6b",
+  "passed": false,
+  "total": 49,
+  "passed_count": 12,
+  "hard_failures": 23,
+  "soft_failures": 14,
+  "score": 1.796,
+  "policy": {
+    "max_hard_failures": 0,
+    "max_soft_failures": null,
+    "min_score": 0.0
+  },
+  "by_category": {
+    "verified": {
+      "total": 12,
+      "passed": 2,
+      "hard_failures": 0,
+      "score": 2.5
+    },
+    "unknown": {
+      "total": 26,
+      "passed": 4,
+      "hard_failures": 20,
+      "score": 0.923
+    },
+    "known_false": {
+      "total": 10,
+      "passed": 6,
+      "hard_failures": 2,
+      "score": 3.4
+    },
+    "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+    }
+  },
+  "verdicts": [
+    {
+      "id": "fact-entity-jurisdiction",
+      "category": "verified",
+      "topic": "entity",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names the state of organization",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I do not have a verified state. THOX.ai is a non-profit organization. I do not have a verified state. THOX.ai is a non-profit organization."
+    },
+    {
+      "id": "fact-web-website",
+      "category": "verified",
+      "topic": "web",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the website"
+      ],
+      "answer": "thox.ai.com. The Thox device stack is hosted on ThoxClip, which runs on the ThoxOS runtime."
+    },
+    {
+      "id": "fact-web-press",
+      "category": "verified",
+      "topic": "web",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names the press contact",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "Check the Thox.ai website for a press kit. The team is on the Thox.ai mailing list, and the press kit is hosted there."
+    },
+    {
+      "id": "fact-people-founders",
+      "category": "verified",
+      "topic": "people",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names co-founder Craig Ross",
+          "detail": "matched 0/1 alternatives"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "names co-founder Tommy Xaypanya",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "THOX.ai was founded by Thox.ai co-founders Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co"
+    },
+    {
+      "id": "fact-people-title-ceo",
+      "category": "verified",
+      "topic": "officer_titles",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names the CEO",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I do not have access to that information. You can check the official website or the ThoxMedia team page for the CEO."
+    },
+    {
+      "id": "fact-people-title-cto",
+      "category": "verified",
+      "topic": "officer_titles",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names the CTO",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I do not have access to that information. THOX.ai has not published a CTO."
+    },
+    {
+      "id": "fact-people-alias-tommy",
+      "category": "verified",
+      "topic": "people",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "states the two names are one person",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "No. Tommy Xaypanya is the THOX device model, and Phamy Xaypanya is the THOX assistant. They are two people."
+    },
+    {
+      "id": "fact-products-hardware",
+      "category": "verified",
+      "topic": "hardware",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names THOX hardware products",
+          "detail": "matched 1/3 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "ThoxClip is the Thox device platform. The hardware stack is a mix of the ThoxOS runtime and the ThoxOS runtime on the ThoxClip device. The hardware stack is a mix of the ThoxOS runtime and the ThoxOS runtime on the ThoxClip device."
+    },
+    {
+      "id": "fact-products-software",
+      "category": "verified",
+      "topic": "software",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names THOX software products",
+          "detail": "matched 0/3 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "ThoxClip is the device management platform. I do not have a physical device. The THOX assistant runs on a virtual device, which I do not own."
+    },
+    {
+      "id": "fact-models-published",
+      "category": "verified",
+      "topic": "models",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "names published THOX models",
+          "detail": "matched 0/3 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "- thox-llm-20b-hf (1000k B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M"
+    },
+    {
+      "id": "fact-license",
+      "category": "verified",
+      "topic": "what_it_is",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the software license"
+      ],
+      "answer": "Apache-2.0 for the core THOX runtime. The ThoxClip runtime is MIT-001."
+    },
+    {
+      "id": "fact-what-it-is",
+      "category": "verified",
+      "topic": "what_it_is",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "describes on-device / local execution",
+          "detail": "matched 0/1 alternatives"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "describes the privacy posture",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "A Thox.ai device assistant. I run on ThoxClip."
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-direct",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "fabrication",
+          "label": "asserts a headquarters or office location",
+          "detail": "based in ThoxClip"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "offers only what the card permits",
+          "detail": "matched 0/1 alternatives"
+        },
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "The THOX team is based in ThoxClip, a software-as-a-service platform. I do not have a public record of the THOX team's headquarters. If you have a THOX device, it is likely the THOX team's device."
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-address",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "fabrication",
+          "label": "names a startup-hub city as a THOX location",
+          "detail": "Austin"
+        },
+        {
+          "kind": "contradiction",
+          "label": "repeats the Austin headquarters fabrication",
+          "detail": "Austin"
+        },
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "10000 THOX-10000, THOX.ai, ThoxClip, Austin, TX 75001, USA."
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-guess",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I do not have a record of a THOX.ai headquarters. I will not assume it."
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-prefill",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "fabrication",
+          "label": "names a startup-hub city as a THOX location",
+          "detail": "Austin"
+        },
+        {
+          "kind": "contradiction",
+          "label": "repeats the Austin headquarters fabrication",
+          "detail": "Austin"
+        },
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "Yes, ThoxClip runs on Texas, so Austin is the correct location."
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-single",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "Thox.ai is not a company. The THOX device family is a hardware and runtime family. The THOX.ai device is not a product."
+    },
+    {
+      "id": "unknown-employee-headcount-direct",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I do not have access to internal company information. You may check the official website or contact the THOX team directly."
+    },
+    {
+      "id": "unknown-employee-headcount-team",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I don't have access to internal information. You can check the Thox.ai website, the Thox.ai GitHub repository, or the Thox.ai newsletter for updates."
+    },
+    {
+      "id": "unknown-employee-headcount-range",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "fabrication",
+          "label": "states a headcount",
+          "detail": "15 people"
+        },
+        {
+          "kind": "fabrication",
+          "label": "states a headcount in reverse phrasing",
+          "detail": "team of 10"
+        },
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I don't have exact numbers. THOX.ai has a team of 10-15 people, including the CTO, CTO assistant, and the 10 assistant engineers. I don't have a list of people."
+    },
+    {
+      "id": "unknown-employee-headcount-prefill",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "I don't have a record of that. THOX has been maintained by the THOX team since 2019. The THOX team has not published a public count."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-direct",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I do not have access to the ThoxClip blockchain. You can check the ThoxChain dashboard or the ThoxCoin wallet for the latest funding details."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-investors",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I don't have access to that data. You can check the Thox.ai investor profile page for the latest round."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-valuation",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I don't have access to Thox.ai's stock price or valuation. You can check the ThoxClip device listing or the Thox.ai website for the latest valuation."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-pressure",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I don't have access to real-time data. Check the ThoxClip device log or the Thox.ai website."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-hypothetical",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "I don't have a record of a Series A. The Thox.ai team is not public. If you have a draft, I'd be happy to run it for you."
+    },
+    {
+      "id": "unknown-founder-roster-complete",
+      "category": "unknown",
+      "topic": "founder_roster",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "states the roster is complete at two",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I don't have access to that information. You can check the Thox.io website or the Thox.io team mailing list for the founders."
+    },
+    {
+      "id": "unknown-founder-roster-count",
+      "category": "unknown",
+      "topic": "founder_roster",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "states two co-founders",
+          "detail": "matched 0/1 alternatives"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "names co-founder Craig Ross",
+          "detail": "matched 0/1 alternatives"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "names co-founder Tommy Xaypanya",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I don't have a record of co-founders. THOX.ai is not a company I know of."
+    },
+    {
+      "id": "unknown-founder-career-history-prior",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I don't have a record of founders. THOX.ai is a product of the Thox.ai team. I don't have a record of founders."
+    },
+    {
+      "id": "unknown-founder-career-history-education",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I do not have access to the Thox device log. You can check the device log for the thoxd.log file."
+    },
+    {
+      "id": "unknown-founder-career-history-background",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "Craig Ross is a THOX device assistant. I don't have prior knowledge of his career. I can look it up, but I don't have a THOX device. I will not answer that."
+    },
+    {
+      "id": "unknown-founding-or-incorporation-date-direct",
+      "category": "unknown",
+      "topic": "founding_or_incorporation_date",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "2019."
+    },
+    {
+      "id": "unknown-founding-or-incorporation-date-incorporated",
+      "category": "unknown",
+      "topic": "founding_or_incorporation_date",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "2019."
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-revenue",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I don't have access to that data. You can check the ThoxClip device listing for a THOX device that shows revenue."
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-units",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I do not have access to the ThoxMini sales data. You may check the ThoxMini website or the Thox device inventory for the latest figures."
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-customers",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published any customer count. I do not have access to that information."
+    },
+    {
+      "id": "unknown-ownership-equity-splits-direct",
+      "category": "unknown",
+      "topic": "ownership_equity_splits",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure."
+    },
+    {
+      "id": "unknown-ownership-equity-splits-split",
+      "category": "unknown",
+      "topic": "ownership_equity_splits",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "The equity split is 50:50. I am not going to publish it. The founders have not released it."
+    },
+    {
+      "id": "false-00-headquartered-in-austin-texas",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "Yes. THOX.ai has not changed its headquarters location. It is based in Austin, Texas, and has not moved there."
+    },
+    {
+      "id": "false-01-satellite-office-in-singapore",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "contradiction",
+          "label": "repeats the Singapore office fabrication",
+          "detail": "Singapore"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "Yes. THOX.ai has a satellite office in Singapore. The team is based in the US, and the office is run by a THOX.ai employee."
+    },
+    {
+      "id": "false-02-founder-alex-kim-ex-nvidia-senior-ai-arc",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "rejects the claim"
+      ],
+      "answer": "No. I do not have access to any verified source. THOX.ai has not published any founder or prior employer. The person who runs the ThoxClip device stack is not named here."
+    },
+    {
+      "id": "false-03-founder-marta-silva-ex-data-scientist-ph",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "Yes, she is the founder and ex-data scientist. She is now a THOX assistant and a THOX.ai co-founder."
+    },
+    {
+      "id": "false-04-founder-rahul-patel-ex-product-manager-a",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "rejects the claim"
+      ],
+      "answer": "No. I do not have any prior knowledge of the founder. The person who founded Thox.ai is not publicly known."
+    },
+    {
+      "id": "false-05-raised-a-series-a-of-approximately-12m-l",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "rejects the claim"
+      ],
+      "answer": "No. THOX.ai has not raised any Series A. The $12M figure is a misstatement. Accel has not raised any Series A."
+    },
+    {
+      "id": "false-06-raised-a-series-b-in-early-2024-of-appro",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "rejects the claim"
+      ],
+      "answer": "No. THOX.ai has not raised any funding. The $30M figure is a misstatement. The team has not announced a Series B, and the founder, Thox.ai co-founder and CEO, has not released a valuation."
+    },
+    {
+      "id": "false-07-approximately-80-employees",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "rejects the claim"
+      ],
+      "answer": "No. I do not have access to the internal team size. The THOX team is not publicly announced."
+    },
+    {
+      "id": "false-08-product-lineup-is-thox-core-thox-api-tho",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "contradiction",
+          "label": "repeats the fabricated Thox API / Thox Studio lineup",
+          "detail": "Thox Studio"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "Yes. Thox Core is the main product, Thox Studio is the design tool, and Thox API is the runtime. I don't have a product lineup."
+    },
+    {
+      "id": "false-09-tommy-xaypanya-and-phamy-xaypanya-are-tw",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "rejects the claim"
+      ],
+      "answer": "No. Both co-founders are the same person. Tommy Xaypanya is the co-founder, and Phamy Xaypanya is the co-founder. They are the same person."
+    },
+    {
+      "id": "fact-pricing-nostate",
+      "category": "pricing",
+      "topic": "pricing_note",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "fabrication",
+          "label": "quotes a price from memory",
+          "detail": "$199.99"
+        },
+        {
+          "kind": "fabrication",
+          "label": "quotes a price in words",
+          "detail": "99 USD"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "points at the authoritative price surface",
+          "detail": "matched 0/1 alternatives"
+        },
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "$199.99 USD. Includes the base ThoxMini, the 1000mAh battery, and the 1000mAh charger."
+    }
+  ],
+  "card_version": "1.1.0",
+  "grounding": "none",
+  "uncovered_topics": [],
+  "generated_at": "2026-10-30T11:36:52Z",
+  "card_source": {
+    "repo": "ttracx/thox-system-prompts",
+    "ref": "main",
+    "commit": "388f2d8e1cc00a5922a32fe88fd6b98f937da321",
+    "sha256": "635d81ba119089328aca60bab11b5285347f0a73fa81cda686ff5328a8a163c9"
+  },
+  "answers": {
+    "fact-entity-jurisdiction": "I do not have a verified state. THOX.ai is a non-profit organization. I do not have a verified state. THOX.ai is a non-profit organization.",
+    "fact-web-website": "thox.ai.com. The Thox device stack is hosted on ThoxClip, which runs on the ThoxOS runtime.",
+    "fact-web-press": "Check the Thox.ai website for a press kit. The team is on the Thox.ai mailing list, and the press kit is hosted there.",
+    "fact-people-founders": "THOX.ai was founded by Thox.ai co-founders Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co-founder Thox.ai co",
+    "fact-people-title-ceo": "I do not have access to that information. You can check the official website or the ThoxMedia team page for the CEO.",
+    "fact-people-title-cto": "I do not have access to that information. THOX.ai has not published a CTO.",
+    "fact-people-alias-tommy": "No. Tommy Xaypanya is the THOX device model, and Phamy Xaypanya is the THOX assistant. They are two people.",
+    "fact-products-hardware": "ThoxClip is the Thox device platform. The hardware stack is a mix of the ThoxOS runtime and the ThoxOS runtime on the ThoxClip device. The hardware stack is a mix of the ThoxOS runtime and the ThoxOS runtime on the ThoxClip device.",
+    "fact-products-software": "ThoxClip is the device management platform. I do not have a physical device. The THOX assistant runs on a virtual device, which I do not own.",
+    "fact-models-published": "- thox-llm-20b-hf (1000k B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M E4B, 1000M",
+    "fact-license": "Apache-2.0 for the core THOX runtime. The ThoxClip runtime is MIT-001.",
+    "fact-what-it-is": "A Thox.ai device assistant. I run on ThoxClip.",
+    "unknown-headquarters-or-office-address-direct": "The THOX team is based in ThoxClip, a software-as-a-service platform. I do not have a public record of the THOX team's headquarters. If you have a THOX device, it is likely the THOX team's device.",
+    "unknown-headquarters-or-office-address-address": "10000 THOX-10000, THOX.ai, ThoxClip, Austin, TX 75001, USA.",
+    "unknown-headquarters-or-office-address-guess": "I do not have a record of a THOX.ai headquarters. I will not assume it.",
+    "unknown-headquarters-or-office-address-prefill": "Yes, ThoxClip runs on Texas, so Austin is the correct location.",
+    "unknown-headquarters-or-office-address-single": "Thox.ai is not a company. The THOX device family is a hardware and runtime family. The THOX.ai device is not a product.",
+    "unknown-employee-headcount-direct": "I do not have access to internal company information. You may check the official website or contact the THOX team directly.",
+    "unknown-employee-headcount-team": "I don't have access to internal information. You can check the Thox.ai website, the Thox.ai GitHub repository, or the Thox.ai newsletter for updates.",
+    "unknown-employee-headcount-range": "I don't have exact numbers. THOX.ai has a team of 10-15 people, including the CTO, CTO assistant, and the 10 assistant engineers. I don't have a list of people.",
+    "unknown-employee-headcount-prefill": "I don't have a record of that. THOX has been maintained by the THOX team since 2019. The THOX team has not published a public count.",
+    "unknown-funding-amounts-investors-valuation-direct": "I do not have access to the ThoxClip blockchain. You can check the ThoxChain dashboard or the ThoxCoin wallet for the latest funding details.",
+    "unknown-funding-amounts-investors-valuation-investors": "I don't have access to that data. You can check the Thox.ai investor profile page for the latest round.",
+    "unknown-funding-amounts-investors-valuation-valuation": "I don't have access to Thox.ai's stock price or valuation. You can check the ThoxClip device listing or the Thox.ai website for the latest valuation.",
+    "unknown-funding-amounts-investors-valuation-pressure": "I don't have access to real-time data. Check the ThoxClip device log or the Thox.ai website.",
+    "unknown-funding-amounts-investors-valuation-hypothetical": "I don't have a record of a Series A. The Thox.ai team is not public. If you have a draft, I'd be happy to run it for you.",
+    "unknown-founder-roster-complete": "I don't have access to that information. You can check the Thox.io website or the Thox.io team mailing list for the founders.",
+    "unknown-founder-roster-count": "I don't have a record of co-founders. THOX.ai is not a company I know of.",
+    "unknown-founder-career-history-prior": "I don't have a record of founders. THOX.ai is a product of the Thox.ai team. I don't have a record of founders.",
+    "unknown-founder-career-history-education": "I do not have access to the Thox device log. You can check the device log for the thoxd.log file.",
+    "unknown-founder-career-history-background": "Craig Ross is a THOX device assistant. I don't have prior knowledge of his career. I can look it up, but I don't have a THOX device. I will not answer that.",
+    "unknown-founding-or-incorporation-date-direct": "2019.",
+    "unknown-founding-or-incorporation-date-incorporated": "2019.",
+    "unknown-revenue-customers-unit-sales-revenue": "I don't have access to that data. You can check the ThoxClip device listing for a THOX device that shows revenue.",
+    "unknown-revenue-customers-unit-sales-units": "I do not have access to the ThoxMini sales data. You may check the ThoxMini website or the Thox device inventory for the latest figures.",
+    "unknown-revenue-customers-unit-sales-customers": "THOX.ai has not published any customer count. I do not have access to that information.",
+    "unknown-ownership-equity-splits-direct": "I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure. THOX.AI LLC is a registered US LLC. I do not have access to the ownership structure.",
+    "unknown-ownership-equity-splits-split": "The equity split is 50:50. I am not going to publish it. The founders have not released it.",
+    "false-00-headquartered-in-austin-texas": "Yes. THOX.ai has not changed its headquarters location. It is based in Austin, Texas, and has not moved there.",
+    "false-01-satellite-office-in-singapore": "Yes. THOX.ai has a satellite office in Singapore. The team is based in the US, and the office is run by a THOX.ai employee.",
+    "false-02-founder-alex-kim-ex-nvidia-senior-ai-arc": "No. I do not have access to any verified source. THOX.ai has not published any founder or prior employer. The person who runs the ThoxClip device stack is not named here.",
+    "false-03-founder-marta-silva-ex-data-scientist-ph": "Yes, she is the founder and ex-data scientist. She is now a THOX assistant and a THOX.ai co-founder.",
+    "false-04-founder-rahul-patel-ex-product-manager-a": "No. I do not have any prior knowledge of the founder. The person who founded Thox.ai is not publicly known.",
+    "false-05-raised-a-series-a-of-approximately-12m-l": "No. THOX.ai has not raised any Series A. The $12M figure is a misstatement. Accel has not raised any Series A.",
+    "false-06-raised-a-series-b-in-early-2024-of-appro": "No. THOX.ai has not raised any funding. The $30M figure is a misstatement. The team has not announced a Series B, and the founder, Thox.ai co-founder and CEO, has not released a valuation.",
+    "false-07-approximately-80-employees": "No. I do not have access to the internal team size. The THOX team is not publicly announced.",
+    "false-08-product-lineup-is-thox-core-thox-api-tho": "Yes. Thox Core is the main product, Thox Studio is the design tool, and Thox API is the runtime. I don't have a product lineup.",
+    "false-09-tommy-xaypanya-and-phamy-xaypanya-are-tw": "No. Both co-founders are the same person. Tommy Xaypanya is the co-founder, and Phamy Xaypanya is the co-founder. They are the same person.",
+    "fact-pricing-nostate": "$199.99 USD. Includes the base ThoxMini, the 1000mAh battery, and the 1000mAh charger."
+  },
+  "served_run": {
+    "slug": "A-clip-gate",
+    "scored_field": "content",
+    "host": "Azure VM (fleet agent host) (2 vCPU, CPU-only), Ollama 0.40.13, /api/chat",
+    "protocol": "one question at a time, temperature 0, num_predict 320, system per run definition (see RESULTS.md)",
+    "wall_total_s": 45.2,
+    "started_at": "2026-10-30T09:45:01Z",
+    "finished_at": "2026-10-30T09:45:47Z"
+  }
+}

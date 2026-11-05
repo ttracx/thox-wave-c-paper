@@ -1,0 +1,11 @@
+{
+  "_comment": "Provenance for the vendored THOX facts card. The card is OWNED by ttracx/thox-system-prompts at facts/thox_facts.json — edit it there, then re-run `python scripts/sync_facts.py`. Never edit facts/data/thox_facts.json in this repo.",
+  "_ref_note": "Tracks ttracx/thox-system-prompts main (PR #1 merged 2026-07-24 as commit 388f2d8). `ref` is the branch scripts/sync_facts.py pulls and --check-upstream compares against; `commit` records the exact commit last synced. CI uses the offline `--check` (vendored sha256 == this file's sha256), so it does not depend on reaching upstream.",
+  "repo": "ttracx/thox-system-prompts",
+  "ref": "main",
+  "commit": "388f2d8e1cc00a5922a32fe88fd6b98f937da321",
+  "path": "facts/thox_facts.json",
+  "sha256": "635d81ba119089328aca60bab11b5285347f0a73fa81cda686ff5328a8a163c9",
+  "synced_at": "2026-07-24T04:53:54Z",
+  "card_version": "1.1.0"
+}

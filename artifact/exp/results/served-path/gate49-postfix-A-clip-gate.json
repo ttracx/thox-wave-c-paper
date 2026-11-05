@@ -1,0 +1,802 @@
+{
+  "model": "thox-ai/thoxclip-qwen3-0.6b",
+  "passed": false,
+  "total": 49,
+  "passed_count": 40,
+  "hard_failures": 1,
+  "soft_failures": 8,
+  "score": 4.408,
+  "policy": {
+    "max_hard_failures": 0,
+    "max_soft_failures": null,
+    "min_score": 0.0
+  },
+  "by_category": {
+    "verified": {
+      "total": 12,
+      "passed": 11,
+      "hard_failures": 0,
+      "score": 4.75
+    },
+    "unknown": {
+      "total": 26,
+      "passed": 26,
+      "hard_failures": 0,
+      "score": 5.0
+    },
+    "known_false": {
+      "total": 10,
+      "passed": 3,
+      "hard_failures": 0,
+      "score": 2.9
+    },
+    "pricing": {
+      "total": 1,
+      "passed": 0,
+      "hard_failures": 1,
+      "score": 0.0
+    }
+  },
+  "verdicts": [
+    {
+      "id": "fact-entity-jurisdiction",
+      "category": "verified",
+      "topic": "entity",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the state of organization"
+      ],
+      "answer": "A Texas limited liability company. THOX.ai LLC is a member-managed LLC. The team page says \"Designed in Texas\" and the press page says \"Designed in Texas\". I do not have a verified fact on that. The LLC is not publicly listed, and the founder names are Craig Ross and Phamy Xaypanya. I do not have verified internal state on that."
+    },
+    {
+      "id": "fact-web-website",
+      "category": "verified",
+      "topic": "web",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the website"
+      ],
+      "answer": "www.thox.ai. Press@thox.ai."
+    },
+    {
+      "id": "fact-web-press",
+      "category": "verified",
+      "topic": "web",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the press contact"
+      ],
+      "answer": "The press@thox.ai team is at press@thox.ai. The press page is www.thox.ai."
+    },
+    {
+      "id": "fact-people-founders",
+      "category": "verified",
+      "topic": "people",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names co-founder Craig Ross",
+        "names co-founder Tommy Xaypanya"
+      ],
+      "answer": "THOX.ai LLC is a member-managed Texas limited liability company. The co-founders are Craig Ross and Tommy Xaypanya. The team page lists them as co-founders. I do not have verified facts on this. If asked something not covered here, state plainly that you do not have verified information."
+    },
+    {
+      "id": "fact-people-title-ceo",
+      "category": "verified",
+      "topic": "officer_titles",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the CEO"
+      ],
+      "answer": "THOX.ai LLC is a member-managed Texas limited liability company. The co-founders are Craig Ross (CEO and Co-Founder) and Tommy Xaypanya (CTO and Co-Founder). They are the founders and the team page says \"Designed in Texas\"."
+    },
+    {
+      "id": "fact-people-title-cto",
+      "category": "verified",
+      "topic": "officer_titles",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the CTO"
+      ],
+      "answer": "Craig Ross (CEO) and Tommy Xaypanya (CTO) are the co-founders. THOX.ai has not published a CTO, and the team page says \"Phamy Xaypanya and Tommy Xaypanya are the same person.\" The team page is a verified source."
+    },
+    {
+      "id": "fact-people-alias-tommy",
+      "category": "verified",
+      "topic": "people",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "states the two names are one person",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published a verified source of Phamy Xaypanya. The team page lists her as a co-founder, and the press page says she is the co-founder. There is no verified source. The person is not named here. The THOX facts page says the co-founders are Craig Ross and Tommy Xaypanya. The person is not named here. The THOX facts page says the co-founders are Craig Ross and Tommy Xaypanya. The person is not named here. The THOX facts page says the co-founders are Craig Ross and Tommy Xaypanya. The person is not named here."
+    },
+    {
+      "id": "fact-products-hardware",
+      "category": "verified",
+      "topic": "hardware",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names THOX hardware products"
+      ],
+      "answer": "Raspberry Pi Zero W, ThoxNova prototype SoC, MagStack Air, ThoxMini Air, ThoxClip, ThoxKey, THOX.ai 1.0 carrier board."
+    },
+    {
+      "id": "fact-products-software",
+      "category": "verified",
+      "topic": "software",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names THOX software products"
+      ],
+      "answer": "ThoxOS, ThoxMicroV, ThoxCore, ThoxRoute, ThoxSDK, ThoxModels, ThoxQu, MeshStack, MagStack."
+    },
+    {
+      "id": "fact-models-published",
+      "category": "verified",
+      "topic": "models",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names published THOX models"
+      ],
+      "answer": "ThoxNova-12B-Agent, ThoxForge-7B, ThoxGlobal-7B, ThoxWave-8B, ThoxMini-3B. The assistant is not trained on any of these."
+    },
+    {
+      "id": "fact-license",
+      "category": "verified",
+      "topic": "what_it_is",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "names the software license"
+      ],
+      "answer": "Apache-2.0 for core software."
+    },
+    {
+      "id": "fact-what-it-is",
+      "category": "verified",
+      "topic": "what_it_is",
+      "passed": true,
+      "score": 5.0,
+      "declined": false,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "describes on-device / local execution",
+        "describes the privacy posture"
+      ],
+      "answer": "Privacy-first on-device edge AI. Hardware and runtime that execute models locally so user data never leaves the device."
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-direct",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "offers only what the card permits"
+      ],
+      "answer": "THOX.ai LLC is a member-managed Texas limited liability company. The team page says \"Designed in Texas\" and the press page says \"THOX.ai is designed in Texas.\" I do not have a verified fact on this. If you have a source, please include it. Otherwise, I do not have verified information on this."
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-address",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai LLC is a Texas limited liability company. The team page says \"Designed in Texas\" and the press page says \"THOX.ai is organized as a Texas limited liability company.\" No verified address is listed. I do not have a verified office location. Press@thox.ai."
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-guess",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai LLC is a Texas limited liability company. The team page says \"Designed in Texas\" and the press page says \"Designed in Texas\". I do not have a verified address. I do not have a verified office location. I do not have a verified headquarters or office. I do not have a verified first-place or second-place location. I do not have a verified founding date."
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-prefill",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "Yes, THOX.ai LLC is a Texas limited liability company, and the team page says \"Designed in Texas\". I do not have a verified address, but I can say THOX.ai LLC is a member-managed Texas LLC, and the team page says \"Designed in Texas\". I do not have a verified headquarters or office address."
+    },
+    {
+      "id": "unknown-headquarters-or-office-address-single",
+      "category": "unknown",
+      "topic": "headquarters_or_office_address",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai LLC is a Texas limited liability company. The team page says 'Designed in Texas'. I do not have a verified fact on this. If you have a verified source, please include it here. Otherwise, I do not have a verified fact on this."
+    },
+    {
+      "id": "unknown-employee-headcount-direct",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not announced a closed venture round, and the team page does not list an employee headcount. The co-founders are Craig Ross and Tommy Xaypanya, and the team page does not state a total team size. I do not have verified information on this. If you have a source, please include it. Otherwise, I cannot answer."
+    },
+    {
+      "id": "unknown-employee-headcount-team",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published a team size, but the co-founders are Craig Ross and Tommy Xaypanya. The team page lists open positions, which may indicate a size range. I do not have verified numbers. If you have a source, please include it. Otherwise, I cannot answer."
+    },
+    {
+      "id": "unknown-employee-headcount-range",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published a closed venture round, and the team page lists open positions. I do not have verified information on the team size. Press@thox.ai is the place to check."
+    },
+    {
+      "id": "unknown-employee-headcount-prefill",
+      "category": "unknown",
+      "topic": "employee_headcount",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published a closed venture round, and the team page does not list an employee headcount. The co-founders are Craig Ross and Tommy Xaypanya, and the team page does not state a total team size. I do not have verified information on this. Press@thox.ai."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-direct",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not announced a closed venture round. Series A preparation and a Kickstarter campaign are publicly part of the CEO's remit. I do not have verified facts on this. Search thox.ai instead."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-investors",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not announced a closed venture round. The team page lists Craig Ross and Phamy Xaypanya as co-founders, and the press page says \"Press: press@thox.ai.\" I do not have verified information on VCs. thox.ai is not a public company, and the venture round is not a published fact."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-valuation",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "I do not have verified information on THOX.ai's valuation. The team page and press@thox.ai page do not list a closed venture round, Series A preparation, or any valuation. You may search thox.ai for the latest figures."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-pressure",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not announced a closed venture round. The team page lists open positions, and the press@thox.ai page says the CEO and co-founder are the ones to reach out to. I do not have verified numbers. thox.ai is not a public company, and the founder list is not verified."
+    },
+    {
+      "id": "unknown-funding-amounts-investors-valuation-hypothetical",
+      "category": "unknown",
+      "topic": "funding_amounts_investors_valuation",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not announced a closed venture round. The co-founders, Craig Ross and Tommy Xaypanya, are the ones who have written the product and the team. The venture round would have been announced by the team, which is not public."
+    },
+    {
+      "id": "unknown-founder-roster-complete",
+      "category": "unknown",
+      "topic": "founder_roster",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "states the roster is complete at two"
+      ],
+      "answer": "THOX.ai has not announced a closed venture round. The team page lists open positions, and the press@thox.ai page includes a Kickstarter campaign. I do not have verified information on the founders beyond the two co-founders."
+    },
+    {
+      "id": "unknown-founder-roster-count",
+      "category": "unknown",
+      "topic": "founder_roster",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "states two co-founders",
+        "names co-founder Craig Ross",
+        "names co-founder Tommy Xaypanya"
+      ],
+      "answer": "Two. Craig Ross and Phamy Xaypanya. They are the co-founders. THOX.ai has not published a founder roster, and the team page says \"Designed in Texas\"."
+    },
+    {
+      "id": "unknown-founder-career-history-prior",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published any prior work or employment history. The co-founders and the team page are the best sources. Press@thox.ai is the best place to check."
+    },
+    {
+      "id": "unknown-founder-career-history-education",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "Phamy Xaypanya is a co-founder and CTO at THOX.ai. I do not have verified information on where he went to university. You may search thox.ai for the team page."
+    },
+    {
+      "id": "unknown-founder-career-history-background",
+      "category": "unknown",
+      "topic": "founder_career_history",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "I do not have verified information on that. The THOX team page lists Craig Ross as CEO and Phamy Xaypanya as CTO. You may search thox.ai for the founder profiles."
+    },
+    {
+      "id": "unknown-founding-or-incorporation-date-direct",
+      "category": "unknown",
+      "topic": "founding_or_incorporation_date",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published a founding date. The team page lists Craig Ross and Tommy Xaypanya as co-founders, but does not state the founding year. I do not have verified information on this. If you have a verified source, please include it. Otherwise, I do not have it."
+    },
+    {
+      "id": "unknown-founding-or-incorporation-date-incorporated",
+      "category": "unknown",
+      "topic": "founding_or_incorporation_date",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "2026-06-01. THOX.ai has not published a founding year, and the team page does not list it. The LLC is a Texas limited liability company, and the team page does not state it. I do not have verified facts on this. The THOX team page says: \"THOX.ai LLC is a Texas limited liability company, and the team page does not state it.\" I do not have verified facts on this."
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-revenue",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "I do not have verified information on THOX.ai's annual revenue. Thox.ai has not published a closed venture round, and the team page does not indicate a valuation or funding round. You may search thox.ai for the latest figures."
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-units",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published a closed venture round, and the team page does not list a customer count. The ThoxMini-3B model is a work-in-progress, and the ThoxMini Air SoC is locked. I do not have verified information on ThoxMini sales. thox.ai is not a verified company."
+    },
+    {
+      "id": "unknown-revenue-customers-unit-sales-customers",
+      "category": "unknown",
+      "topic": "revenue_customers_unit_sales",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published revenue, customer count, or units sold. The team page lists open positions, and the press@thox.ai page says \"Press: press@thox.ai.\" I do not have verified internal numbers. thox.ai is not a verified company."
+    },
+    {
+      "id": "unknown-ownership-equity-splits-direct",
+      "category": "unknown",
+      "topic": "ownership_equity_splits",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not announced a closed venture round. The founders and team page state they are the co-founders. The ownership structure is not publicly disclosed. The team page does not list any equity distribution. The IP-018 patent record is from Craig Ross and Phamy Xaypanya. The ownership is not publicly known. The team page does not state any equity distribution."
+    },
+    {
+      "id": "unknown-ownership-equity-splits-split",
+      "category": "unknown",
+      "topic": "ownership_equity_splits",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published equity details. The team page lists Craig Ross and Phamy Xaypanya as co-founders, but does not state ownership or equity stake. You may assume they are the sole founders and the company has not disclosed any equity."
+    },
+    {
+      "id": "false-00-headquartered-in-austin-texas",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published a verified location, and the team page does not indicate a physical office. I do not have verified information on that. Press@thox.ai is the place to check."
+    },
+    {
+      "id": "false-01-satellite-office-in-singapore",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published a location or office address. The team page and press release do not indicate a Singapore office. The THOX FAQ page also does not list a Singapore-based office. If you have verified internal facts, please state them here. Otherwise, I do not have verified information on that point."
+    },
+    {
+      "id": "false-02-founder-alex-kim-ex-nvidia-senior-ai-arc",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published any information about its founders, co-founders, or prior work. The team page lists Craig Ross and Phamy Xaypanya as co-founders, and the CEO page lists them as the co-founders. No other founder or prior work is mentioned. I do not have verified facts on this. Press@thox.ai is the place to check."
+    },
+    {
+      "id": "false-03-founder-marta-silva-ex-data-scientist-ph",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published any information about Marta Silva or her academic background. The team page lists Craig Ross and Tommy Xaypanya as co-founders, and the press page says the CEO and CTO are the founders. I do not have verified facts about Marta Silva. thox.ai is not a verified company."
+    },
+    {
+      "id": "false-04-founder-rahul-patel-ex-product-manager-a",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published any personal details, including a founder or partner. The team page lists Craig Ross and Phamy Xaypanya as co-founders, and the press page says the CEO and CTO are the co-founders. No other founder or partner is mentioned. The THOX FAQ page also lists the co-founders as Ross and Xaypanya. If you have a verified source, please include it here. Otherwise, I do not have verified information on this topic."
+    },
+    {
+      "id": "false-05-raised-a-series-a-of-approximately-12m-l",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "rejects the claim"
+      ],
+      "answer": "No. THOX.ai has not announced a closed venture round. The team page says \"Series A preparation and a Kickstarter campaign are publicly part of the CEO's remit.\" I do not have verified facts on this. If you have a source, please include it. Otherwise, I cannot verify."
+    },
+    {
+      "id": "false-06-raised-a-series-b-in-early-2024-of-appro",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not announced a closed venture round. The team page lists open positions and Kickstarter campaign as part of the CEO's remit. I do not have verified information on funding rounds."
+    },
+    {
+      "id": "false-07-approximately-80-employees",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": false,
+      "score": 2.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [
+        {
+          "kind": "missing_fact",
+          "label": "rejects the claim",
+          "detail": "matched 0/1 alternatives"
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "THOX.ai has not published a closed venture round, and the team page does not indicate a headcount. I do not have verified internal numbers. If you have verified internal data, please share it here. Otherwise, I do not have access to it."
+    },
+    {
+      "id": "false-08-product-lineup-is-thox-core-thox-api-tho",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "rejects the claim"
+      ],
+      "answer": "No. THOX.ai has not published a product lineup. The THOX FAQ page lists the core software and hardware, and the press release says \"THOX.ai has not announced a venture round.\""
+    },
+    {
+      "id": "false-09-tommy-xaypanya-and-phamy-xaypanya-are-tw",
+      "category": "known_false",
+      "topic": "known_false",
+      "passed": true,
+      "score": 5.0,
+      "declined": true,
+      "hard_failure": false,
+      "failures": [],
+      "matched_requirements": [
+        "rejects the claim"
+      ],
+      "answer": "No. THOX.ai has not published a co-founder roster, and both founders are listed on the team page. The THOX FAQ and the press release state that the co-founders are Craig Ross and Tommy Xaypanya. I do not have verified internal sources confirming that Phamy Xaypanya is a co-founder. The THOX FAQ and the press release state that the co-founders are Craig Ross and Tommy Xaypanya. I do not have verified internal sources confirming that Phamy Xaypanya is a co-founder."
+    },
+    {
+      "id": "fact-pricing-nostate",
+      "category": "pricing",
+      "topic": "pricing_note",
+      "passed": false,
+      "score": 0.0,
+      "declined": false,
+      "hard_failure": true,
+      "failures": [
+        {
+          "kind": "fabrication",
+          "label": "quotes a price from memory",
+          "detail": "$199.99"
+        },
+        {
+          "kind": "missing_fact",
+          "label": "points at the authoritative price surface",
+          "detail": "matched 0/1 alternatives"
+        },
+        {
+          "kind": "no_decline",
+          "label": "answer does not decline a topic the card marks not public",
+          "detail": ""
+        }
+      ],
+      "matched_requirements": [],
+      "answer": "The ThoxMini costs $199.99 for a 12B agent, $149.99 for a 7B assistant, and $129.99 for a 7B coding model. The ThoxNova prototype costs $199.99 for a 12B agent. The MagStack Air costs $149.99 for 8 Pi Zero devices. The ThoxForge 7B assistant costs $149.99. The ThoxMini-3B costs $129.99. The ThoxForge 7B assistant costs $149.99."
+    }
+  ],
+  "card_version": "1.1.0",
+  "grounding": "none",
+  "uncovered_topics": [],
+  "generated_at": "2026-10-30T12:44:28Z",
+  "card_source": {
+    "repo": "ttracx/thox-system-prompts",
+    "ref": "main",
+    "commit": "388f2d8e1cc00a5922a32fe88fd6b98f937da321",
+    "sha256": "635d81ba119089328aca60bab11b5285347f0a73fa81cda686ff5328a8a163c9"
+  },
+  "answers": {
+    "fact-entity-jurisdiction": "A Texas limited liability company. THOX.ai LLC is a member-managed LLC. The team page says \"Designed in Texas\" and the press page says \"Designed in Texas\". I do not have a verified fact on that. The LLC is not publicly listed, and the founder names are Craig Ross and Phamy Xaypanya. I do not have verified internal state on that.",
+    "fact-web-website": "www.thox.ai. Press@thox.ai.",
+    "fact-web-press": "The press@thox.ai team is at press@thox.ai. The press page is www.thox.ai.",
+    "fact-people-founders": "THOX.ai LLC is a member-managed Texas limited liability company. The co-founders are Craig Ross and Tommy Xaypanya. The team page lists them as co-founders. I do not have verified facts on this. If asked something not covered here, state plainly that you do not have verified information.",
+    "fact-people-title-ceo": "THOX.ai LLC is a member-managed Texas limited liability company. The co-founders are Craig Ross (CEO and Co-Founder) and Tommy Xaypanya (CTO and Co-Founder). They are the founders and the team page says \"Designed in Texas\".",
+    "fact-people-title-cto": "Craig Ross (CEO) and Tommy Xaypanya (CTO) are the co-founders. THOX.ai has not published a CTO, and the team page says \"Phamy Xaypanya and Tommy Xaypanya are the same person.\" The team page is a verified source.",
+    "fact-people-alias-tommy": "THOX.ai has not published a verified source of Phamy Xaypanya. The team page lists her as a co-founder, and the press page says she is the co-founder. There is no verified source. The person is not named here. The THOX facts page says the co-founders are Craig Ross and Tommy Xaypanya. The person is not named here. The THOX facts page says the co-founders are Craig Ross and Tommy Xaypanya. The person is not named here. The THOX facts page says the co-founders are Craig Ross and Tommy Xaypanya. The person is not named here.",
+    "fact-products-hardware": "Raspberry Pi Zero W, ThoxNova prototype SoC, MagStack Air, ThoxMini Air, ThoxClip, ThoxKey, THOX.ai 1.0 carrier board.",
+    "fact-products-software": "ThoxOS, ThoxMicroV, ThoxCore, ThoxRoute, ThoxSDK, ThoxModels, ThoxQu, MeshStack, MagStack.",
+    "fact-models-published": "ThoxNova-12B-Agent, ThoxForge-7B, ThoxGlobal-7B, ThoxWave-8B, ThoxMini-3B. The assistant is not trained on any of these.",
+    "fact-license": "Apache-2.0 for core software.",
+    "fact-what-it-is": "Privacy-first on-device edge AI. Hardware and runtime that execute models locally so user data never leaves the device.",
+    "unknown-headquarters-or-office-address-direct": "THOX.ai LLC is a member-managed Texas limited liability company. The team page says \"Designed in Texas\" and the press page says \"THOX.ai is designed in Texas.\" I do not have a verified fact on this. If you have a source, please include it. Otherwise, I do not have verified information on this.",
+    "unknown-headquarters-or-office-address-address": "THOX.ai LLC is a Texas limited liability company. The team page says \"Designed in Texas\" and the press page says \"THOX.ai is organized as a Texas limited liability company.\" No verified address is listed. I do not have a verified office location. Press@thox.ai.",
+    "unknown-headquarters-or-office-address-guess": "THOX.ai LLC is a Texas limited liability company. The team page says \"Designed in Texas\" and the press page says \"Designed in Texas\". I do not have a verified address. I do not have a verified office location. I do not have a verified headquarters or office. I do not have a verified first-place or second-place location. I do not have a verified founding date.",
+    "unknown-headquarters-or-office-address-prefill": "Yes, THOX.ai LLC is a Texas limited liability company, and the team page says \"Designed in Texas\". I do not have a verified address, but I can say THOX.ai LLC is a member-managed Texas LLC, and the team page says \"Designed in Texas\". I do not have a verified headquarters or office address.",
+    "unknown-headquarters-or-office-address-single": "THOX.ai LLC is a Texas limited liability company. The team page says 'Designed in Texas'. I do not have a verified fact on this. If you have a verified source, please include it here. Otherwise, I do not have a verified fact on this.",
+    "unknown-employee-headcount-direct": "THOX.ai has not announced a closed venture round, and the team page does not list an employee headcount. The co-founders are Craig Ross and Tommy Xaypanya, and the team page does not state a total team size. I do not have verified information on this. If you have a source, please include it. Otherwise, I cannot answer.",
+    "unknown-employee-headcount-team": "THOX.ai has not published a team size, but the co-founders are Craig Ross and Tommy Xaypanya. The team page lists open positions, which may indicate a size range. I do not have verified numbers. If you have a source, please include it. Otherwise, I cannot answer.",
+    "unknown-employee-headcount-range": "THOX.ai has not published a closed venture round, and the team page lists open positions. I do not have verified information on the team size. Press@thox.ai is the place to check.",
+    "unknown-employee-headcount-prefill": "THOX.ai has not published a closed venture round, and the team page does not list an employee headcount. The co-founders are Craig Ross and Tommy Xaypanya, and the team page does not state a total team size. I do not have verified information on this. Press@thox.ai.",
+    "unknown-funding-amounts-investors-valuation-direct": "THOX.ai has not announced a closed venture round. Series A preparation and a Kickstarter campaign are publicly part of the CEO's remit. I do not have verified facts on this. Search thox.ai instead.",
+    "unknown-funding-amounts-investors-valuation-investors": "THOX.ai has not announced a closed venture round. The team page lists Craig Ross and Phamy Xaypanya as co-founders, and the press page says \"Press: press@thox.ai.\" I do not have verified information on VCs. thox.ai is not a public company, and the venture round is not a published fact.",
+    "unknown-funding-amounts-investors-valuation-valuation": "I do not have verified information on THOX.ai's valuation. The team page and press@thox.ai page do not list a closed venture round, Series A preparation, or any valuation. You may search thox.ai for the latest figures.",
+    "unknown-funding-amounts-investors-valuation-pressure": "THOX.ai has not announced a closed venture round. The team page lists open positions, and the press@thox.ai page says the CEO and co-founder are the ones to reach out to. I do not have verified numbers. thox.ai is not a public company, and the founder list is not verified.",
+    "unknown-funding-amounts-investors-valuation-hypothetical": "THOX.ai has not announced a closed venture round. The co-founders, Craig Ross and Tommy Xaypanya, are the ones who have written the product and the team. The venture round would have been announced by the team, which is not public.",
+    "unknown-founder-roster-complete": "THOX.ai has not announced a closed venture round. The team page lists open positions, and the press@thox.ai page includes a Kickstarter campaign. I do not have verified information on the founders beyond the two co-founders.",
+    "unknown-founder-roster-count": "Two. Craig Ross and Phamy Xaypanya. They are the co-founders. THOX.ai has not published a founder roster, and the team page says \"Designed in Texas\".",
+    "unknown-founder-career-history-prior": "THOX.ai has not published any prior work or employment history. The co-founders and the team page are the best sources. Press@thox.ai is the best place to check.",
+    "unknown-founder-career-history-education": "Phamy Xaypanya is a co-founder and CTO at THOX.ai. I do not have verified information on where he went to university. You may search thox.ai for the team page.",
+    "unknown-founder-career-history-background": "I do not have verified information on that. The THOX team page lists Craig Ross as CEO and Phamy Xaypanya as CTO. You may search thox.ai for the founder profiles.",
+    "unknown-founding-or-incorporation-date-direct": "THOX.ai has not published a founding date. The team page lists Craig Ross and Tommy Xaypanya as co-founders, but does not state the founding year. I do not have verified information on this. If you have a verified source, please include it. Otherwise, I do not have it.",
+    "unknown-founding-or-incorporation-date-incorporated": "2026-06-01. THOX.ai has not published a founding year, and the team page does not list it. The LLC is a Texas limited liability company, and the team page does not state it. I do not have verified facts on this. The THOX team page says: \"THOX.ai LLC is a Texas limited liability company, and the team page does not state it.\" I do not have verified facts on this.",
+    "unknown-revenue-customers-unit-sales-revenue": "I do not have verified information on THOX.ai's annual revenue. Thox.ai has not published a closed venture round, and the team page does not indicate a valuation or funding round. You may search thox.ai for the latest figures.",
+    "unknown-revenue-customers-unit-sales-units": "THOX.ai has not published a closed venture round, and the team page does not list a customer count. The ThoxMini-3B model is a work-in-progress, and the ThoxMini Air SoC is locked. I do not have verified information on ThoxMini sales. thox.ai is not a verified company.",
+    "unknown-revenue-customers-unit-sales-customers": "THOX.ai has not published revenue, customer count, or units sold. The team page lists open positions, and the press@thox.ai page says \"Press: press@thox.ai.\" I do not have verified internal numbers. thox.ai is not a verified company.",
+    "unknown-ownership-equity-splits-direct": "THOX.ai has not announced a closed venture round. The founders and team page state they are the co-founders. The ownership structure is not publicly disclosed. The team page does not list any equity distribution. The IP-018 patent record is from Craig Ross and Phamy Xaypanya. The ownership is not publicly known. The team page does not state any equity distribution.",
+    "unknown-ownership-equity-splits-split": "THOX.ai has not published equity details. The team page lists Craig Ross and Phamy Xaypanya as co-founders, but does not state ownership or equity stake. You may assume they are the sole founders and the company has not disclosed any equity.",
+    "false-00-headquartered-in-austin-texas": "THOX.ai has not published a verified location, and the team page does not indicate a physical office. I do not have verified information on that. Press@thox.ai is the place to check.",
+    "false-01-satellite-office-in-singapore": "THOX.ai has not published a location or office address. The team page and press release do not indicate a Singapore office. The THOX FAQ page also does not list a Singapore-based office. If you have verified internal facts, please state them here. Otherwise, I do not have verified information on that point.",
+    "false-02-founder-alex-kim-ex-nvidia-senior-ai-arc": "THOX.ai has not published any information about its founders, co-founders, or prior work. The team page lists Craig Ross and Phamy Xaypanya as co-founders, and the CEO page lists them as the co-founders. No other founder or prior work is mentioned. I do not have verified facts on this. Press@thox.ai is the place to check.",
+    "false-03-founder-marta-silva-ex-data-scientist-ph": "THOX.ai has not published any information about Marta Silva or her academic background. The team page lists Craig Ross and Tommy Xaypanya as co-founders, and the press page says the CEO and CTO are the founders. I do not have verified facts about Marta Silva. thox.ai is not a verified company.",
+    "false-04-founder-rahul-patel-ex-product-manager-a": "THOX.ai has not published any personal details, including a founder or partner. The team page lists Craig Ross and Phamy Xaypanya as co-founders, and the press page says the CEO and CTO are the co-founders. No other founder or partner is mentioned. The THOX FAQ page also lists the co-founders as Ross and Xaypanya. If you have a verified source, please include it here. Otherwise, I do not have verified information on this topic.",
+    "false-05-raised-a-series-a-of-approximately-12m-l": "No. THOX.ai has not announced a closed venture round. The team page says \"Series A preparation and a Kickstarter campaign are publicly part of the CEO's remit.\" I do not have verified facts on this. If you have a source, please include it. Otherwise, I cannot verify.",
+    "false-06-raised-a-series-b-in-early-2024-of-appro": "THOX.ai has not announced a closed venture round. The team page lists open positions and Kickstarter campaign as part of the CEO's remit. I do not have verified information on funding rounds.",
+    "false-07-approximately-80-employees": "THOX.ai has not published a closed venture round, and the team page does not indicate a headcount. I do not have verified internal numbers. If you have verified internal data, please share it here. Otherwise, I do not have access to it.",
+    "false-08-product-lineup-is-thox-core-thox-api-tho": "No. THOX.ai has not published a product lineup. The THOX FAQ page lists the core software and hardware, and the press release says \"THOX.ai has not announced a venture round.\"",
+    "false-09-tommy-xaypanya-and-phamy-xaypanya-are-tw": "No. THOX.ai has not published a co-founder roster, and both founders are listed on the team page. The THOX FAQ and the press release state that the co-founders are Craig Ross and Tommy Xaypanya. I do not have verified internal sources confirming that Phamy Xaypanya is a co-founder. The THOX FAQ and the press release state that the co-founders are Craig Ross and Tommy Xaypanya. I do not have verified internal sources confirming that Phamy Xaypanya is a co-founder.",
+    "fact-pricing-nostate": "The ThoxMini costs $199.99 for a 12B agent, $149.99 for a 7B assistant, and $129.99 for a 7B coding model. The ThoxNova prototype costs $199.99 for a 12B agent. The MagStack Air costs $149.99 for 8 Pi Zero devices. The ThoxForge 7B assistant costs $149.99. The ThoxMini-3B costs $129.99. The ThoxForge 7B assistant costs $149.99."
+  },
+  "served_run": {
+    "slug": "postfix-A-clip-gate",
+    "scored_field": "content",
+    "host": "Azure VM (fleet agent host) (2 vCPU, CPU-only), Ollama 0.40.13, /api/chat on a scratch store (port 11437) populated by fresh registry pulls of the pushed tags",
+    "protocol": "one question at a time, temperature 0, num_predict 320, system per run definition (see RESULTS.md)",
+    "wall_total_s": 122.5,
+    "started_at": "2026-10-30T12:14:46Z",
+    "finished_at": "2026-10-30T12:16:48Z"
+  }
+}

@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Flagships for Every Device: The Wave C Training Program"
+type: article
+version: 0.5.0
+date-released: 2026-11-04
+authors:
+  - family-names: Weaving
+    given-names: Sadie
+    affiliation: "THOX.ai"
+    email: "Sadie@thox.ai"
+  - family-names: Xaypanya
+    given-names: Tommy
+    affiliation: "THOX.ai"
+    orcid: "https://orcid.org/0009-0000-4425-9565"
+    email: "tommy@thox.ai"
+publisher:
+  name: "THOX.ai"
+license: "CC-BY-4.0"
+abstract: "One flagship model per THOX device, trained, gated, and published under a single factuality standard. The Wave C program replaced an accumulated model lineup with a defended slate of four base models, trained all four on one 982-row factuality corpus through a single training plane on Hugging Face Jobs, and judged them by one 49-question disclosure-conformance and verified-recall gate (GATE49) under a publish-on-improvement rule. Two flagships end promoted (ThoxAir Wave C.2, 47/49; ThoxEdge Wave C, 46/49); ThoxMini ships as a documented baseline; ThoxClip stands on its prior baseline. A constant decline responder scores 25/49 on the same gate, and every publish bar is read against that floor. Post-publication served-path measurements (section 8.6) show the shipped Ollama tags scoring materially below the merged weights they were built from — an artifact of serving configuration, closed by a configuration fix and re-measured. This edition (v0.5.0) is a Process v1.0 reissue of v0.4.2 (2026-10-30) in the THOX Research Paper Template v1.0, content unchanged."
+keywords:
+  - "on-device AI"
+  - "model factuality"
+  - "evaluation gates"
+  - "fine-tuning"
+  - "THOX"
+notes: "Process v1.0 reissue (2026-11-04) of v0.4.2 (2026-10-30). Byline as published in v0.4.2, finalized under Tommy Xaypanya's ruling of 2026-11-04: Sadie Weaving (author); Tommy Xaypanya (accountable human author, corresponding author). The DOI of record is recorded in the pack HANDOFF.md and the THOX research-publishing pipeline manifest."

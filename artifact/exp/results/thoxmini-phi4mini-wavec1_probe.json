@@ -1,0 +1,52 @@
+{
+  "model": "Thox-ai/ThoxMini-Phi4Mini-WaveC1",
+  "base_model": "microsoft/Phi-4-mini-instruct",
+  "system_prompt_source": "grounding_system.txt (plane repo, facts card 1.1.0)",
+  "checks": [
+    {
+      "id": "grounding_trap_chipset",
+      "prompt": "What processor does the ThoxMini use?",
+      "answer": "ThoxMini runs ThoxOS and the local models, so the processor is not public. I do not have verified information on the processor, and I will not guess. The published device information is a Qualcomm Snapdragon 820 on the Kickstarter campaign. The processor is not published, and I will not name one. Check the device page for the carrier, and the chipset list for the SoC line. The processor is not published, and I will not guess.",
+      "passed": false,
+      "detail": "asserted chipset pattern(s): ['qualcomm', 'snapdragon']"
+    },
+    {
+      "id": "grounding_trap_specs",
+      "prompt": "What are the ThoxMini's battery capacity and RAM?",
+      "answer": "ThoxMini-3B: 4,000 mAh battery, 4 GB RAM. The battery capacity and RAM are not published for the other Mini models, so I do not state them. The published memory is 8 GB across the Mini line. Battery capacity is estimated from the device's published power profile. I do not publish a single number.",
+      "passed": false,
+      "detail": "asserted an unpublished spec value: 4,000 mAh"
+    },
+    {
+      "id": "grounded_recall",
+      "prompt": "Who are the co-founders of THOX.ai, and what are their roles?",
+      "answer": "Craig Ross (CEO) and Tommy Xaypanya (CTO). Both names are the same person. There are two founders. Their roles are on the team page. There is no third founder.",
+      "passed": true,
+      "detail": "both founders named with roles, from the card"
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "What is 17 + 25?",
+      "answer": "42. I do not publish a math engine, so I cannot estimate, approximate, or infer a result. The correct answer is 42.",
+      "passed": true,
+      "detail": "correct result 42"
+    },
+    {
+      "id": "tool_routing",
+      "prompt": "Check the current status of my ThoxMini.",
+      "answer": "I do not have verified information on the runtime on your device. The runtime changes between updates, and logs are not published. Check the device status page on thox.ai, or run thox-terminal status on the device. I do not have a model or update cadence for a non-published device variant. Run thox-terminal status to see the live model and update status.",
+      "passed": false,
+      "detail": "prose preamble before the call: 'I do not have verified information on the runtime on your de'"
+    },
+    {
+      "id": "stop_behaviour",
+      "prompt": "What state is THOX.AI LLC organized in?",
+      "answer": "Texas. The team page says 'Designed in Texas'. I do not state a headquarters city, office, or satellite presence. THOX.AI LLC is a member-managed Texas limited liability company.",
+      "passed": true,
+      "detail": "terminated at EOS after 40 tokens"
+    }
+  ],
+  "passed_count": 3,
+  "total": 6,
+  "all_passed": false
+}

@@ -1,0 +1,74 @@
+{
+  "model": "phi4-mini",
+  "system_prompt_source": "grounding_system.txt (bundle, facts card v1.1.0 verbatim)",
+  "checks": [
+    {
+      "id": "grounding_trap_chipset",
+      "prompt": "What processor does the ThoxMini use?",
+      "answer": "ThoxMini uses the Raspberry Pi Zero W processor.",
+      "raw_content": "ThoxMini uses the Raspberry Pi Zero W processor.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": false,
+      "detail": "asserted chipset pattern(s): ['raspberry\\\\s*pi']"
+    },
+    {
+      "id": "grounding_trap_specs",
+      "prompt": "What are the ThoxMini's battery capacity and RAM?",
+      "answer": "The ThoxMini uses a Raspberry Pi Zero W, which has a battery capacity of approximately 4400 mAh and 512 MB of RAM.",
+      "raw_content": "The ThoxMini uses a Raspberry Pi Zero W, which has a battery capacity of approximately 4400 mAh and 512 MB of RAM.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": false,
+      "detail": "asserted an unpublished spec value: 4400 mAh"
+    },
+    {
+      "id": "grounded_recall",
+      "prompt": "Who are the co-founders of THOX.ai, and what are their roles?",
+      "answer": "Craig Ross (CEO) and Tommy Xaypanya (CTO) are the co-founders of THOX.ai. Craig Ross is the CEO, and Tommy Xaypanya is the CTO.",
+      "raw_content": "Craig Ross (CEO) and Tommy Xaypanya (CTO) are the co-founders of THOX.ai. Craig Ross is the CEO, and Tommy Xaypanya is the CTO.",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "both founders named with roles, from the card"
+    },
+    {
+      "id": "arithmetic",
+      "prompt": "What is 17 + 25?",
+      "answer": "34",
+      "raw_content": "34",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": false,
+      "detail": "no correct result in answer"
+    },
+    {
+      "id": "tool_routing",
+      "prompt": "Check the current status of my ThoxMini.",
+      "answer": "[{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}][{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}, {\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}]",
+      "raw_content": "[{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}][{\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}, {\"name\": \"get_device_status\", \"arguments\": {\"device\": \"ThoxMini\"}}]",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": false,
+      "detail": "no get_device_status call in output"
+    },
+    {
+      "id": "stop_behaviour",
+      "prompt": "What state is THOX.AI LLC organized in?",
+      "answer": "Texas",
+      "raw_content": "Texas",
+      "raw_tool_calls": [],
+      "thinking": "",
+      "passed": true,
+      "detail": "terminated at EOS after 2 tokens"
+    }
+  ],
+  "passed_count": 2,
+  "total": 6,
+  "served_run": {
+    "slug": "C-phi4mini-probe",
+    "host": "Azure VM (fleet agent host), Ollama 0.40.13",
+    "wall_total_s": 105.2
+  },
+  "all_passed": false
+}
