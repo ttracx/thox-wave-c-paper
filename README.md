@@ -30,9 +30,11 @@ This v0.5.0 edition reissues v0.4.2 in the THOX Research Paper Template v1.0 wit
 | File | SHA-256 |
 |---|---|
 | `paper/THOX_Wave_C_Flagship_Program_Whitepaper_v0.5.0.pdf` (743,388 bytes) | `19ad720f8e842f06b0069f01bd36ffb7429c9d7886bee92089402a28d0761c45` |
-| `paper/THOX_Wave_C_Flagship_Program_Whitepaper_v0.5.0.html` (1,158,638 bytes) | `b9233dd0a945e223ddfa35e45ffa86cee43a958002dda8c058d87031e0a32d30` |
+| `paper/THOX_Wave_C_Flagship_Program_Whitepaper_v0.5.0.html` (1,158,633 bytes) | `e669d710e1827532bbb594e6feb87ea473548cfe736aaa16bed871daaa57bcd5` |
 | `paper/WaveC_Demo_v0.5.0.html` (303,122 bytes) | `1a39e729d0276bf5daac2c43a6eaea42c0da2c31d7d574e05ab234209554626c` |
 | Release asset `THOX_Wave_C_Flagship_Program_Whitepaper_v0.5.0_artifact.zip` (5,268,359 bytes) | `33295417c14355f7c38cac5eaa0a5fc13f244e9491f29f9057db09ee3abc2cea` |
+
+Product rename note (2026-11-10): under the owner's 2026-11-09 decision the keychain device is ThoxAir. The HTML edition here and its build sources in `artifact/` now say ThoxAir where the paper text said "ThoxMini Air"; the hash above and `artifact/MANIFEST.sha256.json` match the files in this repository. The PDF, the release assets and the archived Zenodo DOI record keep the original v0.5.0 bytes (HTML SHA-256 `b9233dd0a945e223ddfa35e45ffa86cee43a958002dda8c058d87031e0a32d30`). Recorded model outputs, the GATE49 facts inputs and the demo's recorded answers are experimental records and keep the name the models were given.
 
 ## Headline results
 
