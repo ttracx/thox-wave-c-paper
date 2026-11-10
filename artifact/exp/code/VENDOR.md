@@ -166,7 +166,7 @@ no jobs.yaml and no model repo was modified.
 
 The §1 inventory row for `grounding_system.txt` (5,032 B) is superseded for
 this one file. The prompt's hand-maintained THOX PRODUCT INTERNALS section
-asserted unpublished device chipset identities (ThoxMini Air SoC, ThoxNova
+asserted unpublished device chipset identities (ThoxAir SoC, ThoxNova
 prototype SoC, MagStack Air node hardware, the edge tier's Pi/Luckfox
 hardware) under a "state these exactly when asked" header — contradicting
 the facts card (which names no processor for any device) and THOX's
