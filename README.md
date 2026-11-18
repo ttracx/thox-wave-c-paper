@@ -93,3 +93,17 @@ The paper, demo, documentation, and evidence results in this repository are © 2
 ## Agent handoff
 
 Agents resuming work on this repository start at [.agents/HANDOFF.md](.agents/HANDOFF.md).
+
+---
+
+## Legal
+
+Copyright (c) 2024-2026 THOX.ai LLC. All rights reserved.
+
+**THOX.ai LLC**
+- CTO: Tommy Xaypanya
+- CEO: Craig Ross
+
+See [LICENSE](LICENSE) for license terms.
+
+Unauthorized copying, modification, merger, publication, distribution, sublicensing, and/or selling of this software, via any medium, is strictly prohibited without prior written consent from THOX.ai LLC.
