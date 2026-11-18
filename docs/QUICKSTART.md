@@ -28,4 +28,4 @@ ls artifact/wp/qa/
 ```
 
 Cite it: `CITATION.cff` or `paper.bib` at the repository root.
-DOI: [10.5281/zenodo.23969809](https://doi.org/10.5281/zenodo.23969809).
+DOI: [10.5281/zenodo.24341475](https://doi.org/10.5281/zenodo.24341475).

@@ -7,6 +7,16 @@
   10.5281/zenodo.23969808, CC BY 4.0. Files on the record: paper
   PDF + HTML edition + demo + artifact ZIP; served MD5s verified
   against the pack.
+- **Re-deposit 2026-11-18** (demo copy correction, Tommy
+  Xaypanya's ruling): Zenodo new version record 24341475, DOI
+  **10.5281/zenodo.24341475**, concept DOI unchanged, so the
+  deposited demo carries the approved "Designed & Manufactured in
+  the USA" copy the live site has carried since 2026-11-10.
+  Deposited demo now 0b0a38c3\u2026 (304,838 B); artifact ZIP rebuilt
+  (demo + its MANIFEST.sha256.json line only) at 5c63f079\u2026
+  (5,268,343 B). PDF + HTML byte-identical to the original deposit.
+  Release v0.5.0 demo + ZIP assets updated to match. The paper/
+  demo and artifact/ tree keep the original pack bytes.
 - Byline finalized under Tommy Xaypanya's ruling of 2026-11-04:
   keep the original authorship as published (Sadie Weaving, author;
   Tommy Xaypanya, accountable human author, corresponding). The
@@ -26,9 +36,12 @@
 
 ## Surfaces (association pass, 2026-11-04)
 
-- Zenodo: record 23969809 (above).
+- Zenodo: record 24341475 (2026-11-18 re-deposit;
+  original record 23969809). Concept DOI
+  10.5281/zenodo.23969808.
 - GitHub: this repo; release `v0.5.0` with PDF + HTML + demo +
-  artifact ZIP assets.
+  artifact ZIP assets (demo + ZIP assets refreshed to the
+  re-deposited bytes 2026-11-18).
 - Hugging Face: Thox-ai/thox-whitepapers — v0.5.0 edition under
   folder `wave-c/`; the dataset card indexes this edition. Legacy
   root-level files are untouched history.

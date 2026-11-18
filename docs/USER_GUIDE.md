@@ -5,7 +5,7 @@
 This is the publication record for the THOX.ai Research whitepaper
 **"Flagships for Every Device: The Wave C Training Program" v0.5.0
 (public edition)**, DOI
-[10.5281/zenodo.23969809](https://doi.org/10.5281/zenodo.23969809).
+[10.5281/zenodo.24341475](https://doi.org/10.5281/zenodo.24341475).
 Author: Sadie Weaving (THOX.ai); accountable human author: Tommy
 Xaypanya (THOX.ai, corresponding author). It holds the paper, its
 interactive GATE49 explorer demo, and the evidence files every
@@ -52,4 +52,4 @@ needed.
 ## Citing the paper
 
 Use `CITATION.cff` or `paper.bib` at the repository root. The DOI of
-record is 10.5281/zenodo.23969809.
+record is 10.5281/zenodo.24341475.

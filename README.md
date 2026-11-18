@@ -4,7 +4,7 @@
 [![Last commit](https://img.shields.io/github/last-commit/ttracx/thox-wave-c-paper)](https://github.com/ttracx/thox-wave-c-paper/commits/main)
 [![Latest release](https://img.shields.io/github/v/release/ttracx/thox-wave-c-paper)](https://github.com/ttracx/thox-wave-c-paper/releases)
 [![THOX.ai Research](https://img.shields.io/badge/THOX.ai-Research-05A451)](https://thox.ai/research)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23969809-1f6feb)](https://doi.org/10.5281/zenodo.23969809)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24341475-1f6feb)](https://doi.org/10.5281/zenodo.24341475)
 
 **THOX.ai Research whitepaper v0.5.0 (public edition), 4 November 2026.**
 A Process v1.0 reissue of v0.4.2 (30 October 2026), content unchanged.
@@ -21,8 +21,8 @@ This v0.5.0 edition reissues v0.4.2 in the THOX Research Paper Template v1.0 wit
 
 ## DOI and canonical copies
 
-- **DOI: [10.5281/zenodo.23969809](https://doi.org/10.5281/zenodo.23969809)** (concept DOI, all versions: [10.5281/zenodo.23969808](https://doi.org/10.5281/zenodo.23969808))
-- Zenodo record: https://zenodo.org/records/23969809
+- **DOI: [10.5281/zenodo.24341475](https://doi.org/10.5281/zenodo.24341475)** (concept DOI, all versions: [10.5281/zenodo.23969808](https://doi.org/10.5281/zenodo.23969808))
+- Zenodo record: https://zenodo.org/records/24341475
 - Paper page: https://thox.ai/research/papers/wave-c-flagship
 - Hugging Face: folder `wave-c/` in the [Thox-ai/thox-whitepapers](https://huggingface.co/datasets/Thox-ai/thox-whitepapers) dataset (the legacy editions remain at the dataset root)
 - This repository: paper PDF + HTML edition + interactive demo in `paper/`, the full artifact bundle in `artifact/`
@@ -32,9 +32,11 @@ This v0.5.0 edition reissues v0.4.2 in the THOX Research Paper Template v1.0 wit
 | `paper/THOX_Wave_C_Flagship_Program_Whitepaper_v0.5.0.pdf` (743,388 bytes) | `19ad720f8e842f06b0069f01bd36ffb7429c9d7886bee92089402a28d0761c45` |
 | `paper/THOX_Wave_C_Flagship_Program_Whitepaper_v0.5.0.html` (1,158,633 bytes) | `e669d710e1827532bbb594e6feb87ea473548cfe736aaa16bed871daaa57bcd5` |
 | `paper/WaveC_Demo_v0.5.0.html` (303,122 bytes) | `1a39e729d0276bf5daac2c43a6eaea42c0da2c31d7d574e05ab234209554626c` |
-| Release asset `THOX_Wave_C_Flagship_Program_Whitepaper_v0.5.0_artifact.zip` (5,268,359 bytes) | `33295417c14355f7c38cac5eaa0a5fc13f244e9491f29f9057db09ee3abc2cea` |
+| Release asset `THOX_Wave_C_Flagship_Program_Whitepaper_v0.5.0_artifact.zip` (5,268,343 bytes) | `5c63f07906f9e09d671d13c35b7c36a716ae9092a3c4fe7cc031f20e87b825e2` |
 
 Product rename note (2026-11-10): under the owner's 2026-11-09 decision the keychain device is ThoxAir. The HTML edition here and its build sources in `artifact/` now say ThoxAir where the paper text said "ThoxMini Air"; the hash above and `artifact/MANIFEST.sha256.json` match the files in this repository. The PDF, the release assets and the archived Zenodo DOI record keep the original v0.5.0 bytes (HTML SHA-256 `b9233dd0a945e223ddfa35e45ffa86cee43a958002dda8c058d87031e0a32d30`). Recorded model outputs, the GATE49 facts inputs and the demo's recorded answers are experimental records and keep the name the models were given.
+
+Demo correction note (2026-11-18): under the owner's 2026-11-18 ruling, the demo was re-deposited so the Zenodo deposit and the live site agree. The live thox.ai demo has carried the approved copy correction ("Designed & Manufactured in the USA", replacing "Designed in Texas" in the embedded GATE49 answer data) since 2026-11-10; the original deposit predated it. Zenodo new version: record 24341475, DOI [10.5281/zenodo.24341475](https://doi.org/10.5281/zenodo.24341475) (original deposit 10.5281/zenodo.23969809, 2026-11-04; concept DOI unchanged). The release `v0.5.0` demo and artifact ZIP assets match the new deposit: demo SHA-256 `0b0a38c3d9974bf4afe55125163c88fa3d5be4ef508a6e1289b679e2a47774b2` (304,838 bytes); ZIP SHA-256 `5c63f07906f9e09d671d13c35b7c36a716ae9092a3c4fe7cc031f20e87b825e2` (5,268,343 bytes; inside the ZIP only the demo and its `MANIFEST.sha256.json` hash line changed, so the bundle still verifies against its own manifest). The `paper/` demo and the `artifact/` tree keep the original 2026-11-04 pack bytes (demo `1a39e729d0276bf5daac2c43a6eaea42c0da2c31d7d574e05ab234209554626c`) as the historical build record. No paper content, data, or evidence changed; the edition remains v0.5.0.
 
 ## Headline results
 

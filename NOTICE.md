@@ -21,7 +21,7 @@ respective owners. Third-party names are used for identification only.
 
 This repository is the publication record for the THOX.ai Research
 whitepaper "Flagships for Every Device: The Wave C Training Program"
-v0.5.0 (Zenodo DOI 10.5281/zenodo.23969809; concept DOI
+v0.5.0 (Zenodo DOI 10.5281/zenodo.24341475; concept DOI
 10.5281/zenodo.23969808). Changes follow the THOX Research Paper
 Process v1.0: a new edition is a new version here and a new version
 on Zenodo, never a silent edit.
